@@ -1,0 +1,20 @@
+
+
+configuration TestCtpAppC {}
+
+implementation {
+
+components MainC, TestCtpC as App;
+
+components new TimerMillic() as SendTimerC;
+App.SendTimer -> SendTimerC;
+components new TimerMillic() as RootTimerC; 
+App.RootTimer -> RootTimerC;
+
+components CollectionC;
+
+
+
+
+
+}
