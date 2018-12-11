@@ -199,17 +199,6 @@ implementation {
     uint32_t t; 
     bool tHasPassed;
 
-    void updateRadio(){
-        if(call RootControl.isRoot()){
-            if(radio == 2){
-                radio = 1;
-            } 
-            else{
-                radio = 2;
-            }
-            call SerialLogger.log(LOG_UPDATE_RADIO_TO,radio);
-        }
-    }
 
     void chooseAdvertiseTime() {
        t = currentInterval;
@@ -342,9 +331,7 @@ implementation {
             }
 
             linkEtx = call LinkEstimator1.getLinkQuality(entry->neighbor);
-            dbg("TreeRouting", 
-                "routingTable1[%d]: neighbor: [id: %d parent: %d etx: %d retx: %d]\n",  
-                i, entry->neighbor, entry->info.parent, linkEtx, entry->info.etx);
+       
             pathEtx = linkEtx + entry->info.etx;
             /* Operations specific to the current parent */
             if (entry->neighbor == routeInfo1.parent) {
@@ -363,7 +350,7 @@ implementation {
               dbg("TreeRouting", "   did not pass threshold.\n");
               continue;
             }
-            call SerialLogger.log(LOG_ETX_1,pathEtx);
+            //call SerialLogger.log(LOG_ETX_1,pathEtx);
             
             if (pathEtx < minEtx1) {
 	      dbg("TreeRouting", "   best is %d, setting to %d\n", pathEtx, entry->neighbor);
@@ -405,7 +392,7 @@ implementation {
               dbg("TreeRouting", "   did not pass threshold.\n");
               continue;
             }
-            call SerialLogger.log(LOG_ETX_2,pathEtx);
+            //call SerialLogger.log(LOG_ETX_2,pathEtx);
             
             if (pathEtx < minEtx2) {
           dbg("TreeRouting", "   best is %d, setting to %d\n", pathEtx, entry->neighbor);
@@ -533,7 +520,8 @@ implementation {
             }
             beaconMsg->parent = routeInfo1.parent;
             if (state_is_root) {
-                beaconMsg->etx = routeInfo1.etx;
+                //beaconMsg->etx = routeInfo1.etx;
+                beaconMsg->etx = 0;
             }
             else if (routeInfo1.parent == INVALID_ADDR) {
                 beaconMsg->etx = routeInfo1.etx;
@@ -581,14 +569,15 @@ implementation {
             }
             beaconMsg->parent = routeInfo2.parent;
             if (state_is_root) {
-                beaconMsg->etx = routeInfo2.etx;
+                //beaconMsg->etx = routeInfo2.etx;
+                beaconMsg->etx = 0;
             }
             else if (routeInfo2.parent == INVALID_ADDR) {
                 beaconMsg->etx = routeInfo2.etx;
                 beaconMsg->options |= CTP_OPT_PULL;
             } else {
 
-                beaconMsg->etx = routeInfo2.etx + call LinkEstimator2.getLinkQuality(routeInfo1.parent);
+                beaconMsg->etx = routeInfo2.etx + call LinkEstimator2.getLinkQuality(routeInfo2.parent);
             }
 
                 dbg("TreeRouting", "%s parent: %d etx: %d\n",
@@ -701,7 +690,7 @@ implementation {
             //TODO: also, if better than my current parent's path etx, insert
 
             routingTableUpdateEntry(from, rcvBeacon->parent, rcvBeacon->etx,1);
-            call CtpInfo.setNeighborCongested(from, congested,2);
+            call CtpInfo.setNeighborCongested(from, congested,1);
         }
 
         if (call CtpRoutingPacket.getOption(msg, CTP_OPT_PULL)) {
@@ -724,11 +713,11 @@ implementation {
               
           return msg;
         }
-        call SerialLogger.log(LOG_RECEIVED_BEACON,2);
+       // call SerialLogger.log(LOG_RECEIVED_BEACON,2);
         //need to get the am_addr_t of the source
         from = call AMPacket2.source(msg);
         rcvBeacon = (ctp_routing_header_t*)payload;
-        call SerialLogger.log(LOG_FROM,from);
+        //call SerialLogger.log(LOG_FROM,from);
 
         congested = call CtpRoutingPacket.getOption(msg, CTP_OPT_ECN);
 
@@ -749,7 +738,7 @@ implementation {
             //TODO: also, if better than my current parent's path etx, insert
 
             routingTableUpdateEntry(from, rcvBeacon->parent, rcvBeacon->etx,2);
-            call CtpInfo.setNeighborCongested(from, congested,1);
+            call CtpInfo.setNeighborCongested(from, congested,2);
         }
 
         if (call CtpRoutingPacket.getOption(msg, CTP_OPT_PULL)) {
@@ -912,9 +901,9 @@ implementation {
     /*  returns FAIL if it's not possible for some reason      */
     command error_t RootControl.setRoot() {
         bool route_found = FALSE;
-        route_found = (routeInfo1.parent == INVALID_ADDR);
+        route_found = (routeInfo1.parent == INVALID_ADDR && routeInfo2.parent == INVALID_ADDR);
 	state_is_root = 1;
-    
+
 	routeInfo1.parent = my_ll_addr; //myself
 	routeInfo1.etx = 0;
     routeInfo2.parent = my_ll_addr; //myself
@@ -995,7 +984,7 @@ implementation {
         return found;
     }
 
-        event bool CompareBit2.shouldInsert(message_t *msg, void* payload, uint8_t len) {
+    event bool CompareBit2.shouldInsert(message_t *msg, void* payload, uint8_t len) {
         
         bool found = FALSE;
         uint16_t pathEtx;

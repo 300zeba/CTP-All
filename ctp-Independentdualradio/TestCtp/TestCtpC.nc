@@ -1,8 +1,8 @@
-#define INIT_TIME 5000
+#define INIT_TIME 500
 #define FINISH_TIME 240000
 
 #define NUM_MSGS 100
-#define SEND_PERIOD 250
+#define SEND_PERIOD 1000
 #define SEND_DELAY 5000
 
 module TestCtpC {
