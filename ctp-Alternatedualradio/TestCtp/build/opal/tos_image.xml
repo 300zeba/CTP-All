@@ -1,11 +1,11 @@
 <tos_image>
   <ident>
-    <uidhash>3F12458EL</uidhash>
+    <uidhash>04257F97L</uidhash>
     <hostname>twonet</hostname>
     <username>root</username>
     <appname>TestCtpAppC</appname>
     <userhash>39EA6E5AL</userhash>
-    <timestamp>5C0E8938L</timestamp>
+    <timestamp>5C0FFBB9L</timestamp>
     <deluge_support>no</deluge_support>
     <platform>opal</platform>
   </ident>

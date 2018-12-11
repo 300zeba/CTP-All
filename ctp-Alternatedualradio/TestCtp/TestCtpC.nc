@@ -162,7 +162,7 @@ implementation {
     if(call RootControl.isRoot()){
       call SerialLogger.log(LOG_ROOT,TOS_NODE_ID);
       call SerialLogger.log(LOG_RECEIVED_COUNT,receivedCount);
-      Zcall SerialLogger.log(LOG_THROUGHPUT_TIME,endTime - startTime);
+      call SerialLogger.log(LOG_THROUGHPUT_TIME,endTime - startTime);
     }
     else{
       call SerialLogger.log(LOG_NOT_ROOT,TOS_NODE_ID);
