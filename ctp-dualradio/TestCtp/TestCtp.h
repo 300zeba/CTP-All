@@ -45,6 +45,13 @@ enum{
   LOG_MIN_ETX_2,
   LOG_ETX_1,
   LOG_ETX_2,
+  LOG_DUPLICATES,
+  LOG_THROUGHPUT_TIME,
+  LOG_TOTAL_BEACONS,
+  LOG_AVERAGE_THL,
+  LOG_MAX_THL,
+  LOG_DUPLICATE_AT_ROOT,
+  LOG_TOTAL_MESSAGES,
   COLLECTION_ID = 0xee,
 };
 
@@ -57,5 +64,4 @@ typedef nx_struct DataMsg{
 
 
 #endif
-
 

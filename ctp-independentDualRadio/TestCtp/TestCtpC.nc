@@ -1,8 +1,8 @@
 #define INIT_TIME 500
-#define FINISH_TIME 240000
+#define FINISH_TIME 1080000
 
-#define NUM_MSGS 100
-#define SEND_PERIOD 1000
+#define NUM_MSGS 2000
+#define SEND_PERIOD 500
 #define SEND_DELAY 1000
 
 
@@ -44,6 +44,8 @@ implementation {
   uint16_t sendCount = 0;
   uint16_t receivedCount = 0;
   message_t msgBuffer;
+  uint32_t startTime = 0;
+  uint32_t endTime = 0;
   uint16_t duplicate = 0;
 
 
@@ -139,6 +141,11 @@ implementation {
 
 	event message_t * Receive.receive(message_t *msg, void *payload, uint8_t len) {
 
+    if (startTime == 0) {
+      startTime = call FinishTimer.getNow();
+    }
+    endTime = call FinishTimer.getNow();
+
     if(call ReceivedCache.lookup(msg)){
       call SerialLogger.log(LOG_DUPLICATE_AT_ROOT,1);
       duplicate ++;
@@ -146,9 +153,12 @@ implementation {
     else{
       call ReceivedCache.insert(msg);
       receivedCount++;
+      call SerialLogger.log(LOG_RECEIVED_PACKET,endTime);
+      call SerialLogger.log(LOG_RECEIVED_COUNT,receivedCount);
     }
     return msg;
   }
+  
 	
 
   event void FinishTimer.fired(){

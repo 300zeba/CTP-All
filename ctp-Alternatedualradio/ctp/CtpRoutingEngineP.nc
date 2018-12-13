@@ -203,7 +203,7 @@ implementation {
             else{
                 radio = 2;
             }
-            call SerialLogger.log(LOG_UPDATE_RADIO_TO,radio);
+            //call SerialLogger.log(LOG_UPDATE_RADIO_TO,radio);
         }
     }
 
@@ -467,7 +467,7 @@ implementation {
 		}
         
         radio = c_radio;
-        call SerialLogger.log(LOG_UPDATE_RADIO_TO,radio);
+        //call SerialLogger.log(LOG_UPDATE_RADIO_TO,radio);
             }
         }    
 

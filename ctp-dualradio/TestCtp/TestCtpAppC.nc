@@ -40,7 +40,8 @@ DualRadioControlC.Radio1Control -> RF231ActiveMessageC;
 DualRadioControlC.Radio2Control -> RF212ActiveMessageC;
 App.RadiosControl -> DualRadioControlC;
 
-
+components new LruCtpMsgCacheC(16) as ReceivedCacheP;
+App.ReceivedCache -> ReceivedCacheP;
 
 }
 

@@ -1,9 +1,9 @@
-#define INIT_TIME 5000
+#define INIT_TIME 500
 #define FINISH_TIME 1080000
 
-#define NUM_MSGS 1000
-#define SEND_PERIOD 1000
-#define SEND_DELAY 5000
+#define NUM_MSGS 2000
+#define SEND_PERIOD 500
+#define SEND_DELAY 1000
 
 module TestCtpC {
   uses{
@@ -27,6 +27,8 @@ module TestCtpC {
     interface Intercept;
     interface Send;
 
+    interface Cache<message_t*> as ReceivedCache;
+
   }
 
 }
@@ -39,11 +41,14 @@ implementation {
   uint16_t sendCount = 0;
   uint16_t receivedCount = 0;
   message_t msgBuffer;
+  uint32_t startTime = 0;
+  uint32_t endTime = 0;
+  uint16_t duplicate = 0;
 
 
   void initializeNode() {
 
-    if (TOS_NODE_ID == 6 || TOS_NODE_ID == 17 || TOS_NODE_ID == 25 || TOS_NODE_ID == 36 || TOS_NODE_ID == 51 || TOS_NODE_ID == 79)  {
+    if (TOS_NODE_ID == 36 )  {
       call RootControl.setRoot();
       call SerialLogger.log(LOG_ROOT, TOS_NODE_ID);
       call FinishTimer.startOneShot(FINISH_TIME);
@@ -132,9 +137,25 @@ implementation {
 	event void Send.sendDone(message_t *msg, error_t error) {}
 
 	event message_t * Receive.receive(message_t *msg, void *payload, uint8_t len) {
-    receivedCount++;
+
+    if (startTime == 0) {
+      startTime = call FinishTimer.getNow();
+    }
+    endTime = call FinishTimer.getNow();
+
+    if(call ReceivedCache.lookup(msg)){
+      call SerialLogger.log(LOG_DUPLICATE_AT_ROOT,1);
+      duplicate ++;
+    }
+    else{
+      call ReceivedCache.insert(msg);
+      receivedCount++;
+      call SerialLogger.log(LOG_RECEIVED_PACKET,endTime);
+      call SerialLogger.log(LOG_RECEIVED_COUNT,receivedCount);
+    }
     return msg;
   }
+  
 	
 
   event void FinishTimer.fired(){
