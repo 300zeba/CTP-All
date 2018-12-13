@@ -606,8 +606,8 @@ implementation {
         }
          dbg("Forwarder", "Sending queue entry %p\n", qe);
          if ((!call RootControl2.isRoot() && 
-        !call UnicastNameFreeRouting1.hasRoute()) ||
-       (call CtpInfo1.getEtx(&gradient) != SUCCESS)) {
+        !call UnicastNameFreeRouting2.hasRoute()) ||
+       (call CtpInfo2.getEtx(&gradient) != SUCCESS)) {
         /* This code path is for when we don't have a valid next
          * hop. We set a retry timer.
          *
@@ -623,7 +623,7 @@ implementation {
         return;
       }
 
-        dest = call UnicastNameFreeRouting1.nextHop();
+        dest = call UnicastNameFreeRouting2.nextHop();
 
         if (call RootControl2.isRoot()) {
     /* Code path for roots: copy the packet and signal receive. */

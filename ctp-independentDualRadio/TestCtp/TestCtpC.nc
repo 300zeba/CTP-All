@@ -1,9 +1,10 @@
-#define INIT_TIME 5000
-#define FINISH_TIME 240000
+#define INIT_TIME 500
+#define FINISH_TIME 1080000
 
-#define NUM_MSGS 100
+#define NUM_MSGS 4000
 #define SEND_PERIOD 250
-#define SEND_DELAY 5000
+#define SEND_DELAY 1000
+
 
 module TestCtpC {
   uses{
@@ -48,7 +49,7 @@ implementation {
 
   void initializeNode() {
 
-    if (TOS_NODE_ID == 25 )  {
+    if (TOS_NODE_ID == 36 )  {
       call RootControl1.setRoot();
       call RootControl2.setRoot();
       call SerialLogger.log(LOG_ROOT, TOS_NODE_ID);
