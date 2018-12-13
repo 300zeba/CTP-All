@@ -395,6 +395,7 @@ implementation {
             return;
         }
         call SerialLogger.log(LOG_CURRENT_DAD,routeInfo.parent);
+        call SerialLogger.log(LOG_SENT_BEACON,1);
 
         beaconMsg->options = 0;
 

@@ -12,6 +12,7 @@ if sys.argv[2] == 'i':
     nodes2 = []
     radios1 = []
     radios2 = []
+    nodo = 0
     for i in range(101):
         nodes1.append(1000)
         nodes2.append(1000)
@@ -23,17 +24,17 @@ if sys.argv[2] == 'i':
         if len(linha) >= 3:
             if linha[1] == 'CURRENT_DAD':
                 nodo = int(linha[2])
-            elif linha[1] == 'SEND_RADIO' and linha[2] == '1':
+            elif linha[1] == 'SENT_BEACON' and linha[2] == '1':
                 radios1[int(linha[0])] = int(linha[2])
                 nodes1[int(linha[0])] = nodo
-            elif linha[1] == 'SEND_RADIO' and linha[2] == '2':
+            elif linha[1] == 'SENT_BEACON' and linha[2] == '2':
                 radios2[int(linha[0])] = int(linha[2])
                 nodes2[int(linha[0])] = nodo
 
     string = file_name.split("_")
     str = string[1].split(".")
 
-    out_file_name = str[0] + '.gv'
+    out_file_name = './grafos/' + str[0] + '.gv'
 
     out = open(out_file_name,"w")
 

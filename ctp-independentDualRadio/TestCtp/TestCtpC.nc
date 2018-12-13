@@ -1,8 +1,8 @@
 #define INIT_TIME 500
-#define FINISH_TIME 1080000
+#define FINISH_TIME 240000
 
-#define NUM_MSGS 4000
-#define SEND_PERIOD 250
+#define NUM_MSGS 100
+#define SEND_PERIOD 1000
 #define SEND_DELAY 1000
 
 
