@@ -1,9 +1,10 @@
 #define INIT_TIME 500
-#define FINISH_TIME 240000
+#define FINISH_TIME 1100000
 
-#define NUM_MSGS 100
-#define SEND_PERIOD 1000
-#define SEND_DELAY 1000
+#define NUM_MSGS 250
+#define SEND_PERIOD 2000
+#define SEND_DELAY 5000
+
 
 module TestCtpC {
   uses{
@@ -122,14 +123,19 @@ implementation {
   }
 
   event void SendTimer.fired() {
-    if (transmitting) {
-      call SerialLogger.log(LOG_SEND_TIMER,1);
-      SendMessage();
-      if (sendCount >= NUM_MSGS) {
-        transmitting = FALSE;
+    if(TOS_NODE_ID % 2 == 1){
+      if (transmitting) {
+       // call SerialLogger.log(LOG_SEND_TIMER,1);
+        SendMessage();
+        if (sendCount >= NUM_MSGS) {
+          transmitting = FALSE;
+        }
+      } else {
+        call SendTimer.stop();
       }
-    } else {
-      call SendTimer.stop();
+    }
+    else {
+        call SendTimer.stop();
     }
   }
 
@@ -151,6 +157,8 @@ implementation {
     else{
       call ReceivedCache.insert(msg);
       receivedCount++;
+      call SerialLogger.log(LOG_RECEIVED_PACKET,endTime);
+      call SerialLogger.log(LOG_RECEIVED_COUNT,receivedCount);
     }
     return msg;
   }

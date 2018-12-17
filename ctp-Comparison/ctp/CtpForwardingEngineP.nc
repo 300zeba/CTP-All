@@ -357,7 +357,7 @@ implementation {
        if (hasState(RADIO_ON) && (!hasState(SENDING1) || !hasState(SENDING2))) {
           dbg("FHangBug", "%s posted sendTask.\n", __FUNCTION__);
           post sendTask();
-          call SerialLogger.log(LOG_POST_TASK,0);
+          //call SerialLogger.log(LOG_POST_TASK,0);
        }
        clientPtrs[client] = NULL;
         return SUCCESS;
@@ -414,7 +414,7 @@ implementation {
 
   task void sendTask() {
     uint16_t gradient;
-    call SerialLogger.log(LOG_SEND_TASK,0);
+    //call SerialLogger.log(LOG_SEND_TASK,0);
     dbg("Forwarder", "%s: Trying to send a packet. Queue size is %hhu.\n", __FUNCTION__, call SendQueue.size());
     if (call SendQueue.empty()) {
       call CollectionDebug.logEvent(NET_C_FE_SENDQUEUE_EMPTY);
@@ -463,7 +463,7 @@ implementation {
       
       //Differentiate between radios
       if(call CtpInfo.current_radio() == 1){ //Uses radio 1
-        call SerialLogger.log(LOG_SEND_TASK,1);
+        //call SerialLogger.log(LOG_SEND_TASK,1);
         if(hasState(SENDING1)){
           call CollectionDebug.logEvent(NET_C_FE_SENDQUEUE_EMPTY);
           return;
@@ -498,13 +498,13 @@ implementation {
   	     call CtpPacket.setOption(qe->msg, CTP_OPT_ECN); 
   	     clearState(QUEUE_CONGESTED);
   	     }
-         call SerialLogger.log(LOG_SEND_RADIO,1);
+         //call SerialLogger.log(LOG_SEND_RADIO,1);
   	
   	     subsendResult = call SubSend1.send(dest, qe->msg, payloadLen);
   	     if (subsendResult == SUCCESS) {
   	       // Successfully submitted to the data-link layer.
            setState(SENDING1);
-           call SerialLogger.log(LOG_SEND_SUCCESS,1);
+          // call SerialLogger.log(LOG_SEND_SUCCESS,1);
            dbg("Forwarder", "%s: subsend succeeded with %p.\n", __FUNCTION__, qe->msg);
            send_total ++;
   	       return;
@@ -525,7 +525,7 @@ implementation {
 
       }
       else{ //Uses radio 2
-        call SerialLogger.log(LOG_SEND_TASK,2);
+        //call SerialLogger.log(LOG_SEND_TASK,2);
         if(hasState(SENDING2)){
           call CollectionDebug.logEvent(NET_C_FE_SENDQUEUE_EMPTY);
           return;
@@ -559,13 +559,13 @@ implementation {
          call CtpPacket.setOption(qe->msg, CTP_OPT_ECN); 
          clearState(QUEUE_CONGESTED);
          }
-         call SerialLogger.log(LOG_SEND_RADIO,2);
+         //call SerialLogger.log(LOG_SEND_RADIO,2);
     
          subsendResult = call SubSend2.send(dest, qe->msg, payloadLen);
          if (subsendResult == SUCCESS) {
            // Successfully submitted to the data-link layer.
            setState(SENDING2);
-           call SerialLogger.log(LOG_SEND_SUCCESS,2);
+          // call SerialLogger.log(LOG_SEND_SUCCESS,2);
            dbg("Forwarder", "%s: subsend succeeded with %p.\n", __FUNCTION__, qe->msg);
            send_total ++;
            return;
@@ -998,7 +998,7 @@ implementation {
     bool duplicate = FALSE;
     fe_queue_entry_t* qe;
     uint8_t i, thl;
-    call SerialLogger.log(LOG_RECEIVED_PACKET,2);
+    //call SerialLogger.log(LOG_RECEIVED_PACKET,2);
 
     collectid = call CtpPacket.getType(msg);
 

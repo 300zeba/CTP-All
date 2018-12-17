@@ -74,7 +74,7 @@
 
 typedef nx_struct serial_log_message {
   nx_uint16_t evt;
-  nx_uint32_t data;
+  nx_uint16_t data;
 } serial_log_message_t;
 
 #endif
