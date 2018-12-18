@@ -495,8 +495,8 @@ implementation {
         if (sending) {
             return;
         }
-        call SerialLogger.log(LOG_CURRENT_DAD,routeInfo.parent);
-        call SerialLogger.log(LOG_SENDING_BEACON_RADIO,radio);
+        //call SerialLogger.log(LOG_CURRENT_DAD,routeInfo.parent);
+        //call SerialLogger.log(LOG_SENDING_BEACON_RADIO,radio);
 
         beaconMsg->options = 0;
 
@@ -541,7 +541,7 @@ implementation {
         }
         if (eval == SUCCESS) {
             beaconCount++;
-            call SerialLogger.log(LOG_SENT_BEACON,radio);
+            //call SerialLogger.log(LOG_SENT_BEACON,radio);
             sending = TRUE;
         } else if (eval == EOFF) {
             radioOn = FALSE;
@@ -810,6 +810,9 @@ implementation {
 
     command uint8_t CtpInfo.current_radio(){
         return radio_f;
+    }
+    command uint16_t CtpInfo.current_dad(){
+        return routeInfo.parent;
     }
     
     /* RootControl interface */

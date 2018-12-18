@@ -1,7 +1,7 @@
 #define INIT_TIME 500
-#define FINISH_TIME 1100000
+#define FINISH_TIME 500000
 
-#define NUM_MSGS 250
+#define NUM_MSGS 2000
 #define SEND_PERIOD 2000
 #define SEND_DELAY 5000
 
@@ -76,7 +76,6 @@ implementation {
     msg = &msgBuffer;
     payload = (DataMsg*) call Send.getPayload(msg, sizeof(DataMsg));
 
-    payload->seqno = sendCount;
     for (i = 0; i < MSG_SIZE; i++) {
       payload->data[i] = i;
     }
@@ -157,8 +156,8 @@ implementation {
     else{
       call ReceivedCache.insert(msg);
       receivedCount++;
-      call SerialLogger.log(LOG_RECEIVED_PACKET,endTime);
-      call SerialLogger.log(LOG_RECEIVED_COUNT,receivedCount);
+      //call SerialLogger.log(LOG_RECEIVED_PACKET,endTime);
+      //call SerialLogger.log(LOG_RECEIVED_COUNT,receivedCount);
     }
     return msg;
   }
@@ -169,6 +168,10 @@ implementation {
 
     call SendTimer.stop();
 		call SerialLogger.log(LOG_FINISH,TOS_NODE_ID);
+    call SerialLogger.log(LOG_CURRENT_DAD,call CtpInfo1.current_dad());
+    call SerialLogger.log(LOG_SENT_BEACON,1);
+    call SerialLogger.log(LOG_CURRENT_DAD,call CtpInfo2.current_dad());
+    call SerialLogger.log(LOG_SENT_BEACON,2);
     if(call RootControl1.isRoot()){
       call SerialLogger.log(LOG_ROOT,TOS_NODE_ID);
       call SerialLogger.log(LOG_RECEIVED_COUNT,receivedCount);

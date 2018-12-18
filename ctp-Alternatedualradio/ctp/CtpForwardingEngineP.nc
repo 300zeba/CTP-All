@@ -333,7 +333,7 @@ implementation {
         return EOFF;
       }
       if (len > call Send.maxPayloadLength[client]()) {
-        call SerialLogger.log(LOG_PACKET_TOO_BIG,0);
+        call SerialLogger.log(LOG_PACKET_TOO_BIG,call Send.maxPayloadLength[client]());
         return ESIZE;
       }
     

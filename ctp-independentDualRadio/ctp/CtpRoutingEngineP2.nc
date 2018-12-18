@@ -394,8 +394,8 @@ implementation {
         if (sending) {
             return;
         }
-        call SerialLogger.log(LOG_CURRENT_DAD,routeInfo.parent);
-        call SerialLogger.log(LOG_SENT_BEACON,2);
+        //call SerialLogger.log(LOG_CURRENT_DAD,routeInfo.parent);
+        //call SerialLogger.log(LOG_SENT_BEACON,2);
 
         beaconMsg->options = 0;
 
@@ -832,6 +832,9 @@ implementation {
 
     command uint32_t CtpInfo2.totalBeacons() {
       return beaconCount;
+    }
+    command uint16_t CtpInfo2.current_dad(){
+        return routeInfo.parent;
     }
     
 } 

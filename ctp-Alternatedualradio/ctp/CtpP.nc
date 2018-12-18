@@ -155,7 +155,7 @@ implementation {
   components RF231ActiveMessageC;
   components RF212ActiveMessageC;
 
-  components new CtpRoutingEngineP(TREE_ROUTING_TABLE_SIZE, 128, 512000) as Router;
+  components new CtpRoutingEngineP(TREE_ROUTING_TABLE_SIZE, 64, 512000) as Router;
 
   StdControl = Router;
   StdControl = Estimator1;

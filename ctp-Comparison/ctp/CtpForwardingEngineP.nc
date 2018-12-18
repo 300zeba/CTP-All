@@ -333,7 +333,7 @@ implementation {
         return EOFF;
       }
       if (len > call Send.maxPayloadLength[client]()) {
-        call SerialLogger.log(LOG_PACKET_TOO_BIG,0);
+        call SerialLogger.log(LOG_PACKET_TOO_BIG,len);
         return ESIZE;
       }
     
@@ -684,7 +684,7 @@ implementation {
       /* Packet was acknowledged. Updated the link estimator,
 	 free the buffer (pool or sendDone), start timer to
 	 send next packet. */
-   call SerialLogger.log(LOG_ACKED,1);
+   //call SerialLogger.log(LOG_ACKED,1);
       call SendQueue.dequeue();
       clearState(SENDING1);
       startRetxmitTimer1(SENDDONE_OK_WINDOW, SENDDONE_OK_OFFSET);
@@ -732,7 +732,7 @@ implementation {
       /* Packet was acknowledged. Updated the link estimator,
    free the buffer (pool or sendDone), start timer to
    send next packet. */
-   call SerialLogger.log(LOG_ACKED,2);
+   //call SerialLogger.log(LOG_ACKED,2);
       call SendQueue.dequeue();
       clearState(SENDING2);
       startRetxmitTimer2(SENDDONE_OK_WINDOW, SENDDONE_OK_OFFSET);
@@ -986,7 +986,7 @@ implementation {
 						  call Packet.payloadLength(msg)))
       return msg;
     else {
-      call SerialLogger.log(LOG_FORWARD1_FROM,getHeader(msg)->origin);
+      //call SerialLogger.log(LOG_FORWARD1_FROM,getHeader(msg)->origin);
       dbg("Route", "Forwarding packet from %hu.\n", getHeader(msg)->origin);
       return forward1(msg);
     }
@@ -1059,7 +1059,7 @@ implementation {
               call Packet.payloadLength(msg)))
       return msg;
     else {
-      call SerialLogger.log(LOG_FORWARD2_FROM,getHeader(msg)->origin);
+      //call SerialLogger.log(LOG_FORWARD2_FROM,getHeader(msg)->origin);
       dbg("Route", "Forwarding packet from %hu.\n", getHeader(msg)->origin);
       return forward2(msg);
     }

@@ -408,12 +408,12 @@ struct __sFILE {
 
   void *_cookie;
 
-  int (*_read)(struct _reent *arg_0x2ab2386707a8, void *arg_0x2ab238670a48, char *arg_0x2ab238670ce8, int arg_0x2ab23866f020);
+  int (*_read)(struct _reent *arg_0x2b814ce7e7a8, void *arg_0x2b814ce7ea48, char *arg_0x2b814ce7ece8, int arg_0x2b814ce7d020);
 
-  int (*_write)(struct _reent *arg_0x2ab23866f730, void *arg_0x2ab23866f9d0, const char *arg_0x2ab23866fca8, int arg_0x2ab23866e020);
+  int (*_write)(struct _reent *arg_0x2b814ce7d730, void *arg_0x2b814ce7d9d0, const char *arg_0x2b814ce7dca8, int arg_0x2b814ce7c020);
 
-  _fpos_t (*_seek)(struct _reent *arg_0x2ab23866e770, void *arg_0x2ab23866ea10, _fpos_t arg_0x2ab23866ecc0, int arg_0x2ab238674020);
-  int (*_close)(struct _reent *arg_0x2ab238674730, void *arg_0x2ab2386749d0);
+  _fpos_t (*_seek)(struct _reent *arg_0x2b814ce7c770, void *arg_0x2b814ce7ca10, _fpos_t arg_0x2b814ce7ccc0, int arg_0x2b814ce82020);
+  int (*_close)(struct _reent *arg_0x2b814ce82730, void *arg_0x2b814ce829d0);
 
 
   struct __sbuf _ub;
@@ -476,7 +476,7 @@ struct _reent {
 
   int __sdidinit;
 
-  void (*__cleanup)(struct _reent *arg_0x2ab23867cb18);
+  void (*__cleanup)(struct _reent *arg_0x2b814ce8ab18);
 
 
   struct _Bigint *_result;
@@ -528,7 +528,7 @@ struct _reent {
   struct _atexit _atexit0;
 
 
-  void (**_sig_func)(int arg_0x2ab238682060);
+  void (**_sig_func)(int arg_0x2b814ce90060);
 
 
 
@@ -540,9 +540,9 @@ struct _reent {
 struct _reent;
 struct _reent;
 # 25 "/opt/csiro-cortex-tools/lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/sys-include/string.h" 3
-void *memcpy(void *arg_0x2ab238695020, const void *arg_0x2ab2386952f8, size_t arg_0x2ab2386955a0);
+void *memcpy(void *arg_0x2b814cea3020, const void *arg_0x2b814cea32f8, size_t arg_0x2b814cea35a0);
 
-void *memset(void *arg_0x2ab238693bf0, int arg_0x2ab238693e58, size_t arg_0x2ab238692140);
+void *memset(void *arg_0x2b814cea1bf0, int arg_0x2b814cea1e58, size_t arg_0x2b814cea0140);
 # 33 "/opt/csiro-cortex-tools/lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/sys-include/stdlib.h" 3
 #line 29
 typedef struct __nesc_unnamed4248 {
@@ -3790,11 +3790,9 @@ enum __nesc_unnamed4382 {
 
 
 
-
 #line 58
 typedef nx_struct DataMsg {
-  nx_uint16_t seqno;
-  nx_uint8_t data[5];
+  nx_uint8_t data[19];
 } __attribute__((packed)) DataMsg;
 # 42 "../ctp/Collection.h"
 enum __nesc_unnamed4383 {
@@ -6000,11 +5998,11 @@ static uint16_t RF212RadioP$RandomCollisionConfig$getTransmitBarrier(message_t *
 # 60 "/opt/tinyos-main/tos/lib/rfxlink/util/RadioAlarm.nc"
 static void /*RF212RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP$0$RadioAlarm$default$fired(
 # 54 "/opt/tinyos-main/tos/lib/rfxlink/util/RadioAlarmP.nc"
-uint8_t arg_0x2ab23919cce8);
+uint8_t arg_0x2b814d9aace8);
 # 50 "/opt/tinyos-main/tos/lib/rfxlink/util/RadioAlarm.nc"
 static void /*RF212RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP$0$RadioAlarm$wait(
 # 54 "/opt/tinyos-main/tos/lib/rfxlink/util/RadioAlarmP.nc"
-uint8_t arg_0x2ab23919cce8, 
+uint8_t arg_0x2b814d9aace8, 
 # 50 "/opt/tinyos-main/tos/lib/rfxlink/util/RadioAlarm.nc"
 tradio_size timeout);
 
@@ -6013,15 +6011,15 @@ tradio_size timeout);
 
 static void /*RF212RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP$0$RadioAlarm$cancel(
 # 54 "/opt/tinyos-main/tos/lib/rfxlink/util/RadioAlarmP.nc"
-uint8_t arg_0x2ab23919cce8);
+uint8_t arg_0x2b814d9aace8);
 # 45 "/opt/tinyos-main/tos/lib/rfxlink/util/RadioAlarm.nc"
 static bool /*RF212RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP$0$RadioAlarm$isFree(
 # 54 "/opt/tinyos-main/tos/lib/rfxlink/util/RadioAlarmP.nc"
-uint8_t arg_0x2ab23919cce8);
+uint8_t arg_0x2b814d9aace8);
 # 65 "/opt/tinyos-main/tos/lib/rfxlink/util/RadioAlarm.nc"
 static tradio_size /*RF212RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP$0$RadioAlarm$getNow(
 # 54 "/opt/tinyos-main/tos/lib/rfxlink/util/RadioAlarmP.nc"
-uint8_t arg_0x2ab23919cce8);
+uint8_t arg_0x2b814d9aace8);
 # 78 "/opt/tinyos-main/tos/lib/timer/Alarm.nc"
 static void /*RF212RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP$0$Alarm$fired(void );
 # 48 "/opt/tinyos-main/tos/lib/rfxlink/util/Tasklet.nc"
@@ -6044,7 +6042,7 @@ static void /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessage
 # 59 "/opt/tinyos-main/tos/interfaces/SendNotifier.nc"
 static void /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$0$SendNotifier$default$aboutToSend(
 # 48 "/opt/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageLayerP.nc"
-am_id_t arg_0x2ab2391eeca8, 
+am_id_t arg_0x2b814d9fcca8, 
 # 59 "/opt/tinyos-main/tos/interfaces/SendNotifier.nc"
 am_addr_t dest, 
 #line 57
@@ -6080,7 +6078,7 @@ uint8_t len);
 # 80 "/opt/tinyos-main/tos/interfaces/AMSend.nc"
 static error_t /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$0$AMSend$send(
 # 45 "/opt/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageLayerP.nc"
-am_id_t arg_0x2ab2391f03c8, 
+am_id_t arg_0x2b814d9fe3c8, 
 # 80 "/opt/tinyos-main/tos/interfaces/AMSend.nc"
 am_addr_t addr, 
 #line 71
@@ -6097,11 +6095,11 @@ uint8_t len);
 #line 123
 static uint8_t /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$0$AMSend$maxPayloadLength(
 # 45 "/opt/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageLayerP.nc"
-am_id_t arg_0x2ab2391f03c8);
+am_id_t arg_0x2b814d9fe3c8);
 # 110 "/opt/tinyos-main/tos/interfaces/AMSend.nc"
 static void /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$0$AMSend$default$sendDone(
 # 45 "/opt/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageLayerP.nc"
-am_id_t arg_0x2ab2391f03c8, 
+am_id_t arg_0x2b814d9fe3c8, 
 # 103 "/opt/tinyos-main/tos/interfaces/AMSend.nc"
 message_t * msg, 
 
@@ -6120,7 +6118,7 @@ message_t *
 
 /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$0$Snoop$default$receive(
 # 47 "/opt/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageLayerP.nc"
-am_id_t arg_0x2ab2391ee1a0, 
+am_id_t arg_0x2b814d9fc1a0, 
 # 71 "/opt/tinyos-main/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -6155,7 +6153,7 @@ message_t *
 
 /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$0$Receive$default$receive(
 # 46 "/opt/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageLayerP.nc"
-am_id_t arg_0x2ab2391ef5f8, 
+am_id_t arg_0x2b814d9fd5f8, 
 # 71 "/opt/tinyos-main/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -6174,7 +6172,7 @@ message_t *
 
 /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$0$ReceiveDefault$default$receive(
 # 51 "/opt/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageLayerP.nc"
-am_id_t arg_0x2ab2391ed8b0, 
+am_id_t arg_0x2b814d9fb8b0, 
 # 71 "/opt/tinyos-main/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -6258,7 +6256,7 @@ message_t *
 
 /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$0$SnoopDefault$default$receive(
 # 52 "/opt/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageLayerP.nc"
-am_id_t arg_0x2ab2391eb488, 
+am_id_t arg_0x2b814d9f9488, 
 # 71 "/opt/tinyos-main/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -6309,35 +6307,35 @@ static resource_client_id_t /*RF212RadioC.SendResourceC.Queue*/FcfsResourceQueue
 # 53 "/opt/tinyos-main/tos/interfaces/ResourceRequested.nc"
 static void /*RF212RadioC.SendResourceC.Arbiter*/SimpleArbiterP$0$ResourceRequested$default$requested(
 # 52 "/opt/tinyos-main/tos/system/SimpleArbiterP.nc"
-uint8_t arg_0x2ab2392cd1a0);
+uint8_t arg_0x2b814dadb1a0);
 # 61 "/opt/tinyos-main/tos/interfaces/ResourceRequested.nc"
 static void /*RF212RadioC.SendResourceC.Arbiter*/SimpleArbiterP$0$ResourceRequested$default$immediateRequested(
 # 52 "/opt/tinyos-main/tos/system/SimpleArbiterP.nc"
-uint8_t arg_0x2ab2392cd1a0);
+uint8_t arg_0x2b814dadb1a0);
 # 65 "/opt/tinyos-main/tos/interfaces/ResourceConfigure.nc"
 static void /*RF212RadioC.SendResourceC.Arbiter*/SimpleArbiterP$0$ResourceConfigure$default$unconfigure(
 # 56 "/opt/tinyos-main/tos/system/SimpleArbiterP.nc"
-uint8_t arg_0x2ab2392cc6e0);
+uint8_t arg_0x2b814dada6e0);
 # 59 "/opt/tinyos-main/tos/interfaces/ResourceConfigure.nc"
 static void /*RF212RadioC.SendResourceC.Arbiter*/SimpleArbiterP$0$ResourceConfigure$default$configure(
 # 56 "/opt/tinyos-main/tos/system/SimpleArbiterP.nc"
-uint8_t arg_0x2ab2392cc6e0);
+uint8_t arg_0x2b814dada6e0);
 # 120 "/opt/tinyos-main/tos/interfaces/Resource.nc"
 static error_t /*RF212RadioC.SendResourceC.Arbiter*/SimpleArbiterP$0$Resource$release(
 # 51 "/opt/tinyos-main/tos/system/SimpleArbiterP.nc"
-uint8_t arg_0x2ab2392ce020);
+uint8_t arg_0x2b814dadc020);
 # 97 "/opt/tinyos-main/tos/interfaces/Resource.nc"
 static error_t /*RF212RadioC.SendResourceC.Arbiter*/SimpleArbiterP$0$Resource$immediateRequest(
 # 51 "/opt/tinyos-main/tos/system/SimpleArbiterP.nc"
-uint8_t arg_0x2ab2392ce020);
+uint8_t arg_0x2b814dadc020);
 # 88 "/opt/tinyos-main/tos/interfaces/Resource.nc"
 static error_t /*RF212RadioC.SendResourceC.Arbiter*/SimpleArbiterP$0$Resource$request(
 # 51 "/opt/tinyos-main/tos/system/SimpleArbiterP.nc"
-uint8_t arg_0x2ab2392ce020);
+uint8_t arg_0x2b814dadc020);
 # 102 "/opt/tinyos-main/tos/interfaces/Resource.nc"
 static void /*RF212RadioC.SendResourceC.Arbiter*/SimpleArbiterP$0$Resource$default$granted(
 # 51 "/opt/tinyos-main/tos/system/SimpleArbiterP.nc"
-uint8_t arg_0x2ab2392ce020);
+uint8_t arg_0x2b814dadc020);
 # 75 "/opt/tinyos-main/tos/interfaces/TaskBasic.nc"
 static void /*RF212RadioC.SendResourceC.Arbiter*/SimpleArbiterP$0$grantedTask$runTask(void );
 # 54 "/opt/tinyos-main/tos/lib/rfxlink/util/BareSend.nc"
@@ -6477,7 +6475,7 @@ static error_t /*RF212RadioC.UniqueLayerC.UniqueLayerP*/UniqueLayerP$0$Init$init
 # 46 "/opt/tinyos-main/tos/lib/rfxlink/util/NeighborhoodFlag.nc"
 static bool NeighborhoodP$NeighborhoodFlag$get(
 # 43 "/opt/tinyos-main/tos/lib/rfxlink/util/NeighborhoodP.nc"
-uint8_t arg_0x2ab239429970, 
+uint8_t arg_0x2b814dc37970, 
 # 46 "/opt/tinyos-main/tos/lib/rfxlink/util/NeighborhoodFlag.nc"
 uint8_t idx);
 
@@ -6486,7 +6484,7 @@ uint8_t idx);
 
 static void NeighborhoodP$NeighborhoodFlag$set(
 # 43 "/opt/tinyos-main/tos/lib/rfxlink/util/NeighborhoodP.nc"
-uint8_t arg_0x2ab239429970, 
+uint8_t arg_0x2b814dc37970, 
 # 51 "/opt/tinyos-main/tos/lib/rfxlink/util/NeighborhoodFlag.nc"
 uint8_t idx);
 # 71 "/opt/tinyos-main/tos/lib/rfxlink/util/Neighborhood.nc"
@@ -6608,25 +6606,25 @@ static void /*HilTimerMilliC.VirtTimersMilli32*/VirtualizeTimerC$0$TimerFrom$fir
 #line 136
 static uint32_t /*HilTimerMilliC.VirtTimersMilli32*/VirtualizeTimerC$0$Timer$getNow(
 # 48 "/opt/tinyos-main/tos/lib/timer/VirtualizeTimerC.nc"
-uint8_t arg_0x2ab239625448);
+uint8_t arg_0x2b814de33448);
 # 83 "/opt/tinyos-main/tos/lib/timer/Timer.nc"
 static void /*HilTimerMilliC.VirtTimersMilli32*/VirtualizeTimerC$0$Timer$default$fired(
 # 48 "/opt/tinyos-main/tos/lib/timer/VirtualizeTimerC.nc"
-uint8_t arg_0x2ab239625448);
+uint8_t arg_0x2b814de33448);
 # 114 "/opt/tinyos-main/tos/lib/timer/Timer.nc"
 static void /*HilTimerMilliC.VirtTimersMilli32*/VirtualizeTimerC$0$Timer$startPeriodicAt(
 # 48 "/opt/tinyos-main/tos/lib/timer/VirtualizeTimerC.nc"
-uint8_t arg_0x2ab239625448, 
+uint8_t arg_0x2b814de33448, 
 # 114 "/opt/tinyos-main/tos/lib/timer/Timer.nc"
 uint32_t t0, uint32_t dt);
 #line 92
 static bool /*HilTimerMilliC.VirtTimersMilli32*/VirtualizeTimerC$0$Timer$isRunning(
 # 48 "/opt/tinyos-main/tos/lib/timer/VirtualizeTimerC.nc"
-uint8_t arg_0x2ab239625448);
+uint8_t arg_0x2b814de33448);
 # 64 "/opt/tinyos-main/tos/lib/timer/Timer.nc"
 static void /*HilTimerMilliC.VirtTimersMilli32*/VirtualizeTimerC$0$Timer$startPeriodic(
 # 48 "/opt/tinyos-main/tos/lib/timer/VirtualizeTimerC.nc"
-uint8_t arg_0x2ab239625448, 
+uint8_t arg_0x2b814de33448, 
 # 64 "/opt/tinyos-main/tos/lib/timer/Timer.nc"
 uint32_t dt);
 
@@ -6639,7 +6637,7 @@ uint32_t dt);
 
 static void /*HilTimerMilliC.VirtTimersMilli32*/VirtualizeTimerC$0$Timer$startOneShot(
 # 48 "/opt/tinyos-main/tos/lib/timer/VirtualizeTimerC.nc"
-uint8_t arg_0x2ab239625448, 
+uint8_t arg_0x2b814de33448, 
 # 73 "/opt/tinyos-main/tos/lib/timer/Timer.nc"
 uint32_t dt);
 
@@ -6648,7 +6646,7 @@ uint32_t dt);
 
 static void /*HilTimerMilliC.VirtTimersMilli32*/VirtualizeTimerC$0$Timer$stop(
 # 48 "/opt/tinyos-main/tos/lib/timer/VirtualizeTimerC.nc"
-uint8_t arg_0x2ab239625448);
+uint8_t arg_0x2b814de33448);
 # 75 "/opt/tinyos-main/tos/interfaces/TaskBasic.nc"
 static void /*HilTimerMilliC.AlarmToTimerMilli32*/AlarmToTimerC$0$fired$runTask(void );
 # 78 "/opt/tinyos-main/tos/lib/timer/Alarm.nc"
@@ -6956,7 +6954,7 @@ static void /*HplSam3uGeneralIOC.PioA.Port*/HplSam3GeneralIOPortP$0$HplPort$fire
 #line 39
 static void /*HplSam3uGeneralIOC.PioA.Port*/HplSam3GeneralIOPortP$0$Bits$default$fired(
 # 40 "/opt/tinyos-main/tos/chips/cortex/m3/sam3/pins/HplSam3GeneralIOPortP.nc"
-uint8_t arg_0x2ab239b86128, 
+uint8_t arg_0x2b814e394128, 
 # 39 "/opt/tinyos-main/tos/chips/cortex/m3/sam3/pins/HplSam3GeneralIOPort.nc"
 uint32_t time);
 # 77 "/opt/tinyos-main/tos/chips/cortex/m3/sam3/pins/HplSam3GeneralIOPin.nc"
@@ -7190,26 +7188,26 @@ static void /*HplSam3uGeneralIOC.PioB.Port*/HplSam3GeneralIOPortP$1$HplPort$fire
 #line 39
 static void /*HplSam3uGeneralIOC.PioB.Port*/HplSam3GeneralIOPortP$1$Bits$default$fired(
 # 40 "/opt/tinyos-main/tos/chips/cortex/m3/sam3/pins/HplSam3GeneralIOPortP.nc"
-uint8_t arg_0x2ab239b86128, 
+uint8_t arg_0x2b814e394128, 
 # 39 "/opt/tinyos-main/tos/chips/cortex/m3/sam3/pins/HplSam3GeneralIOPort.nc"
 uint32_t time);
 
 
 static void /*HplSam3uGeneralIOC.PioB.Port*/HplSam3GeneralIOPortP$1$Bits$enableInterrupt(
 # 40 "/opt/tinyos-main/tos/chips/cortex/m3/sam3/pins/HplSam3GeneralIOPortP.nc"
-uint8_t arg_0x2ab239b86128);
+uint8_t arg_0x2b814e394128);
 # 45 "/opt/tinyos-main/tos/chips/cortex/m3/sam3/pins/HplSam3GeneralIOPort.nc"
 static void /*HplSam3uGeneralIOC.PioB.Port*/HplSam3GeneralIOPortP$1$Bits$disableInterrupt(
 # 40 "/opt/tinyos-main/tos/chips/cortex/m3/sam3/pins/HplSam3GeneralIOPortP.nc"
-uint8_t arg_0x2ab239b86128);
+uint8_t arg_0x2b814e394128);
 # 51 "/opt/tinyos-main/tos/chips/cortex/m3/sam3/pins/HplSam3GeneralIOPort.nc"
 static void /*HplSam3uGeneralIOC.PioB.Port*/HplSam3GeneralIOPortP$1$Bits$disableClock(
 # 40 "/opt/tinyos-main/tos/chips/cortex/m3/sam3/pins/HplSam3GeneralIOPortP.nc"
-uint8_t arg_0x2ab239b86128);
+uint8_t arg_0x2b814e394128);
 # 48 "/opt/tinyos-main/tos/chips/cortex/m3/sam3/pins/HplSam3GeneralIOPort.nc"
 static void /*HplSam3uGeneralIOC.PioB.Port*/HplSam3GeneralIOPortP$1$Bits$enableClock(
 # 40 "/opt/tinyos-main/tos/chips/cortex/m3/sam3/pins/HplSam3GeneralIOPortP.nc"
-uint8_t arg_0x2ab239b86128);
+uint8_t arg_0x2b814e394128);
 # 61 "/opt/tinyos-main/tos/interfaces/GpioCapture.nc"
 static void /*HplSam3uGeneralIOC.PioC.Bit0*/HplSam3GeneralIOPinP$64$Capture$default$captured(uint16_t time);
 # 39 "/opt/tinyos-main/tos/chips/cortex/m3/sam3/pins/HplSam3GeneralIOPort.nc"
@@ -7449,13 +7447,13 @@ static void /*HplSam3uGeneralIOC.PioC.Port*/HplSam3GeneralIOPortP$2$HplPort$fire
 #line 39
 static void /*HplSam3uGeneralIOC.PioC.Port*/HplSam3GeneralIOPortP$2$Bits$default$fired(
 # 40 "/opt/tinyos-main/tos/chips/cortex/m3/sam3/pins/HplSam3GeneralIOPortP.nc"
-uint8_t arg_0x2ab239b86128, 
+uint8_t arg_0x2b814e394128, 
 # 39 "/opt/tinyos-main/tos/chips/cortex/m3/sam3/pins/HplSam3GeneralIOPort.nc"
 uint32_t time);
 #line 51
 static void /*HplSam3uGeneralIOC.PioC.Port*/HplSam3GeneralIOPortP$2$Bits$disableClock(
 # 40 "/opt/tinyos-main/tos/chips/cortex/m3/sam3/pins/HplSam3GeneralIOPortP.nc"
-uint8_t arg_0x2ab239b86128);
+uint8_t arg_0x2b814e394128);
 # 109 "/opt/tinyos-main/tos/lib/timer/Alarm.nc"
 static HalSam3RttP$Alarm$size_type HalSam3RttP$Alarm$getNow(void );
 #line 103
@@ -7474,25 +7472,25 @@ static void HalSam3RttP$HplSam3Rtt$alarmFired(void );
 # 109 "/opt/tinyos-main/tos/lib/timer/Alarm.nc"
 static /*HilAlarmMilliC.VirtAlarmsTMilli*/VirtualizeAlarmC$0$Alarm$size_type /*HilAlarmMilliC.VirtAlarmsTMilli*/VirtualizeAlarmC$0$Alarm$getNow(
 # 49 "/opt/tinyos-main/tos/lib/timer/VirtualizeAlarmC.nc"
-uint8_t arg_0x2ab23a041738);
+uint8_t arg_0x2b814e84f738);
 # 78 "/opt/tinyos-main/tos/lib/timer/Alarm.nc"
 static void /*HilAlarmMilliC.VirtAlarmsTMilli*/VirtualizeAlarmC$0$Alarm$default$fired(
 # 49 "/opt/tinyos-main/tos/lib/timer/VirtualizeAlarmC.nc"
-uint8_t arg_0x2ab23a041738);
+uint8_t arg_0x2b814e84f738);
 # 103 "/opt/tinyos-main/tos/lib/timer/Alarm.nc"
 static void /*HilAlarmMilliC.VirtAlarmsTMilli*/VirtualizeAlarmC$0$Alarm$startAt(
 # 49 "/opt/tinyos-main/tos/lib/timer/VirtualizeAlarmC.nc"
-uint8_t arg_0x2ab23a041738, 
+uint8_t arg_0x2b814e84f738, 
 # 103 "/opt/tinyos-main/tos/lib/timer/Alarm.nc"
 /*HilAlarmMilliC.VirtAlarmsTMilli*/VirtualizeAlarmC$0$Alarm$size_type t0, /*HilAlarmMilliC.VirtAlarmsTMilli*/VirtualizeAlarmC$0$Alarm$size_type dt);
 #line 116
 static /*HilAlarmMilliC.VirtAlarmsTMilli*/VirtualizeAlarmC$0$Alarm$size_type /*HilAlarmMilliC.VirtAlarmsTMilli*/VirtualizeAlarmC$0$Alarm$getAlarm(
 # 49 "/opt/tinyos-main/tos/lib/timer/VirtualizeAlarmC.nc"
-uint8_t arg_0x2ab23a041738);
+uint8_t arg_0x2b814e84f738);
 # 73 "/opt/tinyos-main/tos/lib/timer/Alarm.nc"
 static void /*HilAlarmMilliC.VirtAlarmsTMilli*/VirtualizeAlarmC$0$Alarm$stop(
 # 49 "/opt/tinyos-main/tos/lib/timer/VirtualizeAlarmC.nc"
-uint8_t arg_0x2ab23a041738);
+uint8_t arg_0x2b814e84f738);
 # 78 "/opt/tinyos-main/tos/lib/timer/Alarm.nc"
 static void /*HilAlarmMilliC.VirtAlarmsTMilli*/VirtualizeAlarmC$0$AlarmFrom$fired(void );
 # 49 "/opt/tinyos-main/tos/lib/rfxlink/util/RadioPacket.nc"
@@ -7516,13 +7514,13 @@ static uint8_t /*RF212RadioC.MetadataFlagsLayerC*/MetadataFlagsLayerC$0$RadioPac
 # 55 "/opt/tinyos-main/tos/lib/rfxlink/util/PacketFlag.nc"
 static void /*RF212RadioC.MetadataFlagsLayerC*/MetadataFlagsLayerC$0$PacketFlag$clear(
 # 42 "/opt/tinyos-main/tos/lib/rfxlink/layers/MetadataFlagsLayerC.nc"
-uint8_t arg_0x2ab23a0c1b60, 
+uint8_t arg_0x2b814e8cfb60, 
 # 55 "/opt/tinyos-main/tos/lib/rfxlink/util/PacketFlag.nc"
 message_t *msg);
 #line 40
 static bool /*RF212RadioC.MetadataFlagsLayerC*/MetadataFlagsLayerC$0$PacketFlag$get(
 # 42 "/opt/tinyos-main/tos/lib/rfxlink/layers/MetadataFlagsLayerC.nc"
-uint8_t arg_0x2ab23a0c1b60, 
+uint8_t arg_0x2b814e8cfb60, 
 # 40 "/opt/tinyos-main/tos/lib/rfxlink/util/PacketFlag.nc"
 message_t *msg);
 
@@ -7536,7 +7534,7 @@ message_t *msg);
 
 static void /*RF212RadioC.MetadataFlagsLayerC*/MetadataFlagsLayerC$0$PacketFlag$set(
 # 42 "/opt/tinyos-main/tos/lib/rfxlink/layers/MetadataFlagsLayerC.nc"
-uint8_t arg_0x2ab23a0c1b60, 
+uint8_t arg_0x2b814e8cfb60, 
 # 50 "/opt/tinyos-main/tos/lib/rfxlink/util/PacketFlag.nc"
 message_t *msg);
 # 52 "/opt/tinyos-main/tos/lib/rfxlink/util/RadioCCA.nc"
@@ -7751,41 +7749,41 @@ static resource_client_id_t /*HilSam3SpiC.ArbiterC.Queue*/FcfsResourceQueueC$1$F
 # 53 "/opt/tinyos-main/tos/interfaces/ResourceRequested.nc"
 static void /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$ResourceRequested$default$requested(
 # 55 "/opt/tinyos-main/tos/system/ArbiterP.nc"
-uint8_t arg_0x2ab23a3724b8);
+uint8_t arg_0x2b814eb804b8);
 # 61 "/opt/tinyos-main/tos/interfaces/ResourceRequested.nc"
 static void /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$ResourceRequested$default$immediateRequested(
 # 55 "/opt/tinyos-main/tos/system/ArbiterP.nc"
-uint8_t arg_0x2ab23a3724b8);
+uint8_t arg_0x2b814eb804b8);
 # 65 "/opt/tinyos-main/tos/interfaces/ResourceConfigure.nc"
 static void /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$default$unconfigure(
 # 60 "/opt/tinyos-main/tos/system/ArbiterP.nc"
-uint8_t arg_0x2ab23a3706e0);
+uint8_t arg_0x2b814eb7e6e0);
 # 59 "/opt/tinyos-main/tos/interfaces/ResourceConfigure.nc"
 static void /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$default$configure(
 # 60 "/opt/tinyos-main/tos/system/ArbiterP.nc"
-uint8_t arg_0x2ab23a3706e0);
+uint8_t arg_0x2b814eb7e6e0);
 # 56 "/opt/tinyos-main/tos/interfaces/ResourceDefaultOwner.nc"
 static error_t /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$ResourceDefaultOwner$release(void );
 # 120 "/opt/tinyos-main/tos/interfaces/Resource.nc"
 static error_t /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$Resource$release(
 # 54 "/opt/tinyos-main/tos/system/ArbiterP.nc"
-uint8_t arg_0x2ab23a3732f0);
+uint8_t arg_0x2b814eb812f0);
 # 97 "/opt/tinyos-main/tos/interfaces/Resource.nc"
 static error_t /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$Resource$immediateRequest(
 # 54 "/opt/tinyos-main/tos/system/ArbiterP.nc"
-uint8_t arg_0x2ab23a3732f0);
+uint8_t arg_0x2b814eb812f0);
 # 88 "/opt/tinyos-main/tos/interfaces/Resource.nc"
 static error_t /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$Resource$request(
 # 54 "/opt/tinyos-main/tos/system/ArbiterP.nc"
-uint8_t arg_0x2ab23a3732f0);
+uint8_t arg_0x2b814eb812f0);
 # 102 "/opt/tinyos-main/tos/interfaces/Resource.nc"
 static void /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$Resource$default$granted(
 # 54 "/opt/tinyos-main/tos/system/ArbiterP.nc"
-uint8_t arg_0x2ab23a3732f0);
+uint8_t arg_0x2b814eb812f0);
 # 128 "/opt/tinyos-main/tos/interfaces/Resource.nc"
 static bool /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$Resource$isOwner(
 # 54 "/opt/tinyos-main/tos/system/ArbiterP.nc"
-uint8_t arg_0x2ab23a3732f0);
+uint8_t arg_0x2b814eb812f0);
 # 98 "/opt/tinyos-main/tos/interfaces/ArbiterInfo.nc"
 static uint8_t /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$ArbiterInfo$userId(void );
 # 75 "/opt/tinyos-main/tos/interfaces/TaskBasic.nc"
@@ -7803,7 +7801,7 @@ static void HilSam3SpiP$HplSam3SpiInterrupts$receivedData(uint16_t data);
 # 82 "/opt/tinyos-main/tos/interfaces/SpiPacket.nc"
 static void HilSam3SpiP$SpiPacket$default$sendDone(
 # 48 "/opt/tinyos-main/tos/chips/cortex/m3/sam3/spi/HilSam3SpiP.nc"
-uint8_t arg_0x2ab23a405200, 
+uint8_t arg_0x2b814ec13200, 
 # 75 "/opt/tinyos-main/tos/interfaces/SpiPacket.nc"
 uint8_t * txBuf, 
 uint8_t * rxBuf, 
@@ -7817,7 +7815,7 @@ error_t error);
 # 45 "/opt/tinyos-main/tos/interfaces/SpiByte.nc"
 static uint8_t HilSam3SpiP$SpiByte$write(
 # 47 "/opt/tinyos-main/tos/chips/cortex/m3/sam3/spi/HilSam3SpiP.nc"
-uint8_t arg_0x2ab23a406728, 
+uint8_t arg_0x2b814ec14728, 
 # 45 "/opt/tinyos-main/tos/interfaces/SpiByte.nc"
 uint8_t tx);
 # 62 "/opt/tinyos-main/tos/interfaces/Init.nc"
@@ -7827,23 +7825,23 @@ static void HilSam3SpiP$signalDone_task$runTask(void );
 # 62 "/opt/tinyos-main/tos/interfaces/FastSpiByte.nc"
 static void /*HilSam3SpiC.FastSpiSam3C*/FastSpiSam3C$0$FastSpiByte$splitWrite(
 # 39 "/opt/tinyos-main/tos/chips/cortex/m3/sam3/spi/FastSpiSam3C.nc"
-uint8_t arg_0x2ab23a450370, 
+uint8_t arg_0x2b814ec5e370, 
 # 62 "/opt/tinyos-main/tos/interfaces/FastSpiByte.nc"
 uint8_t data);
 #line 74
 static uint8_t /*HilSam3SpiC.FastSpiSam3C*/FastSpiSam3C$0$FastSpiByte$splitReadWrite(
 # 39 "/opt/tinyos-main/tos/chips/cortex/m3/sam3/spi/FastSpiSam3C.nc"
-uint8_t arg_0x2ab23a450370, 
+uint8_t arg_0x2b814ec5e370, 
 # 74 "/opt/tinyos-main/tos/interfaces/FastSpiByte.nc"
 uint8_t data);
 #line 68
 static uint8_t /*HilSam3SpiC.FastSpiSam3C*/FastSpiSam3C$0$FastSpiByte$splitRead(
 # 39 "/opt/tinyos-main/tos/chips/cortex/m3/sam3/spi/FastSpiSam3C.nc"
-uint8_t arg_0x2ab23a450370);
+uint8_t arg_0x2b814ec5e370);
 # 81 "/opt/tinyos-main/tos/interfaces/FastSpiByte.nc"
 static uint8_t /*HilSam3SpiC.FastSpiSam3C*/FastSpiSam3C$0$FastSpiByte$write(
 # 39 "/opt/tinyos-main/tos/chips/cortex/m3/sam3/spi/FastSpiSam3C.nc"
-uint8_t arg_0x2ab23a450370, 
+uint8_t arg_0x2b814ec5e370, 
 # 81 "/opt/tinyos-main/tos/interfaces/FastSpiByte.nc"
 uint8_t data);
 # 65 "/opt/tinyos-main/tos/interfaces/ResourceConfigure.nc"
@@ -7891,21 +7889,21 @@ static void /*LocalTimeMicroC.CounterToLocalTimeC*/CounterToLocalTimeC$0$Counter
 # 109 "/opt/tinyos-main/tos/lib/timer/Alarm.nc"
 static /*HilAlarmTMicro16C.VirtAlarmsTMicro16*/VirtualizeAlarmC$1$Alarm$size_type /*HilAlarmTMicro16C.VirtAlarmsTMicro16*/VirtualizeAlarmC$1$Alarm$getNow(
 # 49 "/opt/tinyos-main/tos/lib/timer/VirtualizeAlarmC.nc"
-uint8_t arg_0x2ab23a041738);
+uint8_t arg_0x2b814e84f738);
 # 78 "/opt/tinyos-main/tos/lib/timer/Alarm.nc"
 static void /*HilAlarmTMicro16C.VirtAlarmsTMicro16*/VirtualizeAlarmC$1$Alarm$default$fired(
 # 49 "/opt/tinyos-main/tos/lib/timer/VirtualizeAlarmC.nc"
-uint8_t arg_0x2ab23a041738);
+uint8_t arg_0x2b814e84f738);
 # 103 "/opt/tinyos-main/tos/lib/timer/Alarm.nc"
 static void /*HilAlarmTMicro16C.VirtAlarmsTMicro16*/VirtualizeAlarmC$1$Alarm$startAt(
 # 49 "/opt/tinyos-main/tos/lib/timer/VirtualizeAlarmC.nc"
-uint8_t arg_0x2ab23a041738, 
+uint8_t arg_0x2b814e84f738, 
 # 103 "/opt/tinyos-main/tos/lib/timer/Alarm.nc"
 /*HilAlarmTMicro16C.VirtAlarmsTMicro16*/VirtualizeAlarmC$1$Alarm$size_type t0, /*HilAlarmTMicro16C.VirtAlarmsTMicro16*/VirtualizeAlarmC$1$Alarm$size_type dt);
 #line 66
 static void /*HilAlarmTMicro16C.VirtAlarmsTMicro16*/VirtualizeAlarmC$1$Alarm$start(
 # 49 "/opt/tinyos-main/tos/lib/timer/VirtualizeAlarmC.nc"
-uint8_t arg_0x2ab23a041738, 
+uint8_t arg_0x2b814e84f738, 
 # 66 "/opt/tinyos-main/tos/lib/timer/Alarm.nc"
 /*HilAlarmTMicro16C.VirtAlarmsTMicro16*/VirtualizeAlarmC$1$Alarm$size_type dt);
 
@@ -7916,7 +7914,7 @@ uint8_t arg_0x2ab23a041738,
 
 static void /*HilAlarmTMicro16C.VirtAlarmsTMicro16*/VirtualizeAlarmC$1$Alarm$stop(
 # 49 "/opt/tinyos-main/tos/lib/timer/VirtualizeAlarmC.nc"
-uint8_t arg_0x2ab23a041738);
+uint8_t arg_0x2b814e84f738);
 # 78 "/opt/tinyos-main/tos/lib/timer/Alarm.nc"
 static void /*HilAlarmTMicro16C.VirtAlarmsTMicro16*/VirtualizeAlarmC$1$AlarmFrom$fired(void );
 # 43 "/opt/tinyos-main/tos/chips/cortex/m3/sam3/timer/HplSam3TCChannel.nc"
@@ -8042,11 +8040,11 @@ static uint16_t RF231RadioP$RandomCollisionConfig$getTransmitBarrier(message_t *
 # 60 "/opt/tinyos-main/tos/lib/rfxlink/util/RadioAlarm.nc"
 static void /*RF231RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP$1$RadioAlarm$default$fired(
 # 54 "/opt/tinyos-main/tos/lib/rfxlink/util/RadioAlarmP.nc"
-uint8_t arg_0x2ab23919cce8);
+uint8_t arg_0x2b814d9aace8);
 # 50 "/opt/tinyos-main/tos/lib/rfxlink/util/RadioAlarm.nc"
 static void /*RF231RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP$1$RadioAlarm$wait(
 # 54 "/opt/tinyos-main/tos/lib/rfxlink/util/RadioAlarmP.nc"
-uint8_t arg_0x2ab23919cce8, 
+uint8_t arg_0x2b814d9aace8, 
 # 50 "/opt/tinyos-main/tos/lib/rfxlink/util/RadioAlarm.nc"
 tradio_size timeout);
 
@@ -8055,15 +8053,15 @@ tradio_size timeout);
 
 static void /*RF231RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP$1$RadioAlarm$cancel(
 # 54 "/opt/tinyos-main/tos/lib/rfxlink/util/RadioAlarmP.nc"
-uint8_t arg_0x2ab23919cce8);
+uint8_t arg_0x2b814d9aace8);
 # 45 "/opt/tinyos-main/tos/lib/rfxlink/util/RadioAlarm.nc"
 static bool /*RF231RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP$1$RadioAlarm$isFree(
 # 54 "/opt/tinyos-main/tos/lib/rfxlink/util/RadioAlarmP.nc"
-uint8_t arg_0x2ab23919cce8);
+uint8_t arg_0x2b814d9aace8);
 # 65 "/opt/tinyos-main/tos/lib/rfxlink/util/RadioAlarm.nc"
 static tradio_size /*RF231RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP$1$RadioAlarm$getNow(
 # 54 "/opt/tinyos-main/tos/lib/rfxlink/util/RadioAlarmP.nc"
-uint8_t arg_0x2ab23919cce8);
+uint8_t arg_0x2b814d9aace8);
 # 78 "/opt/tinyos-main/tos/lib/timer/Alarm.nc"
 static void /*RF231RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP$1$Alarm$fired(void );
 # 48 "/opt/tinyos-main/tos/lib/rfxlink/util/Tasklet.nc"
@@ -8086,7 +8084,7 @@ static void /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessage
 # 59 "/opt/tinyos-main/tos/interfaces/SendNotifier.nc"
 static void /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$1$SendNotifier$default$aboutToSend(
 # 48 "/opt/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageLayerP.nc"
-am_id_t arg_0x2ab2391eeca8, 
+am_id_t arg_0x2b814d9fcca8, 
 # 59 "/opt/tinyos-main/tos/interfaces/SendNotifier.nc"
 am_addr_t dest, 
 #line 57
@@ -8122,7 +8120,7 @@ uint8_t len);
 # 80 "/opt/tinyos-main/tos/interfaces/AMSend.nc"
 static error_t /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$1$AMSend$send(
 # 45 "/opt/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageLayerP.nc"
-am_id_t arg_0x2ab2391f03c8, 
+am_id_t arg_0x2b814d9fe3c8, 
 # 80 "/opt/tinyos-main/tos/interfaces/AMSend.nc"
 am_addr_t addr, 
 #line 71
@@ -8139,11 +8137,11 @@ uint8_t len);
 #line 123
 static uint8_t /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$1$AMSend$maxPayloadLength(
 # 45 "/opt/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageLayerP.nc"
-am_id_t arg_0x2ab2391f03c8);
+am_id_t arg_0x2b814d9fe3c8);
 # 110 "/opt/tinyos-main/tos/interfaces/AMSend.nc"
 static void /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$1$AMSend$default$sendDone(
 # 45 "/opt/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageLayerP.nc"
-am_id_t arg_0x2ab2391f03c8, 
+am_id_t arg_0x2b814d9fe3c8, 
 # 103 "/opt/tinyos-main/tos/interfaces/AMSend.nc"
 message_t * msg, 
 
@@ -8162,7 +8160,7 @@ message_t *
 
 /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$1$Snoop$default$receive(
 # 47 "/opt/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageLayerP.nc"
-am_id_t arg_0x2ab2391ee1a0, 
+am_id_t arg_0x2b814d9fc1a0, 
 # 71 "/opt/tinyos-main/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -8197,7 +8195,7 @@ message_t *
 
 /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$1$Receive$default$receive(
 # 46 "/opt/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageLayerP.nc"
-am_id_t arg_0x2ab2391ef5f8, 
+am_id_t arg_0x2b814d9fd5f8, 
 # 71 "/opt/tinyos-main/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -8216,7 +8214,7 @@ message_t *
 
 /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$1$ReceiveDefault$default$receive(
 # 51 "/opt/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageLayerP.nc"
-am_id_t arg_0x2ab2391ed8b0, 
+am_id_t arg_0x2b814d9fb8b0, 
 # 71 "/opt/tinyos-main/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -8300,7 +8298,7 @@ message_t *
 
 /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$1$SnoopDefault$default$receive(
 # 52 "/opt/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageLayerP.nc"
-am_id_t arg_0x2ab2391eb488, 
+am_id_t arg_0x2b814d9f9488, 
 # 71 "/opt/tinyos-main/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -8342,35 +8340,35 @@ static resource_client_id_t /*RF231RadioC.SendResourceC.Queue*/FcfsResourceQueue
 # 53 "/opt/tinyos-main/tos/interfaces/ResourceRequested.nc"
 static void /*RF231RadioC.SendResourceC.Arbiter*/SimpleArbiterP$1$ResourceRequested$default$requested(
 # 52 "/opt/tinyos-main/tos/system/SimpleArbiterP.nc"
-uint8_t arg_0x2ab2392cd1a0);
+uint8_t arg_0x2b814dadb1a0);
 # 61 "/opt/tinyos-main/tos/interfaces/ResourceRequested.nc"
 static void /*RF231RadioC.SendResourceC.Arbiter*/SimpleArbiterP$1$ResourceRequested$default$immediateRequested(
 # 52 "/opt/tinyos-main/tos/system/SimpleArbiterP.nc"
-uint8_t arg_0x2ab2392cd1a0);
+uint8_t arg_0x2b814dadb1a0);
 # 65 "/opt/tinyos-main/tos/interfaces/ResourceConfigure.nc"
 static void /*RF231RadioC.SendResourceC.Arbiter*/SimpleArbiterP$1$ResourceConfigure$default$unconfigure(
 # 56 "/opt/tinyos-main/tos/system/SimpleArbiterP.nc"
-uint8_t arg_0x2ab2392cc6e0);
+uint8_t arg_0x2b814dada6e0);
 # 59 "/opt/tinyos-main/tos/interfaces/ResourceConfigure.nc"
 static void /*RF231RadioC.SendResourceC.Arbiter*/SimpleArbiterP$1$ResourceConfigure$default$configure(
 # 56 "/opt/tinyos-main/tos/system/SimpleArbiterP.nc"
-uint8_t arg_0x2ab2392cc6e0);
+uint8_t arg_0x2b814dada6e0);
 # 120 "/opt/tinyos-main/tos/interfaces/Resource.nc"
 static error_t /*RF231RadioC.SendResourceC.Arbiter*/SimpleArbiterP$1$Resource$release(
 # 51 "/opt/tinyos-main/tos/system/SimpleArbiterP.nc"
-uint8_t arg_0x2ab2392ce020);
+uint8_t arg_0x2b814dadc020);
 # 97 "/opt/tinyos-main/tos/interfaces/Resource.nc"
 static error_t /*RF231RadioC.SendResourceC.Arbiter*/SimpleArbiterP$1$Resource$immediateRequest(
 # 51 "/opt/tinyos-main/tos/system/SimpleArbiterP.nc"
-uint8_t arg_0x2ab2392ce020);
+uint8_t arg_0x2b814dadc020);
 # 88 "/opt/tinyos-main/tos/interfaces/Resource.nc"
 static error_t /*RF231RadioC.SendResourceC.Arbiter*/SimpleArbiterP$1$Resource$request(
 # 51 "/opt/tinyos-main/tos/system/SimpleArbiterP.nc"
-uint8_t arg_0x2ab2392ce020);
+uint8_t arg_0x2b814dadc020);
 # 102 "/opt/tinyos-main/tos/interfaces/Resource.nc"
 static void /*RF231RadioC.SendResourceC.Arbiter*/SimpleArbiterP$1$Resource$default$granted(
 # 51 "/opt/tinyos-main/tos/system/SimpleArbiterP.nc"
-uint8_t arg_0x2ab2392ce020);
+uint8_t arg_0x2b814dadc020);
 # 75 "/opt/tinyos-main/tos/interfaces/TaskBasic.nc"
 static void /*RF231RadioC.SendResourceC.Arbiter*/SimpleArbiterP$1$grantedTask$runTask(void );
 # 54 "/opt/tinyos-main/tos/lib/rfxlink/util/BareSend.nc"
@@ -8630,13 +8628,13 @@ static uint8_t /*RF231RadioC.MetadataFlagsLayerC*/MetadataFlagsLayerC$1$RadioPac
 # 55 "/opt/tinyos-main/tos/lib/rfxlink/util/PacketFlag.nc"
 static void /*RF231RadioC.MetadataFlagsLayerC*/MetadataFlagsLayerC$1$PacketFlag$clear(
 # 42 "/opt/tinyos-main/tos/lib/rfxlink/layers/MetadataFlagsLayerC.nc"
-uint8_t arg_0x2ab23a0c1b60, 
+uint8_t arg_0x2b814e8cfb60, 
 # 55 "/opt/tinyos-main/tos/lib/rfxlink/util/PacketFlag.nc"
 message_t *msg);
 #line 40
 static bool /*RF231RadioC.MetadataFlagsLayerC*/MetadataFlagsLayerC$1$PacketFlag$get(
 # 42 "/opt/tinyos-main/tos/lib/rfxlink/layers/MetadataFlagsLayerC.nc"
-uint8_t arg_0x2ab23a0c1b60, 
+uint8_t arg_0x2b814e8cfb60, 
 # 40 "/opt/tinyos-main/tos/lib/rfxlink/util/PacketFlag.nc"
 message_t *msg);
 
@@ -8650,7 +8648,7 @@ message_t *msg);
 
 static void /*RF231RadioC.MetadataFlagsLayerC*/MetadataFlagsLayerC$1$PacketFlag$set(
 # 42 "/opt/tinyos-main/tos/lib/rfxlink/layers/MetadataFlagsLayerC.nc"
-uint8_t arg_0x2ab23a0c1b60, 
+uint8_t arg_0x2b814e8cfb60, 
 # 50 "/opt/tinyos-main/tos/lib/rfxlink/util/PacketFlag.nc"
 message_t *msg);
 # 52 "/opt/tinyos-main/tos/lib/rfxlink/util/RadioCCA.nc"
@@ -8734,11 +8732,11 @@ static void /*RF231DriverLayerC.TaskletC*/TaskletC$1$Tasklet$schedule(void );
 # 67 "/opt/tinyos-main/tos/interfaces/TaskBasic.nc"
 static error_t SchedulerBasicP$TaskBasic$postTask(
 # 56 "/opt/tinyos-main/tos/system/SchedulerBasicP.nc"
-uint8_t arg_0x2ab2388110c8);
+uint8_t arg_0x2b814d01f0c8);
 # 75 "/opt/tinyos-main/tos/interfaces/TaskBasic.nc"
 static void SchedulerBasicP$TaskBasic$default$runTask(
 # 56 "/opt/tinyos-main/tos/system/SchedulerBasicP.nc"
-uint8_t arg_0x2ab2388110c8);
+uint8_t arg_0x2b814d01f0c8);
 # 57 "/opt/tinyos-main/tos/interfaces/Scheduler.nc"
 static void SchedulerBasicP$Scheduler$init(void );
 #line 72
@@ -8868,7 +8866,7 @@ static void /*CtpP.Forwarder*/CtpForwardingEngineP$0$RetxmitTimer1$fired(void );
 # 31 "/opt/tinyos-main/tos/interfaces/Intercept.nc"
 static bool /*CtpP.Forwarder*/CtpForwardingEngineP$0$Intercept$default$forward(
 # 114 "../ctp/CtpForwardingEngineP.nc"
-collection_id_t arg_0x2ab23a96ada8, 
+collection_id_t arg_0x2b814f1759b0, 
 # 20 "/opt/tinyos-main/tos/interfaces/Intercept.nc"
 message_t * msg, 
 
@@ -8919,7 +8917,7 @@ message_t *
 
 /*CtpP.Forwarder*/CtpForwardingEngineP$0$Snoop$default$receive(
 # 113 "../ctp/CtpForwardingEngineP.nc"
-collection_id_t arg_0x2ab23a96a270, 
+collection_id_t arg_0x2b814f176e08, 
 # 71 "/opt/tinyos-main/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -8932,7 +8930,7 @@ uint8_t len);
 # 75 "/opt/tinyos-main/tos/interfaces/Send.nc"
 static error_t /*CtpP.Forwarder*/CtpForwardingEngineP$0$Send$send(
 # 111 "../ctp/CtpForwardingEngineP.nc"
-uint8_t arg_0x2ab23a96d3f0, 
+uint8_t arg_0x2b814f178108, 
 # 67 "/opt/tinyos-main/tos/interfaces/Send.nc"
 message_t * msg, 
 
@@ -8950,7 +8948,7 @@ void *
 
 /*CtpP.Forwarder*/CtpForwardingEngineP$0$Send$getPayload(
 # 111 "../ctp/CtpForwardingEngineP.nc"
-uint8_t arg_0x2ab23a96d3f0, 
+uint8_t arg_0x2b814f178108, 
 # 122 "/opt/tinyos-main/tos/interfaces/Send.nc"
 message_t * msg, 
 
@@ -8959,11 +8957,11 @@ uint8_t len);
 #line 112
 static uint8_t /*CtpP.Forwarder*/CtpForwardingEngineP$0$Send$maxPayloadLength(
 # 111 "../ctp/CtpForwardingEngineP.nc"
-uint8_t arg_0x2ab23a96d3f0);
+uint8_t arg_0x2b814f178108);
 # 100 "/opt/tinyos-main/tos/interfaces/Send.nc"
 static void /*CtpP.Forwarder*/CtpForwardingEngineP$0$Send$default$sendDone(
 # 111 "../ctp/CtpForwardingEngineP.nc"
-uint8_t arg_0x2ab23a96d3f0, 
+uint8_t arg_0x2b814f178108, 
 # 96 "/opt/tinyos-main/tos/interfaces/Send.nc"
 message_t * msg, 
 
@@ -9014,7 +9012,7 @@ message_t *
 
 /*CtpP.Forwarder*/CtpForwardingEngineP$0$Receive$default$receive(
 # 112 "../ctp/CtpForwardingEngineP.nc"
-collection_id_t arg_0x2ab23a96c648, 
+collection_id_t arg_0x2b814f176270, 
 # 71 "/opt/tinyos-main/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -9116,7 +9114,7 @@ static error_t /*CtpP.Forwarder*/CtpForwardingEngineP$0$StdControl$start(void );
 # 46 "/opt/tinyos-main/tos/lib/net/CollectionId.nc"
 static collection_id_t /*CtpP.Forwarder*/CtpForwardingEngineP$0$CollectionId$default$fetch(
 # 157 "../ctp/CtpForwardingEngineP.nc"
-uint8_t arg_0x2ab23a9bd020);
+uint8_t arg_0x2b814f1c8350);
 # 97 "/opt/tinyos-main/tos/interfaces/Pool.nc"
 static 
 #line 94
@@ -9419,19 +9417,13 @@ static void /*CtpP.Router1*/CtpRoutingEngineP1$0$CtpInfo1$recomputeRoutes(void )
 static void /*CtpP.Router1*/CtpRoutingEngineP1$0$CtpInfo1$triggerRouteUpdate(void );
 #line 64
 static error_t /*CtpP.Router1*/CtpRoutingEngineP1$0$CtpInfo1$getEtx(uint16_t *etx);
+#line 88
+static void /*CtpP.Router1*/CtpRoutingEngineP1$0$CtpInfo1$setNeighborCongested(am_addr_t n, bool congested);
 #line 78
 static void /*CtpP.Router1*/CtpRoutingEngineP1$0$CtpInfo1$triggerImmediateRouteUpdate(void );
+#line 99
+static uint16_t /*CtpP.Router1*/CtpRoutingEngineP1$0$CtpInfo1$current_dad(void );
 
-
-
-
-
-
-
-
-
-static void /*CtpP.Router1*/CtpRoutingEngineP1$0$CtpInfo1$setNeighborCongested(am_addr_t n, bool congested);
-#line 100
 static uint32_t /*CtpP.Router1*/CtpRoutingEngineP1$0$CtpInfo1$totalBeacons(void );
 # 75 "/opt/tinyos-main/tos/interfaces/TaskBasic.nc"
 static void /*CtpP.Router1*/CtpRoutingEngineP1$0$sendBeaconTask$runTask(void );
@@ -9520,7 +9512,18 @@ static void /*CtpP.Router2*/CtpRoutingEngineP2$0$CtpInfo2$triggerRouteUpdate(voi
 static error_t /*CtpP.Router2*/CtpRoutingEngineP2$0$CtpInfo2$getEtx(uint16_t *etx);
 #line 88
 static void /*CtpP.Router2*/CtpRoutingEngineP2$0$CtpInfo2$setNeighborCongested(am_addr_t n, bool congested);
-#line 100
+
+
+
+
+
+
+
+
+
+
+static uint16_t /*CtpP.Router2*/CtpRoutingEngineP2$0$CtpInfo2$current_dad(void );
+
 static uint32_t /*CtpP.Router2*/CtpRoutingEngineP2$0$CtpInfo2$totalBeacons(void );
 # 51 "../ctp/CompareBit.nc"
 static bool /*CtpP.Router2*/CtpRoutingEngineP2$0$CompareBit$shouldInsert(message_t * msg, void * payload, uint8_t len);
@@ -9596,7 +9599,7 @@ uint8_t len);
 # 80 "/opt/tinyos-main/tos/interfaces/AMSend.nc"
 static error_t /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMSend$send(
 # 47 "/opt/tinyos-main/tos/lib/serial/SerialActiveMessageP.nc"
-am_id_t arg_0x2ab23aef19a8, 
+am_id_t arg_0x2b814f6f56c8, 
 # 80 "/opt/tinyos-main/tos/interfaces/AMSend.nc"
 am_addr_t addr, 
 #line 71
@@ -9617,7 +9620,7 @@ void *
 
 /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMSend$getPayload(
 # 47 "/opt/tinyos-main/tos/lib/serial/SerialActiveMessageP.nc"
-am_id_t arg_0x2ab23aef19a8, 
+am_id_t arg_0x2b814f6f56c8, 
 # 132 "/opt/tinyos-main/tos/interfaces/AMSend.nc"
 message_t * msg, 
 
@@ -9660,7 +9663,7 @@ message_t *
 
 /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Receive$default$receive(
 # 48 "/opt/tinyos-main/tos/lib/serial/SerialActiveMessageP.nc"
-am_id_t arg_0x2ab23aeeec18, 
+am_id_t arg_0x2b814f6f4908, 
 # 71 "/opt/tinyos-main/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -9729,7 +9732,7 @@ static void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiveTa
 # 75 "/opt/tinyos-main/tos/interfaces/Send.nc"
 static error_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Send$send(
 # 51 "/opt/tinyos-main/tos/lib/serial/SerialDispatcherP.nc"
-uart_id_t arg_0x2ab23b076020, 
+uart_id_t arg_0x2b814f87c020, 
 # 67 "/opt/tinyos-main/tos/interfaces/Send.nc"
 message_t * msg, 
 
@@ -9743,7 +9746,7 @@ uint8_t len);
 #line 100
 static void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Send$default$sendDone(
 # 51 "/opt/tinyos-main/tos/lib/serial/SerialDispatcherP.nc"
-uart_id_t arg_0x2ab23b076020, 
+uart_id_t arg_0x2b814f87c020, 
 # 96 "/opt/tinyos-main/tos/interfaces/Send.nc"
 message_t * msg, 
 
@@ -9761,7 +9764,7 @@ message_t *
 
 /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Receive$default$receive(
 # 50 "/opt/tinyos-main/tos/lib/serial/SerialDispatcherP.nc"
-uart_id_t arg_0x2ab23b077468, 
+uart_id_t arg_0x2b814f87d468, 
 # 71 "/opt/tinyos-main/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -9774,17 +9777,17 @@ uint8_t len);
 # 31 "/opt/tinyos-main/tos/lib/serial/SerialPacketInfo.nc"
 static uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$default$upperLength(
 # 54 "/opt/tinyos-main/tos/lib/serial/SerialDispatcherP.nc"
-uart_id_t arg_0x2ab23b074308, 
+uart_id_t arg_0x2b814f87b308, 
 # 31 "/opt/tinyos-main/tos/lib/serial/SerialPacketInfo.nc"
 message_t *msg, uint8_t dataLinkLen);
 #line 15
 static uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$default$offset(
 # 54 "/opt/tinyos-main/tos/lib/serial/SerialDispatcherP.nc"
-uart_id_t arg_0x2ab23b074308);
+uart_id_t arg_0x2b814f87b308);
 # 23 "/opt/tinyos-main/tos/lib/serial/SerialPacketInfo.nc"
 static uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$default$dataLinkLength(
 # 54 "/opt/tinyos-main/tos/lib/serial/SerialDispatcherP.nc"
-uart_id_t arg_0x2ab23b074308, 
+uart_id_t arg_0x2b814f87b308, 
 # 23 "/opt/tinyos-main/tos/lib/serial/SerialPacketInfo.nc"
 message_t *msg, uint8_t upperLen);
 # 81 "/opt/tinyos-main/tos/lib/serial/SendBytePacket.nc"
@@ -9972,7 +9975,7 @@ error_t error);
 # 110 "/opt/tinyos-main/tos/interfaces/AMSend.nc"
 static void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$AMSend$sendDone(
 # 48 "/opt/tinyos-main/tos/system/AMQueueImplP.nc"
-am_id_t arg_0x2ab23b206c70, 
+am_id_t arg_0x2b814fa0dc70, 
 # 103 "/opt/tinyos-main/tos/interfaces/AMSend.nc"
 message_t * msg, 
 
@@ -9985,7 +9988,7 @@ error_t error);
 # 75 "/opt/tinyos-main/tos/interfaces/Send.nc"
 static error_t /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$send(
 # 46 "/opt/tinyos-main/tos/system/AMQueueImplP.nc"
-uint8_t arg_0x2ab23b207990, 
+uint8_t arg_0x2b814fa0e990, 
 # 67 "/opt/tinyos-main/tos/interfaces/Send.nc"
 message_t * msg, 
 
@@ -10003,7 +10006,7 @@ void *
 
 /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$getPayload(
 # 46 "/opt/tinyos-main/tos/system/AMQueueImplP.nc"
-uint8_t arg_0x2ab23b207990, 
+uint8_t arg_0x2b814fa0e990, 
 # 122 "/opt/tinyos-main/tos/interfaces/Send.nc"
 message_t * msg, 
 
@@ -10012,7 +10015,7 @@ uint8_t len);
 #line 100
 static void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$default$sendDone(
 # 46 "/opt/tinyos-main/tos/system/AMQueueImplP.nc"
-uint8_t arg_0x2ab23b207990, 
+uint8_t arg_0x2b814fa0e990, 
 # 96 "/opt/tinyos-main/tos/interfaces/Send.nc"
 message_t * msg, 
 
@@ -10825,7 +10828,7 @@ static inline void RF212RadioP$RadioAlarm$fired(void );
 # 60 "/opt/tinyos-main/tos/lib/rfxlink/util/RadioAlarm.nc"
 static void /*RF212RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP$0$RadioAlarm$fired(
 # 54 "/opt/tinyos-main/tos/lib/rfxlink/util/RadioAlarmP.nc"
-uint8_t arg_0x2ab23919cce8);
+uint8_t arg_0x2b814d9aace8);
 # 109 "/opt/tinyos-main/tos/lib/timer/Alarm.nc"
 static /*RF212RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP$0$Alarm$size_type /*RF212RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP$0$Alarm$getNow(void );
 #line 66
@@ -10898,7 +10901,7 @@ static error_t /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMess
 # 59 "/opt/tinyos-main/tos/interfaces/SendNotifier.nc"
 static void /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$0$SendNotifier$aboutToSend(
 # 48 "/opt/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageLayerP.nc"
-am_id_t arg_0x2ab2391eeca8, 
+am_id_t arg_0x2b814d9fcca8, 
 # 59 "/opt/tinyos-main/tos/interfaces/SendNotifier.nc"
 am_addr_t dest, 
 #line 57
@@ -10906,7 +10909,7 @@ message_t * msg);
 # 110 "/opt/tinyos-main/tos/interfaces/AMSend.nc"
 static void /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$0$AMSend$sendDone(
 # 45 "/opt/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageLayerP.nc"
-am_id_t arg_0x2ab2391f03c8, 
+am_id_t arg_0x2b814d9fe3c8, 
 # 103 "/opt/tinyos-main/tos/interfaces/AMSend.nc"
 message_t * msg, 
 
@@ -10925,7 +10928,7 @@ message_t *
 
 /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$0$Snoop$receive(
 # 47 "/opt/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageLayerP.nc"
-am_id_t arg_0x2ab2391ee1a0, 
+am_id_t arg_0x2b814d9fc1a0, 
 # 71 "/opt/tinyos-main/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -10986,7 +10989,7 @@ message_t *
 
 /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$0$Receive$receive(
 # 46 "/opt/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageLayerP.nc"
-am_id_t arg_0x2ab2391ef5f8, 
+am_id_t arg_0x2b814d9fd5f8, 
 # 71 "/opt/tinyos-main/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -11005,7 +11008,7 @@ message_t *
 
 /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$0$ReceiveDefault$receive(
 # 51 "/opt/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageLayerP.nc"
-am_id_t arg_0x2ab2391ed8b0, 
+am_id_t arg_0x2b814d9fb8b0, 
 # 71 "/opt/tinyos-main/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -11024,7 +11027,7 @@ message_t *
 
 /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$0$SnoopDefault$receive(
 # 52 "/opt/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageLayerP.nc"
-am_id_t arg_0x2ab2391eb488, 
+am_id_t arg_0x2b814d9f9488, 
 # 71 "/opt/tinyos-main/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -11268,19 +11271,19 @@ static inline error_t /*RF212RadioC.SendResourceC.Queue*/FcfsResourceQueueC$0$Fc
 # 53 "/opt/tinyos-main/tos/interfaces/ResourceRequested.nc"
 static void /*RF212RadioC.SendResourceC.Arbiter*/SimpleArbiterP$0$ResourceRequested$requested(
 # 52 "/opt/tinyos-main/tos/system/SimpleArbiterP.nc"
-uint8_t arg_0x2ab2392cd1a0);
+uint8_t arg_0x2b814dadb1a0);
 # 61 "/opt/tinyos-main/tos/interfaces/ResourceRequested.nc"
 static void /*RF212RadioC.SendResourceC.Arbiter*/SimpleArbiterP$0$ResourceRequested$immediateRequested(
 # 52 "/opt/tinyos-main/tos/system/SimpleArbiterP.nc"
-uint8_t arg_0x2ab2392cd1a0);
+uint8_t arg_0x2b814dadb1a0);
 # 65 "/opt/tinyos-main/tos/interfaces/ResourceConfigure.nc"
 static void /*RF212RadioC.SendResourceC.Arbiter*/SimpleArbiterP$0$ResourceConfigure$unconfigure(
 # 56 "/opt/tinyos-main/tos/system/SimpleArbiterP.nc"
-uint8_t arg_0x2ab2392cc6e0);
+uint8_t arg_0x2b814dada6e0);
 # 59 "/opt/tinyos-main/tos/interfaces/ResourceConfigure.nc"
 static void /*RF212RadioC.SendResourceC.Arbiter*/SimpleArbiterP$0$ResourceConfigure$configure(
 # 56 "/opt/tinyos-main/tos/system/SimpleArbiterP.nc"
-uint8_t arg_0x2ab2392cc6e0);
+uint8_t arg_0x2b814dada6e0);
 # 79 "/opt/tinyos-main/tos/interfaces/ResourceQueue.nc"
 static error_t /*RF212RadioC.SendResourceC.Arbiter*/SimpleArbiterP$0$Queue$enqueue(resource_client_id_t id);
 #line 53
@@ -11290,7 +11293,7 @@ static resource_client_id_t /*RF212RadioC.SendResourceC.Arbiter*/SimpleArbiterP$
 # 102 "/opt/tinyos-main/tos/interfaces/Resource.nc"
 static void /*RF212RadioC.SendResourceC.Arbiter*/SimpleArbiterP$0$Resource$granted(
 # 51 "/opt/tinyos-main/tos/system/SimpleArbiterP.nc"
-uint8_t arg_0x2ab2392ce020);
+uint8_t arg_0x2b814dadc020);
 # 67 "/opt/tinyos-main/tos/interfaces/TaskBasic.nc"
 static error_t /*RF212RadioC.SendResourceC.Arbiter*/SimpleArbiterP$0$grantedTask$postTask(void );
 # 68 "/opt/tinyos-main/tos/system/SimpleArbiterP.nc"
@@ -12160,7 +12163,7 @@ static void /*HilTimerMilliC.VirtTimersMilli32*/VirtualizeTimerC$0$TimerFrom$sto
 
 static void /*HilTimerMilliC.VirtTimersMilli32*/VirtualizeTimerC$0$Timer$fired(
 # 48 "/opt/tinyos-main/tos/lib/timer/VirtualizeTimerC.nc"
-uint8_t arg_0x2ab239625448);
+uint8_t arg_0x2b814de33448);
 #line 71
 enum /*HilTimerMilliC.VirtTimersMilli32*/VirtualizeTimerC$0$__nesc_unnamed4502 {
 #line 71
@@ -12683,7 +12686,7 @@ static inline void /*HplSam3uGeneralIOC.PioA.Bit31*/HplSam3GeneralIOPinP$31$Capt
 # 39 "/opt/tinyos-main/tos/chips/cortex/m3/sam3/pins/HplSam3GeneralIOPort.nc"
 static void /*HplSam3uGeneralIOC.PioA.Port*/HplSam3GeneralIOPortP$0$Bits$fired(
 # 40 "/opt/tinyos-main/tos/chips/cortex/m3/sam3/pins/HplSam3GeneralIOPortP.nc"
-uint8_t arg_0x2ab239b86128, 
+uint8_t arg_0x2b814e394128, 
 # 39 "/opt/tinyos-main/tos/chips/cortex/m3/sam3/pins/HplSam3GeneralIOPort.nc"
 uint32_t time);
 # 52 "/opt/tinyos-main/tos/chips/cortex/m3/sam3/pins/HplSam3GeneralIOPortP.nc"
@@ -13103,7 +13106,7 @@ static void /*HplSam3uGeneralIOC.PioB.Port*/HplSam3GeneralIOPortP$1$PIOClockCont
 # 39 "/opt/tinyos-main/tos/chips/cortex/m3/sam3/pins/HplSam3GeneralIOPort.nc"
 static void /*HplSam3uGeneralIOC.PioB.Port*/HplSam3GeneralIOPortP$1$Bits$fired(
 # 40 "/opt/tinyos-main/tos/chips/cortex/m3/sam3/pins/HplSam3GeneralIOPortP.nc"
-uint8_t arg_0x2ab239b86128, 
+uint8_t arg_0x2b814e394128, 
 # 39 "/opt/tinyos-main/tos/chips/cortex/m3/sam3/pins/HplSam3GeneralIOPort.nc"
 uint32_t time);
 # 51 "/opt/tinyos-main/tos/chips/cortex/m3/sam3/pins/HplSam3GeneralIOPortP.nc"
@@ -13531,7 +13534,7 @@ static void /*HplSam3uGeneralIOC.PioC.Port*/HplSam3GeneralIOPortP$2$PIOClockCont
 # 39 "/opt/tinyos-main/tos/chips/cortex/m3/sam3/pins/HplSam3GeneralIOPort.nc"
 static void /*HplSam3uGeneralIOC.PioC.Port*/HplSam3GeneralIOPortP$2$Bits$fired(
 # 40 "/opt/tinyos-main/tos/chips/cortex/m3/sam3/pins/HplSam3GeneralIOPortP.nc"
-uint8_t arg_0x2ab239b86128, 
+uint8_t arg_0x2b814e394128, 
 # 39 "/opt/tinyos-main/tos/chips/cortex/m3/sam3/pins/HplSam3GeneralIOPort.nc"
 uint32_t time);
 # 51 "/opt/tinyos-main/tos/chips/cortex/m3/sam3/pins/HplSam3GeneralIOPortP.nc"
@@ -13646,7 +13649,7 @@ static inline void HalSam3RttP$HplSam3Rtt$incrementFired(void );
 # 78 "/opt/tinyos-main/tos/lib/timer/Alarm.nc"
 static void /*HilAlarmMilliC.VirtAlarmsTMilli*/VirtualizeAlarmC$0$Alarm$fired(
 # 49 "/opt/tinyos-main/tos/lib/timer/VirtualizeAlarmC.nc"
-uint8_t arg_0x2ab23a041738);
+uint8_t arg_0x2b814e84f738);
 # 109 "/opt/tinyos-main/tos/lib/timer/Alarm.nc"
 static /*HilAlarmMilliC.VirtAlarmsTMilli*/VirtualizeAlarmC$0$AlarmFrom$size_type /*HilAlarmMilliC.VirtAlarmsTMilli*/VirtualizeAlarmC$0$AlarmFrom$getNow(void );
 #line 103
@@ -14264,19 +14267,19 @@ static inline error_t /*HilSam3SpiC.ArbiterC.Queue*/FcfsResourceQueueC$1$FcfsQue
 # 53 "/opt/tinyos-main/tos/interfaces/ResourceRequested.nc"
 static void /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$ResourceRequested$requested(
 # 55 "/opt/tinyos-main/tos/system/ArbiterP.nc"
-uint8_t arg_0x2ab23a3724b8);
+uint8_t arg_0x2b814eb804b8);
 # 61 "/opt/tinyos-main/tos/interfaces/ResourceRequested.nc"
 static void /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$ResourceRequested$immediateRequested(
 # 55 "/opt/tinyos-main/tos/system/ArbiterP.nc"
-uint8_t arg_0x2ab23a3724b8);
+uint8_t arg_0x2b814eb804b8);
 # 65 "/opt/tinyos-main/tos/interfaces/ResourceConfigure.nc"
 static void /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$unconfigure(
 # 60 "/opt/tinyos-main/tos/system/ArbiterP.nc"
-uint8_t arg_0x2ab23a3706e0);
+uint8_t arg_0x2b814eb7e6e0);
 # 59 "/opt/tinyos-main/tos/interfaces/ResourceConfigure.nc"
 static void /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$configure(
 # 60 "/opt/tinyos-main/tos/system/ArbiterP.nc"
-uint8_t arg_0x2ab23a3706e0);
+uint8_t arg_0x2b814eb7e6e0);
 # 79 "/opt/tinyos-main/tos/interfaces/ResourceQueue.nc"
 static error_t /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$Queue$enqueue(resource_client_id_t id);
 #line 53
@@ -14292,7 +14295,7 @@ static void /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$ResourceDefaultOwner$imme
 # 102 "/opt/tinyos-main/tos/interfaces/Resource.nc"
 static void /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$Resource$granted(
 # 54 "/opt/tinyos-main/tos/system/ArbiterP.nc"
-uint8_t arg_0x2ab23a3732f0);
+uint8_t arg_0x2b814eb812f0);
 # 67 "/opt/tinyos-main/tos/interfaces/TaskBasic.nc"
 static error_t /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$grantedTask$postTask(void );
 # 75 "/opt/tinyos-main/tos/system/ArbiterP.nc"
@@ -14403,7 +14406,7 @@ static void HilSam3SpiP$HplSam3SpiInterrupts$disableAllSpiIrqs(void );
 # 82 "/opt/tinyos-main/tos/interfaces/SpiPacket.nc"
 static void HilSam3SpiP$SpiPacket$sendDone(
 # 48 "/opt/tinyos-main/tos/chips/cortex/m3/sam3/spi/HilSam3SpiP.nc"
-uint8_t arg_0x2ab23a405200, 
+uint8_t arg_0x2b814ec13200, 
 # 75 "/opt/tinyos-main/tos/interfaces/SpiPacket.nc"
 uint8_t * txBuf, 
 uint8_t * rxBuf, 
@@ -14528,7 +14531,7 @@ static inline void HilSam3SpiP$HplSam3SpiInterrupts$receivedData(uint16_t data);
 # 45 "/opt/tinyos-main/tos/interfaces/SpiByte.nc"
 static uint8_t /*HilSam3SpiC.FastSpiSam3C*/FastSpiSam3C$0$SpiByte$write(
 # 43 "/opt/tinyos-main/tos/chips/cortex/m3/sam3/spi/FastSpiSam3C.nc"
-uint8_t arg_0x2ab23a44e370, 
+uint8_t arg_0x2b814ec5d370, 
 # 45 "/opt/tinyos-main/tos/interfaces/SpiByte.nc"
 uint8_t tx);
 # 49 "/opt/tinyos-main/tos/chips/cortex/m3/sam3/spi/FastSpiSam3C.nc"
@@ -14674,7 +14677,7 @@ static inline void /*LocalTimeMicroC.CounterToLocalTimeC*/CounterToLocalTimeC$0$
 # 78 "/opt/tinyos-main/tos/lib/timer/Alarm.nc"
 static void /*HilAlarmTMicro16C.VirtAlarmsTMicro16*/VirtualizeAlarmC$1$Alarm$fired(
 # 49 "/opt/tinyos-main/tos/lib/timer/VirtualizeAlarmC.nc"
-uint8_t arg_0x2ab23a041738);
+uint8_t arg_0x2b814e84f738);
 # 109 "/opt/tinyos-main/tos/lib/timer/Alarm.nc"
 static /*HilAlarmTMicro16C.VirtAlarmsTMicro16*/VirtualizeAlarmC$1$AlarmFrom$size_type /*HilAlarmTMicro16C.VirtAlarmsTMicro16*/VirtualizeAlarmC$1$AlarmFrom$getNow(void );
 #line 103
@@ -14999,7 +15002,7 @@ static inline void RF231RadioP$RadioAlarm$fired(void );
 # 60 "/opt/tinyos-main/tos/lib/rfxlink/util/RadioAlarm.nc"
 static void /*RF231RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP$1$RadioAlarm$fired(
 # 54 "/opt/tinyos-main/tos/lib/rfxlink/util/RadioAlarmP.nc"
-uint8_t arg_0x2ab23919cce8);
+uint8_t arg_0x2b814d9aace8);
 # 109 "/opt/tinyos-main/tos/lib/timer/Alarm.nc"
 static /*RF231RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP$1$Alarm$size_type /*RF231RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP$1$Alarm$getNow(void );
 #line 66
@@ -15072,7 +15075,7 @@ static error_t /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMess
 # 59 "/opt/tinyos-main/tos/interfaces/SendNotifier.nc"
 static void /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$1$SendNotifier$aboutToSend(
 # 48 "/opt/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageLayerP.nc"
-am_id_t arg_0x2ab2391eeca8, 
+am_id_t arg_0x2b814d9fcca8, 
 # 59 "/opt/tinyos-main/tos/interfaces/SendNotifier.nc"
 am_addr_t dest, 
 #line 57
@@ -15080,7 +15083,7 @@ message_t * msg);
 # 110 "/opt/tinyos-main/tos/interfaces/AMSend.nc"
 static void /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$1$AMSend$sendDone(
 # 45 "/opt/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageLayerP.nc"
-am_id_t arg_0x2ab2391f03c8, 
+am_id_t arg_0x2b814d9fe3c8, 
 # 103 "/opt/tinyos-main/tos/interfaces/AMSend.nc"
 message_t * msg, 
 
@@ -15099,7 +15102,7 @@ message_t *
 
 /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$1$Snoop$receive(
 # 47 "/opt/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageLayerP.nc"
-am_id_t arg_0x2ab2391ee1a0, 
+am_id_t arg_0x2b814d9fc1a0, 
 # 71 "/opt/tinyos-main/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -15160,7 +15163,7 @@ message_t *
 
 /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$1$Receive$receive(
 # 46 "/opt/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageLayerP.nc"
-am_id_t arg_0x2ab2391ef5f8, 
+am_id_t arg_0x2b814d9fd5f8, 
 # 71 "/opt/tinyos-main/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -15179,7 +15182,7 @@ message_t *
 
 /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$1$ReceiveDefault$receive(
 # 51 "/opt/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageLayerP.nc"
-am_id_t arg_0x2ab2391ed8b0, 
+am_id_t arg_0x2b814d9fb8b0, 
 # 71 "/opt/tinyos-main/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -15198,7 +15201,7 @@ message_t *
 
 /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$1$SnoopDefault$receive(
 # 52 "/opt/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageLayerP.nc"
-am_id_t arg_0x2ab2391eb488, 
+am_id_t arg_0x2b814d9f9488, 
 # 71 "/opt/tinyos-main/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -15426,19 +15429,19 @@ static inline error_t /*RF231RadioC.SendResourceC.Queue*/FcfsResourceQueueC$2$Fc
 # 53 "/opt/tinyos-main/tos/interfaces/ResourceRequested.nc"
 static void /*RF231RadioC.SendResourceC.Arbiter*/SimpleArbiterP$1$ResourceRequested$requested(
 # 52 "/opt/tinyos-main/tos/system/SimpleArbiterP.nc"
-uint8_t arg_0x2ab2392cd1a0);
+uint8_t arg_0x2b814dadb1a0);
 # 61 "/opt/tinyos-main/tos/interfaces/ResourceRequested.nc"
 static void /*RF231RadioC.SendResourceC.Arbiter*/SimpleArbiterP$1$ResourceRequested$immediateRequested(
 # 52 "/opt/tinyos-main/tos/system/SimpleArbiterP.nc"
-uint8_t arg_0x2ab2392cd1a0);
+uint8_t arg_0x2b814dadb1a0);
 # 65 "/opt/tinyos-main/tos/interfaces/ResourceConfigure.nc"
 static void /*RF231RadioC.SendResourceC.Arbiter*/SimpleArbiterP$1$ResourceConfigure$unconfigure(
 # 56 "/opt/tinyos-main/tos/system/SimpleArbiterP.nc"
-uint8_t arg_0x2ab2392cc6e0);
+uint8_t arg_0x2b814dada6e0);
 # 59 "/opt/tinyos-main/tos/interfaces/ResourceConfigure.nc"
 static void /*RF231RadioC.SendResourceC.Arbiter*/SimpleArbiterP$1$ResourceConfigure$configure(
 # 56 "/opt/tinyos-main/tos/system/SimpleArbiterP.nc"
-uint8_t arg_0x2ab2392cc6e0);
+uint8_t arg_0x2b814dada6e0);
 # 79 "/opt/tinyos-main/tos/interfaces/ResourceQueue.nc"
 static error_t /*RF231RadioC.SendResourceC.Arbiter*/SimpleArbiterP$1$Queue$enqueue(resource_client_id_t id);
 #line 53
@@ -15448,7 +15451,7 @@ static resource_client_id_t /*RF231RadioC.SendResourceC.Arbiter*/SimpleArbiterP$
 # 102 "/opt/tinyos-main/tos/interfaces/Resource.nc"
 static void /*RF231RadioC.SendResourceC.Arbiter*/SimpleArbiterP$1$Resource$granted(
 # 51 "/opt/tinyos-main/tos/system/SimpleArbiterP.nc"
-uint8_t arg_0x2ab2392ce020);
+uint8_t arg_0x2b814dadc020);
 # 67 "/opt/tinyos-main/tos/interfaces/TaskBasic.nc"
 static error_t /*RF231RadioC.SendResourceC.Arbiter*/SimpleArbiterP$1$grantedTask$postTask(void );
 # 68 "/opt/tinyos-main/tos/system/SimpleArbiterP.nc"
@@ -16701,7 +16704,7 @@ static void /*RF231DriverLayerC.TaskletC*/TaskletC$1$Tasklet$schedule(void );
 # 75 "/opt/tinyos-main/tos/interfaces/TaskBasic.nc"
 static void SchedulerBasicP$TaskBasic$runTask(
 # 56 "/opt/tinyos-main/tos/system/SchedulerBasicP.nc"
-uint8_t arg_0x2ab2388110c8);
+uint8_t arg_0x2b814d01f0c8);
 # 76 "/opt/tinyos-main/tos/interfaces/McuSleep.nc"
 static void SchedulerBasicP$McuSleep$sleep(void );
 # 61 "/opt/tinyos-main/tos/system/SchedulerBasicP.nc"
@@ -16767,7 +16770,9 @@ static error_t TestCtpC$RootControl1$setRoot(void );
 static error_t TestCtpC$RootControl2$setRoot(void );
 # 104 "/opt/tinyos-main/tos/interfaces/SplitControl.nc"
 static error_t TestCtpC$RadiosControl$start(void );
-# 100 "../ctp/CtpInfo1.nc"
+# 99 "../ctp/CtpInfo1.nc"
+static uint16_t TestCtpC$CtpInfo1$current_dad(void );
+
 static uint32_t TestCtpC$CtpInfo1$totalBeacons(void );
 # 6 "../ctp/CtpInfoForward.nc"
 static uint16_t TestCtpC$CtpInfoForward$maxTHL(void );
@@ -16808,7 +16813,9 @@ static void TestCtpC$FinishTimer$startOneShot(uint32_t dt);
 static error_t TestCtpC$CtpRouteControl$start(void );
 # 73 "/opt/tinyos-main/tos/lib/timer/Timer.nc"
 static void TestCtpC$InitTimer$startOneShot(uint32_t dt);
-# 100 "../ctp/CtpInfo2.nc"
+# 99 "../ctp/CtpInfo2.nc"
+static uint16_t TestCtpC$CtpInfo2$current_dad(void );
+
 static uint32_t TestCtpC$CtpInfo2$totalBeacons(void );
 # 51 "/opt/tinyos-main/tos/interfaces/Cache.nc"
 static void TestCtpC$ReceivedCache$insert(TestCtpC$ReceivedCache$t item);
@@ -16833,7 +16840,7 @@ uint16_t TestCtpC$duplicate = 0;
 static inline void TestCtpC$initializeNode(void );
 #line 68
 static inline void TestCtpC$SendMessage(void );
-#line 94
+#line 93
 static inline void TestCtpC$Boot$booted(void );
 
 
@@ -16866,13 +16873,13 @@ static inline void TestCtpC$InitTimer$fired(void );
 
 
 static inline void TestCtpC$SendTimer$fired(void );
-#line 142
+#line 141
 static inline bool TestCtpC$Intercept$forward(message_t *msg, void *payload, uint8_t len);
 
 static inline void TestCtpC$Send$sendDone(message_t *msg, error_t error);
 
 static message_t *TestCtpC$Receive$receive(message_t *msg, void *payload, uint8_t len);
-#line 168
+#line 167
 static inline void TestCtpC$FinishTimer$fired(void );
 # 78 "/opt/tinyos-main/tos/interfaces/AMPacket.nc"
 static am_addr_t /*CtpP.Forwarder*/CtpForwardingEngineP$0$AMPacket2$destination(
@@ -16936,7 +16943,7 @@ static bool /*CtpP.Forwarder*/CtpForwardingEngineP$0$RootControl2$isRoot(void );
 # 31 "/opt/tinyos-main/tos/interfaces/Intercept.nc"
 static bool /*CtpP.Forwarder*/CtpForwardingEngineP$0$Intercept$forward(
 # 114 "../ctp/CtpForwardingEngineP.nc"
-collection_id_t arg_0x2ab23a96ada8, 
+collection_id_t arg_0x2b814f1759b0, 
 # 20 "/opt/tinyos-main/tos/interfaces/Intercept.nc"
 message_t * msg, 
 
@@ -16961,7 +16968,7 @@ message_t *
 
 /*CtpP.Forwarder*/CtpForwardingEngineP$0$Snoop$receive(
 # 113 "../ctp/CtpForwardingEngineP.nc"
-collection_id_t arg_0x2ab23a96a270, 
+collection_id_t arg_0x2b814f176e08, 
 # 71 "/opt/tinyos-main/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -16976,7 +16983,7 @@ static uint16_t /*CtpP.Forwarder*/CtpForwardingEngineP$0$Random$rand16(void );
 # 100 "/opt/tinyos-main/tos/interfaces/Send.nc"
 static void /*CtpP.Forwarder*/CtpForwardingEngineP$0$Send$sendDone(
 # 111 "../ctp/CtpForwardingEngineP.nc"
-uint8_t arg_0x2ab23a96d3f0, 
+uint8_t arg_0x2b814f178108, 
 # 96 "/opt/tinyos-main/tos/interfaces/Send.nc"
 message_t * msg, 
 
@@ -17040,7 +17047,7 @@ message_t *
 
 /*CtpP.Forwarder*/CtpForwardingEngineP$0$Receive$receive(
 # 112 "../ctp/CtpForwardingEngineP.nc"
-collection_id_t arg_0x2ab23a96c648, 
+collection_id_t arg_0x2b814f176270, 
 # 71 "/opt/tinyos-main/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -17144,7 +17151,7 @@ uint8_t len);
 # 46 "/opt/tinyos-main/tos/lib/net/CollectionId.nc"
 static collection_id_t /*CtpP.Forwarder*/CtpForwardingEngineP$0$CollectionId$fetch(
 # 157 "../ctp/CtpForwardingEngineP.nc"
-uint8_t arg_0x2ab23a9bd020);
+uint8_t arg_0x2b814f1c8350);
 #line 260
 enum /*CtpP.Forwarder*/CtpForwardingEngineP$0$__nesc_unnamed4547 {
 #line 260
@@ -17263,37 +17270,37 @@ static void /*CtpP.Forwarder*/CtpForwardingEngineP$0$RadiosControl$stopDone(erro
 static inline ctp_data_header_t */*CtpP.Forwarder*/CtpForwardingEngineP$0$getHeader(message_t *m);
 #line 341
 static inline error_t /*CtpP.Forwarder*/CtpForwardingEngineP$0$Send$send(uint8_t client, message_t *msg, uint8_t len);
-#line 460
+#line 462
 static inline uint8_t /*CtpP.Forwarder*/CtpForwardingEngineP$0$Send$maxPayloadLength(uint8_t client);
 
 
 
 static inline void */*CtpP.Forwarder*/CtpForwardingEngineP$0$Send$getPayload(uint8_t client, message_t *msg, uint8_t len);
-#line 486
+#line 488
 static inline void /*CtpP.Forwarder*/CtpForwardingEngineP$0$sendTask$runTask(void );
-#line 695
+#line 697
 static void /*CtpP.Forwarder*/CtpForwardingEngineP$0$packetComplete(fe_queue_entry_t *qe, message_t *msg, bool success);
-#line 739
+#line 741
 static void /*CtpP.Forwarder*/CtpForwardingEngineP$0$SubSend1$sendDone(message_t *msg, error_t error);
-#line 789
+#line 791
 static void /*CtpP.Forwarder*/CtpForwardingEngineP$0$SubSend2$sendDone(message_t *msg, error_t error);
-#line 844
+#line 846
 static inline message_t * /*CtpP.Forwarder*/CtpForwardingEngineP$0$forward1(message_t * m);
-#line 926
+#line 928
 static inline message_t * /*CtpP.Forwarder*/CtpForwardingEngineP$0$forward2(message_t * m);
-#line 1015
+#line 1017
 static inline message_t *
 /*CtpP.Forwarder*/CtpForwardingEngineP$0$SubReceive1$receive(message_t *msg, void *payload, uint8_t len);
-#line 1088
+#line 1090
 static inline message_t *
 /*CtpP.Forwarder*/CtpForwardingEngineP$0$SubReceive2$receive(message_t *msg, void *payload, uint8_t len);
-#line 1161
+#line 1163
 static inline message_t *
 /*CtpP.Forwarder*/CtpForwardingEngineP$0$SubSnoop1$receive(message_t *msg, void *payload, uint8_t len);
-#line 1174
+#line 1176
 static inline message_t *
 /*CtpP.Forwarder*/CtpForwardingEngineP$0$SubSnoop2$receive(message_t *msg, void *payload, uint8_t len);
-#line 1187
+#line 1189
 static inline void /*CtpP.Forwarder*/CtpForwardingEngineP$0$RetxmitTimer1$fired(void );
 
 
@@ -17378,7 +17385,7 @@ static void /*CtpP.Forwarder*/CtpForwardingEngineP$0$CtpPacket$clearOption(messa
 
 
 static bool /*CtpP.Forwarder*/CtpForwardingEngineP$0$CtpPacket$matchInstance(message_t *m1, message_t *m2);
-#line 1284
+#line 1286
 static inline void /*CtpP.Forwarder*/CtpForwardingEngineP$0$clearState(uint8_t state);
 
 
@@ -17393,14 +17400,14 @@ static inline void /*CtpP.Forwarder*/CtpForwardingEngineP$0$setState(uint8_t sta
 
 
 static inline 
-#line 1296
+#line 1298
 void 
 /*CtpP.Forwarder*/CtpForwardingEngineP$0$Send$default$sendDone(uint8_t client, message_t *msg, error_t error);
 
 
 
 static inline 
-#line 1300
+#line 1302
 bool 
 /*CtpP.Forwarder*/CtpForwardingEngineP$0$Intercept$default$forward(collection_id_t collectid, message_t *msg, void *payload, 
 uint8_t len);
@@ -18104,8 +18111,6 @@ static error_t /*CtpP.Router1*/CtpRoutingEngineP1$0$LinkEstimator$clearDLQ(am_ad
 static error_t /*CtpP.Router1*/CtpRoutingEngineP1$0$LinkEstimator$unpinNeighbor(am_addr_t neighbor);
 #line 49
 static uint16_t /*CtpP.Router1*/CtpRoutingEngineP1$0$LinkEstimator$getLinkQuality(uint16_t neighbor);
-# 2 "../serial-logger/SerialLogger.nc"
-static void /*CtpP.Router1*/CtpRoutingEngineP1$0$SerialLogger$log(uint16_t evt, uint16_t data);
 # 52 "/opt/tinyos-main/tos/interfaces/Random.nc"
 static uint16_t /*CtpP.Router1*/CtpRoutingEngineP1$0$Random$rand16(void );
 #line 46
@@ -18205,8 +18210,8 @@ uint32_t /*CtpP.Router1*/CtpRoutingEngineP1$0$parentChanges;
 
 
 static inline void /*CtpP.Router1*/CtpRoutingEngineP1$0$routingTableInit(void );
-static uint8_t /*CtpP.Router1*/CtpRoutingEngineP1$0$routingTableFind(am_addr_t arg_0x2ab23ad280c8);
-static inline error_t /*CtpP.Router1*/CtpRoutingEngineP1$0$routingTableUpdateEntry(am_addr_t arg_0x2ab23ad289d0, am_addr_t arg_0x2ab23ad28c98, uint16_t arg_0x2ab23ad26020);
+static uint8_t /*CtpP.Router1*/CtpRoutingEngineP1$0$routingTableFind(am_addr_t arg_0x2b814f531830);
+static inline error_t /*CtpP.Router1*/CtpRoutingEngineP1$0$routingTableUpdateEntry(am_addr_t arg_0x2b814f530160, am_addr_t arg_0x2b814f530428, uint16_t arg_0x2b814f5306e8);
 static inline error_t /*CtpP.Router1*/CtpRoutingEngineP1$0$routingTableEvict(am_addr_t neighbor);
 #line 185
 uint32_t /*CtpP.Router1*/CtpRoutingEngineP1$0$currentInterval = 128;
@@ -18353,6 +18358,10 @@ static inline error_t /*CtpP.Router1*/CtpRoutingEngineP1$0$CollectionDebug$defau
 static bool /*CtpP.Router1*/CtpRoutingEngineP1$0$CtpRoutingPacket$getOption(message_t *msg, ctp_options_t opt);
 #line 833
 static inline uint32_t /*CtpP.Router1*/CtpRoutingEngineP1$0$CtpInfo1$totalBeacons(void );
+
+
+
+static inline uint16_t /*CtpP.Router1*/CtpRoutingEngineP1$0$CtpInfo1$current_dad(void );
 # 67 "/opt/tinyos-main/tos/interfaces/TaskBasic.nc"
 static error_t /*CtpP.Router2*/CtpRoutingEngineP2$0$updateRouteTask$postTask(void );
 # 79 "/opt/tinyos-main/tos/lib/net/CollectionDebug.nc"
@@ -18369,8 +18378,6 @@ static error_t /*CtpP.Router2*/CtpRoutingEngineP2$0$LinkEstimator$clearDLQ(am_ad
 static error_t /*CtpP.Router2*/CtpRoutingEngineP2$0$LinkEstimator$unpinNeighbor(am_addr_t neighbor);
 #line 49
 static uint16_t /*CtpP.Router2*/CtpRoutingEngineP2$0$LinkEstimator$getLinkQuality(uint16_t neighbor);
-# 2 "../serial-logger/SerialLogger.nc"
-static void /*CtpP.Router2*/CtpRoutingEngineP2$0$SerialLogger$log(uint16_t evt, uint16_t data);
 # 52 "/opt/tinyos-main/tos/interfaces/Random.nc"
 static uint16_t /*CtpP.Router2*/CtpRoutingEngineP2$0$Random$rand16(void );
 #line 46
@@ -18470,8 +18477,8 @@ uint32_t /*CtpP.Router2*/CtpRoutingEngineP2$0$parentChanges;
 
 
 static inline void /*CtpP.Router2*/CtpRoutingEngineP2$0$routingTableInit(void );
-static uint8_t /*CtpP.Router2*/CtpRoutingEngineP2$0$routingTableFind(am_addr_t arg_0x2ab23ae13830);
-static inline error_t /*CtpP.Router2*/CtpRoutingEngineP2$0$routingTableUpdateEntry(am_addr_t arg_0x2ab23ae12160, am_addr_t arg_0x2ab23ae12428, uint16_t arg_0x2ab23ae126e8);
+static uint8_t /*CtpP.Router2*/CtpRoutingEngineP2$0$routingTableFind(am_addr_t arg_0x2b814f61a0c8);
+static inline error_t /*CtpP.Router2*/CtpRoutingEngineP2$0$routingTableUpdateEntry(am_addr_t arg_0x2b814f61a9d0, am_addr_t arg_0x2b814f61ac98, uint16_t arg_0x2b814f618020);
 static inline error_t /*CtpP.Router2*/CtpRoutingEngineP2$0$routingTableEvict(am_addr_t neighbor);
 #line 185
 uint32_t /*CtpP.Router2*/CtpRoutingEngineP2$0$currentInterval = 128;
@@ -18614,6 +18621,9 @@ static inline error_t /*CtpP.Router2*/CtpRoutingEngineP2$0$CollectionDebug$defau
 static bool /*CtpP.Router2*/CtpRoutingEngineP2$0$CtpRoutingPacket$getOption(message_t *msg, ctp_options_t opt);
 #line 833
 static inline uint32_t /*CtpP.Router2*/CtpRoutingEngineP2$0$CtpInfo2$totalBeacons(void );
+
+
+static inline uint16_t /*CtpP.Router2*/CtpRoutingEngineP2$0$CtpInfo2$current_dad(void );
 # 113 "/opt/tinyos-main/tos/interfaces/SplitControl.nc"
 static void SerialLoggerP$SplitControl$startDone(error_t error);
 #line 138
@@ -18717,7 +18727,7 @@ uint8_t len);
 # 110 "/opt/tinyos-main/tos/interfaces/AMSend.nc"
 static void /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMSend$sendDone(
 # 47 "/opt/tinyos-main/tos/lib/serial/SerialActiveMessageP.nc"
-am_id_t arg_0x2ab23aef19a8, 
+am_id_t arg_0x2b814f6f56c8, 
 # 103 "/opt/tinyos-main/tos/interfaces/AMSend.nc"
 message_t * msg, 
 
@@ -18736,7 +18746,7 @@ message_t *
 
 /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Receive$receive(
 # 48 "/opt/tinyos-main/tos/lib/serial/SerialActiveMessageP.nc"
-am_id_t arg_0x2ab23aeeec18, 
+am_id_t arg_0x2b814f6f4908, 
 # 71 "/opt/tinyos-main/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -19225,7 +19235,7 @@ static error_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$receiv
 # 100 "/opt/tinyos-main/tos/interfaces/Send.nc"
 static void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Send$sendDone(
 # 51 "/opt/tinyos-main/tos/lib/serial/SerialDispatcherP.nc"
-uart_id_t arg_0x2ab23b076020, 
+uart_id_t arg_0x2b814f87c020, 
 # 96 "/opt/tinyos-main/tos/interfaces/Send.nc"
 message_t * msg, 
 
@@ -19243,7 +19253,7 @@ message_t *
 
 /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Receive$receive(
 # 50 "/opt/tinyos-main/tos/lib/serial/SerialDispatcherP.nc"
-uart_id_t arg_0x2ab23b077468, 
+uart_id_t arg_0x2b814f87d468, 
 # 71 "/opt/tinyos-main/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -19256,17 +19266,17 @@ uint8_t len);
 # 31 "/opt/tinyos-main/tos/lib/serial/SerialPacketInfo.nc"
 static uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$upperLength(
 # 54 "/opt/tinyos-main/tos/lib/serial/SerialDispatcherP.nc"
-uart_id_t arg_0x2ab23b074308, 
+uart_id_t arg_0x2b814f87b308, 
 # 31 "/opt/tinyos-main/tos/lib/serial/SerialPacketInfo.nc"
 message_t *msg, uint8_t dataLinkLen);
 #line 15
 static uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$offset(
 # 54 "/opt/tinyos-main/tos/lib/serial/SerialDispatcherP.nc"
-uart_id_t arg_0x2ab23b074308);
+uart_id_t arg_0x2b814f87b308);
 # 23 "/opt/tinyos-main/tos/lib/serial/SerialPacketInfo.nc"
 static uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$dataLinkLength(
 # 54 "/opt/tinyos-main/tos/lib/serial/SerialDispatcherP.nc"
-uart_id_t arg_0x2ab23b074308, 
+uart_id_t arg_0x2b814f87b308, 
 # 23 "/opt/tinyos-main/tos/lib/serial/SerialPacketInfo.nc"
 message_t *msg, uint8_t upperLen);
 # 71 "/opt/tinyos-main/tos/lib/serial/SendBytePacket.nc"
@@ -19760,7 +19770,7 @@ static inline void */*SerialLoggerC.SerialSenderC.AMQueueEntryP*/AMQueueEntryP$0
 # 80 "/opt/tinyos-main/tos/interfaces/AMSend.nc"
 static error_t /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$AMSend$send(
 # 48 "/opt/tinyos-main/tos/system/AMQueueImplP.nc"
-am_id_t arg_0x2ab23b206c70, 
+am_id_t arg_0x2b814fa0dc70, 
 # 80 "/opt/tinyos-main/tos/interfaces/AMSend.nc"
 am_addr_t addr, 
 #line 71
@@ -19781,7 +19791,7 @@ void *
 
 /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$AMSend$getPayload(
 # 48 "/opt/tinyos-main/tos/system/AMQueueImplP.nc"
-am_id_t arg_0x2ab23b206c70, 
+am_id_t arg_0x2b814fa0dc70, 
 # 132 "/opt/tinyos-main/tos/interfaces/AMSend.nc"
 message_t * msg, 
 
@@ -19790,7 +19800,7 @@ uint8_t len);
 # 100 "/opt/tinyos-main/tos/interfaces/Send.nc"
 static void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$sendDone(
 # 46 "/opt/tinyos-main/tos/system/AMQueueImplP.nc"
-uint8_t arg_0x2ab23b207990, 
+uint8_t arg_0x2b814fa0e990, 
 # 96 "/opt/tinyos-main/tos/interfaces/Send.nc"
 message_t * msg, 
 
@@ -21080,9 +21090,9 @@ static inline void /*RF212RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP$0$RadioAla
 }
 
 # 60 "/opt/tinyos-main/tos/lib/rfxlink/util/RadioAlarm.nc"
-inline static void /*RF212RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP$0$RadioAlarm$fired(uint8_t arg_0x2ab23919cce8){
+inline static void /*RF212RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP$0$RadioAlarm$fired(uint8_t arg_0x2b814d9aace8){
 #line 60
-  switch (arg_0x2ab23919cce8) {
+  switch (arg_0x2b814d9aace8) {
 #line 60
     case 0U:
 #line 60
@@ -21110,7 +21120,7 @@ inline static void /*RF212RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP$0$RadioAla
 #line 60
     default:
 #line 60
-      /*RF212RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP$0$RadioAlarm$default$fired(arg_0x2ab23919cce8);
+      /*RF212RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP$0$RadioAlarm$default$fired(arg_0x2b814d9aace8);
 #line 60
       break;
 #line 60
@@ -21479,9 +21489,9 @@ static inline void /*RF231RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP$1$RadioAla
 }
 
 # 60 "/opt/tinyos-main/tos/lib/rfxlink/util/RadioAlarm.nc"
-inline static void /*RF231RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP$1$RadioAlarm$fired(uint8_t arg_0x2ab23919cce8){
+inline static void /*RF231RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP$1$RadioAlarm$fired(uint8_t arg_0x2b814d9aace8){
 #line 60
-  switch (arg_0x2ab23919cce8) {
+  switch (arg_0x2b814d9aace8) {
 #line 60
     case 0U:
 #line 60
@@ -21509,7 +21519,7 @@ inline static void /*RF231RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP$1$RadioAla
 #line 60
     default:
 #line 60
-      /*RF231RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP$1$RadioAlarm$default$fired(arg_0x2ab23919cce8);
+      /*RF231RadioC.RadioAlarmC.RadioAlarmP*/RadioAlarmP$1$RadioAlarm$default$fired(arg_0x2b814d9aace8);
 #line 60
       break;
 #line 60
@@ -21613,9 +21623,9 @@ static inline void /*HilAlarmTMicro16C.VirtAlarmsTMicro16*/VirtualizeAlarmC$1$Al
 }
 
 # 78 "/opt/tinyos-main/tos/lib/timer/Alarm.nc"
-inline static void /*HilAlarmTMicro16C.VirtAlarmsTMicro16*/VirtualizeAlarmC$1$Alarm$fired(uint8_t arg_0x2ab23a041738){
+inline static void /*HilAlarmTMicro16C.VirtAlarmsTMicro16*/VirtualizeAlarmC$1$Alarm$fired(uint8_t arg_0x2b814e84f738){
 #line 78
-  switch (arg_0x2ab23a041738) {
+  switch (arg_0x2b814e84f738) {
 #line 78
     case 0U:
 #line 78
@@ -21631,7 +21641,7 @@ inline static void /*HilAlarmTMicro16C.VirtAlarmsTMicro16*/VirtualizeAlarmC$1$Al
 #line 78
     default:
 #line 78
-      /*HilAlarmTMicro16C.VirtAlarmsTMicro16*/VirtualizeAlarmC$1$Alarm$default$fired(arg_0x2ab23a041738);
+      /*HilAlarmTMicro16C.VirtAlarmsTMicro16*/VirtualizeAlarmC$1$Alarm$default$fired(arg_0x2b814e84f738);
 #line 78
       break;
 #line 78
@@ -21976,9 +21986,9 @@ static inline void /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$ResourceRequested$
 }
 
 # 61 "/opt/tinyos-main/tos/interfaces/ResourceRequested.nc"
-inline static void /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$ResourceRequested$immediateRequested(uint8_t arg_0x2ab23a3724b8){
+inline static void /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$ResourceRequested$immediateRequested(uint8_t arg_0x2b814eb804b8){
 #line 61
-    /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$ResourceRequested$default$immediateRequested(arg_0x2ab23a3724b8);
+    /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$ResourceRequested$default$immediateRequested(arg_0x2b814eb804b8);
 #line 61
 }
 #line 61
@@ -22088,9 +22098,9 @@ static inline void /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$ResourceRequested$
 }
 
 # 53 "/opt/tinyos-main/tos/interfaces/ResourceRequested.nc"
-inline static void /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$ResourceRequested$requested(uint8_t arg_0x2ab23a3724b8){
+inline static void /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$ResourceRequested$requested(uint8_t arg_0x2b814eb804b8){
 #line 53
-    /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$ResourceRequested$default$requested(arg_0x2ab23a3724b8);
+    /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$ResourceRequested$default$requested(arg_0x2b814eb804b8);
 #line 53
 }
 #line 53
@@ -22610,9 +22620,9 @@ static inline void /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$
 }
 
 # 65 "/opt/tinyos-main/tos/interfaces/ResourceConfigure.nc"
-inline static void /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$unconfigure(uint8_t arg_0x2ab23a3706e0){
+inline static void /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$unconfigure(uint8_t arg_0x2b814eb7e6e0){
 #line 65
-  switch (arg_0x2ab23a3706e0) {
+  switch (arg_0x2b814eb7e6e0) {
 #line 65
     case /*HplRF212C.SpiC*/Sam3Spi1C$0$CLIENT_ID:
 #line 65
@@ -22628,7 +22638,7 @@ inline static void /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$
 #line 65
     default:
 #line 65
-      /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$default$unconfigure(arg_0x2ab23a3706e0);
+      /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$default$unconfigure(arg_0x2b814eb7e6e0);
 #line 65
       break;
 #line 65
@@ -23487,9 +23497,9 @@ static inline void /*HilAlarmMilliC.VirtAlarmsTMilli*/VirtualizeAlarmC$0$Alarm$d
 }
 
 # 78 "/opt/tinyos-main/tos/lib/timer/Alarm.nc"
-inline static void /*HilAlarmMilliC.VirtAlarmsTMilli*/VirtualizeAlarmC$0$Alarm$fired(uint8_t arg_0x2ab23a041738){
+inline static void /*HilAlarmMilliC.VirtAlarmsTMilli*/VirtualizeAlarmC$0$Alarm$fired(uint8_t arg_0x2b814e84f738){
 #line 78
-  switch (arg_0x2ab23a041738) {
+  switch (arg_0x2b814e84f738) {
 #line 78
     case 0U:
 #line 78
@@ -23499,7 +23509,7 @@ inline static void /*HilAlarmMilliC.VirtAlarmsTMilli*/VirtualizeAlarmC$0$Alarm$f
 #line 78
     default:
 #line 78
-      /*HilAlarmMilliC.VirtAlarmsTMilli*/VirtualizeAlarmC$0$Alarm$default$fired(arg_0x2ab23a041738);
+      /*HilAlarmMilliC.VirtAlarmsTMilli*/VirtualizeAlarmC$0$Alarm$default$fired(arg_0x2b814e84f738);
 #line 78
       break;
 #line 78
@@ -24815,9 +24825,9 @@ static inline void /*HplSam3uGeneralIOC.PioA.Port*/HplSam3GeneralIOPortP$0$Bits$
 }
 
 # 39 "/opt/tinyos-main/tos/chips/cortex/m3/sam3/pins/HplSam3GeneralIOPort.nc"
-inline static void /*HplSam3uGeneralIOC.PioA.Port*/HplSam3GeneralIOPortP$0$Bits$fired(uint8_t arg_0x2ab239b86128, uint32_t time){
+inline static void /*HplSam3uGeneralIOC.PioA.Port*/HplSam3GeneralIOPortP$0$Bits$fired(uint8_t arg_0x2b814e394128, uint32_t time){
 #line 39
-  switch (arg_0x2ab239b86128) {
+  switch (arg_0x2b814e394128) {
 #line 39
     case 0:
 #line 39
@@ -25013,7 +25023,7 @@ inline static void /*HplSam3uGeneralIOC.PioA.Port*/HplSam3GeneralIOPortP$0$Bits$
 #line 39
     default:
 #line 39
-      /*HplSam3uGeneralIOC.PioA.Port*/HplSam3GeneralIOPortP$0$Bits$default$fired(arg_0x2ab239b86128, time);
+      /*HplSam3uGeneralIOC.PioA.Port*/HplSam3GeneralIOPortP$0$Bits$default$fired(arg_0x2b814e394128, time);
 #line 39
       break;
 #line 39
@@ -26163,9 +26173,9 @@ static inline void /*HplSam3uGeneralIOC.PioB.Port*/HplSam3GeneralIOPortP$1$Bits$
 }
 
 # 39 "/opt/tinyos-main/tos/chips/cortex/m3/sam3/pins/HplSam3GeneralIOPort.nc"
-inline static void /*HplSam3uGeneralIOC.PioB.Port*/HplSam3GeneralIOPortP$1$Bits$fired(uint8_t arg_0x2ab239b86128, uint32_t time){
+inline static void /*HplSam3uGeneralIOC.PioB.Port*/HplSam3GeneralIOPortP$1$Bits$fired(uint8_t arg_0x2b814e394128, uint32_t time){
 #line 39
-  switch (arg_0x2ab239b86128) {
+  switch (arg_0x2b814e394128) {
 #line 39
     case 0:
 #line 39
@@ -26361,7 +26371,7 @@ inline static void /*HplSam3uGeneralIOC.PioB.Port*/HplSam3GeneralIOPortP$1$Bits$
 #line 39
     default:
 #line 39
-      /*HplSam3uGeneralIOC.PioB.Port*/HplSam3GeneralIOPortP$1$Bits$default$fired(arg_0x2ab239b86128, time);
+      /*HplSam3uGeneralIOC.PioB.Port*/HplSam3GeneralIOPortP$1$Bits$default$fired(arg_0x2b814e394128, time);
 #line 39
       break;
 #line 39
@@ -27653,13 +27663,13 @@ static inline uint8_t RF231DriverLayerP$RadioPacket$maxPayloadLength(void )
 }
 
 # 45 "/opt/tinyos-main/tos/interfaces/SpiByte.nc"
-inline static uint8_t /*HilSam3SpiC.FastSpiSam3C*/FastSpiSam3C$0$SpiByte$write(uint8_t arg_0x2ab23a44e370, uint8_t tx){
+inline static uint8_t /*HilSam3SpiC.FastSpiSam3C*/FastSpiSam3C$0$SpiByte$write(uint8_t arg_0x2b814ec5d370, uint8_t tx){
 #line 45
   unsigned char __nesc_result;
 #line 45
 
 #line 45
-  __nesc_result = HilSam3SpiP$SpiByte$write(arg_0x2ab23a44e370, tx);
+  __nesc_result = HilSam3SpiP$SpiByte$write(arg_0x2b814ec5d370, tx);
 #line 45
 
 #line 45
@@ -31337,9 +31347,9 @@ static inline void /*HplSam3uGeneralIOC.PioC.Port*/HplSam3GeneralIOPortP$2$Bits$
 }
 
 # 39 "/opt/tinyos-main/tos/chips/cortex/m3/sam3/pins/HplSam3GeneralIOPort.nc"
-inline static void /*HplSam3uGeneralIOC.PioC.Port*/HplSam3GeneralIOPortP$2$Bits$fired(uint8_t arg_0x2ab239b86128, uint32_t time){
+inline static void /*HplSam3uGeneralIOC.PioC.Port*/HplSam3GeneralIOPortP$2$Bits$fired(uint8_t arg_0x2b814e394128, uint32_t time){
 #line 39
-  switch (arg_0x2ab239b86128) {
+  switch (arg_0x2b814e394128) {
 #line 39
     case 0:
 #line 39
@@ -31535,7 +31545,7 @@ inline static void /*HplSam3uGeneralIOC.PioC.Port*/HplSam3GeneralIOPortP$2$Bits$
 #line 39
     default:
 #line 39
-      /*HplSam3uGeneralIOC.PioC.Port*/HplSam3GeneralIOPortP$2$Bits$default$fired(arg_0x2ab239b86128, time);
+      /*HplSam3uGeneralIOC.PioC.Port*/HplSam3GeneralIOPortP$2$Bits$default$fired(arg_0x2b814e394128, time);
 #line 39
       break;
 #line 39
@@ -33448,9 +33458,9 @@ static inline void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$default$se
 }
 
 # 100 "/opt/tinyos-main/tos/interfaces/Send.nc"
-inline static void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$sendDone(uint8_t arg_0x2ab23b207990, message_t * msg, error_t error){
+inline static void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$sendDone(uint8_t arg_0x2b814fa0e990, message_t * msg, error_t error){
 #line 100
-  switch (arg_0x2ab23b207990) {
+  switch (arg_0x2b814fa0e990) {
 #line 100
     case 0U:
 #line 100
@@ -33460,7 +33470,7 @@ inline static void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$sendDone(u
 #line 100
     default:
 #line 100
-      /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$default$sendDone(arg_0x2ab23b207990, msg, error);
+      /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$default$sendDone(arg_0x2b814fa0e990, msg, error);
 #line 100
       break;
 #line 100
@@ -33521,13 +33531,13 @@ inline static error_t /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$errorTask$po
 }
 #line 67
 # 80 "/opt/tinyos-main/tos/interfaces/AMSend.nc"
-inline static error_t /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$AMSend$send(am_id_t arg_0x2ab23b206c70, am_addr_t addr, message_t * msg, uint8_t len){
+inline static error_t /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$AMSend$send(am_id_t arg_0x2b814fa0dc70, am_addr_t addr, message_t * msg, uint8_t len){
 #line 80
   unsigned char __nesc_result;
 #line 80
 
 #line 80
-  __nesc_result = /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMSend$send(arg_0x2ab23b206c70, addr, msg, len);
+  __nesc_result = /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMSend$send(arg_0x2b814fa0dc70, addr, msg, len);
 #line 80
 
 #line 80
@@ -33744,13 +33754,13 @@ uint8_t upperLen)
 }
 
 # 23 "/opt/tinyos-main/tos/lib/serial/SerialPacketInfo.nc"
-inline static uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$dataLinkLength(uart_id_t arg_0x2ab23b074308, message_t *msg, uint8_t upperLen){
+inline static uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$dataLinkLength(uart_id_t arg_0x2b814f87b308, message_t *msg, uint8_t upperLen){
 #line 23
   unsigned char __nesc_result;
 #line 23
 
 #line 23
-  switch (arg_0x2ab23b074308) {
+  switch (arg_0x2b814f87b308) {
 #line 23
     case TOS_SERIAL_ACTIVE_MESSAGE_ID:
 #line 23
@@ -33760,7 +33770,7 @@ inline static uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0
 #line 23
     default:
 #line 23
-      __nesc_result = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$default$dataLinkLength(arg_0x2ab23b074308, msg, upperLen);
+      __nesc_result = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$default$dataLinkLength(arg_0x2b814f87b308, msg, upperLen);
 #line 23
       break;
 #line 23
@@ -33787,13 +33797,13 @@ static inline uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0
 }
 
 # 15 "/opt/tinyos-main/tos/lib/serial/SerialPacketInfo.nc"
-inline static uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$offset(uart_id_t arg_0x2ab23b074308){
+inline static uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$offset(uart_id_t arg_0x2b814f87b308){
 #line 15
   unsigned char __nesc_result;
 #line 15
 
 #line 15
-  switch (arg_0x2ab23b074308) {
+  switch (arg_0x2b814f87b308) {
 #line 15
     case TOS_SERIAL_ACTIVE_MESSAGE_ID:
 #line 15
@@ -33803,7 +33813,7 @@ inline static uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0
 #line 15
     default:
 #line 15
-      __nesc_result = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$default$offset(arg_0x2ab23b074308);
+      __nesc_result = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$default$offset(arg_0x2b814f87b308);
 #line 15
       break;
 #line 15
@@ -33917,9 +33927,9 @@ static inline void /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$AMSend$sendDone
 }
 
 # 110 "/opt/tinyos-main/tos/interfaces/AMSend.nc"
-inline static void /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMSend$sendDone(am_id_t arg_0x2ab23aef19a8, message_t * msg, error_t error){
+inline static void /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMSend$sendDone(am_id_t arg_0x2b814f6f56c8, message_t * msg, error_t error){
 #line 110
-  /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$AMSend$sendDone(arg_0x2ab23aef19a8, msg, error);
+  /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$AMSend$sendDone(arg_0x2b814f6f56c8, msg, error);
 #line 110
 }
 #line 110
@@ -33938,9 +33948,9 @@ static inline void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Se
 }
 
 # 100 "/opt/tinyos-main/tos/interfaces/Send.nc"
-inline static void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Send$sendDone(uart_id_t arg_0x2ab23b076020, message_t * msg, error_t error){
+inline static void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Send$sendDone(uart_id_t arg_0x2b814f87c020, message_t * msg, error_t error){
 #line 100
-  switch (arg_0x2ab23b076020) {
+  switch (arg_0x2b814f87c020) {
 #line 100
     case TOS_SERIAL_ACTIVE_MESSAGE_ID:
 #line 100
@@ -33950,7 +33960,7 @@ inline static void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Se
 #line 100
     default:
 #line 100
-      /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Send$default$sendDone(arg_0x2ab23b076020, msg, error);
+      /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Send$default$sendDone(arg_0x2b814f87c020, msg, error);
 #line 100
       break;
 #line 100
@@ -33999,13 +34009,13 @@ static inline message_t */*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Recei
 }
 
 # 78 "/opt/tinyos-main/tos/interfaces/Receive.nc"
-inline static message_t * /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Receive$receive(am_id_t arg_0x2ab23aeeec18, message_t * msg, void * payload, uint8_t len){
+inline static message_t * /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Receive$receive(am_id_t arg_0x2b814f6f4908, message_t * msg, void * payload, uint8_t len){
 #line 78
   nx_struct message_t *__nesc_result;
 #line 78
 
 #line 78
-    __nesc_result = /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Receive$default$receive(arg_0x2ab23aeeec18, msg, payload, len);
+    __nesc_result = /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Receive$default$receive(arg_0x2b814f6f4908, msg, payload, len);
 #line 78
 
 #line 78
@@ -34030,13 +34040,13 @@ uint8_t len)
 }
 
 # 78 "/opt/tinyos-main/tos/interfaces/Receive.nc"
-inline static message_t * /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Receive$receive(uart_id_t arg_0x2ab23b077468, message_t * msg, void * payload, uint8_t len){
+inline static message_t * /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Receive$receive(uart_id_t arg_0x2b814f87d468, message_t * msg, void * payload, uint8_t len){
 #line 78
   nx_struct message_t *__nesc_result;
 #line 78
 
 #line 78
-  switch (arg_0x2ab23b077468) {
+  switch (arg_0x2b814f87d468) {
 #line 78
     case TOS_SERIAL_ACTIVE_MESSAGE_ID:
 #line 78
@@ -34046,7 +34056,7 @@ inline static message_t * /*SerialDispatcherC.SerialDispatcherP*/SerialDispatche
 #line 78
     default:
 #line 78
-      __nesc_result = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Receive$default$receive(arg_0x2ab23b077468, msg, payload, len);
+      __nesc_result = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$Receive$default$receive(arg_0x2b814f87d468, msg, payload, len);
 #line 78
       break;
 #line 78
@@ -34074,13 +34084,13 @@ uint8_t dataLinkLen)
 }
 
 # 31 "/opt/tinyos-main/tos/lib/serial/SerialPacketInfo.nc"
-inline static uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$upperLength(uart_id_t arg_0x2ab23b074308, message_t *msg, uint8_t dataLinkLen){
+inline static uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$upperLength(uart_id_t arg_0x2b814f87b308, message_t *msg, uint8_t dataLinkLen){
 #line 31
   unsigned char __nesc_result;
 #line 31
 
 #line 31
-  switch (arg_0x2ab23b074308) {
+  switch (arg_0x2b814f87b308) {
 #line 31
     case TOS_SERIAL_ACTIVE_MESSAGE_ID:
 #line 31
@@ -34090,7 +34100,7 @@ inline static uint8_t /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0
 #line 31
     default:
 #line 31
-      __nesc_result = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$default$upperLength(arg_0x2ab23b074308, msg, dataLinkLen);
+      __nesc_result = /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$PacketInfo$default$upperLength(arg_0x2b814f87b308, msg, dataLinkLen);
 #line 31
       break;
 #line 31
@@ -34136,9 +34146,9 @@ static inline void /*SerialDispatcherC.SerialDispatcherP*/SerialDispatcherP$0$re
     __nesc_atomic_end(__nesc_atomic); }
 }
 
-# 106 "TestCtpC.nc"
+# 105 "TestCtpC.nc"
 static inline void TestCtpC$SerialControl$stopDone(error_t err)
-#line 106
+#line 105
 {
 }
 
@@ -34344,15 +34354,15 @@ inline static error_t TestCtpC$SerialControl$start(void ){
 #line 104
 }
 #line 104
-# 98 "TestCtpC.nc"
+# 97 "TestCtpC.nc"
 static inline void TestCtpC$SerialControl$startDone(error_t err)
-#line 98
+#line 97
 {
   if (err != SUCCESS) {
       TestCtpC$SerialControl$start();
     }
   else 
-#line 101
+#line 100
     {
       TestCtpC$RadiosControl$start();
     }
@@ -35750,9 +35760,9 @@ inline static error_t /*CtpP.Router2*/CtpRoutingEngineP2$0$CollectionDebug$logEv
 #line 79
 }
 #line 79
-# 1198 "../ctp/CtpForwardingEngineP.nc"
+# 1200 "../ctp/CtpForwardingEngineP.nc"
 static inline bool /*CtpP.Forwarder*/CtpForwardingEngineP$0$CtpCongestion$isCongested(void )
-#line 1198
+#line 1200
 {
   return FALSE;
 }
@@ -35772,13 +35782,6 @@ inline static bool /*CtpP.Router2*/CtpRoutingEngineP2$0$CtpCongestion$isCongeste
 #line 7
 }
 #line 7
-# 2 "../serial-logger/SerialLogger.nc"
-inline static void /*CtpP.Router2*/CtpRoutingEngineP2$0$SerialLogger$log(uint16_t evt, uint16_t data){
-#line 2
-  SerialLoggerP$SerialLogger$log(evt, data);
-#line 2
-}
-#line 2
 # 392 "../ctp/CtpRoutingEngineP2.nc"
 static inline void /*CtpP.Router2*/CtpRoutingEngineP2$0$sendBeaconTask$runTask(void )
 #line 392
@@ -35792,8 +35795,8 @@ static inline void /*CtpP.Router2*/CtpRoutingEngineP2$0$sendBeaconTask$runTask(v
   if (/*CtpP.Router2*/CtpRoutingEngineP2$0$sending) {
       return;
     }
-  /*CtpP.Router2*/CtpRoutingEngineP2$0$SerialLogger$log(LOG_CURRENT_DAD, /*CtpP.Router2*/CtpRoutingEngineP2$0$routeInfo.parent);
-  /*CtpP.Router2*/CtpRoutingEngineP2$0$SerialLogger$log(LOG_SENT_BEACON, 2);
+
+
 
   __nesc_hton_uint8(/*CtpP.Router2*/CtpRoutingEngineP2$0$beaconMsg->options.nxdata, 0);
 
@@ -35840,181 +35843,6 @@ static inline void /*CtpP.Router2*/CtpRoutingEngineP2$0$sendBeaconTask$runTask(v
     }
 }
 
-# 75 "/opt/tinyos-main/tos/system/PoolP.nc"
-static inline bool /*SerialLoggerC.SerialPoolC.PoolP*/PoolP$2$Pool$empty(void )
-#line 75
-{
-  ;
-  return /*SerialLoggerC.SerialPoolC.PoolP*/PoolP$2$free == 0;
-}
-
-# 61 "/opt/tinyos-main/tos/interfaces/Pool.nc"
-inline static bool SerialLoggerP$Pool$empty(void ){
-#line 61
-  unsigned char __nesc_result;
-#line 61
-
-#line 61
-  __nesc_result = /*SerialLoggerC.SerialPoolC.PoolP*/PoolP$2$Pool$empty();
-#line 61
-
-#line 61
-  return __nesc_result;
-#line 61
-}
-#line 61
-# 88 "/opt/tinyos-main/tos/system/PoolP.nc"
-static inline /*SerialLoggerC.SerialPoolC.PoolP*/PoolP$2$pool_t */*SerialLoggerC.SerialPoolC.PoolP*/PoolP$2$Pool$get(void )
-#line 88
-{
-  if (/*SerialLoggerC.SerialPoolC.PoolP*/PoolP$2$free) {
-      /*SerialLoggerC.SerialPoolC.PoolP*/PoolP$2$pool_t *rval = /*SerialLoggerC.SerialPoolC.PoolP*/PoolP$2$queue[/*SerialLoggerC.SerialPoolC.PoolP*/PoolP$2$index];
-
-#line 91
-      /*SerialLoggerC.SerialPoolC.PoolP*/PoolP$2$queue[/*SerialLoggerC.SerialPoolC.PoolP*/PoolP$2$index] = (void *)0;
-      /*SerialLoggerC.SerialPoolC.PoolP*/PoolP$2$free--;
-      /*SerialLoggerC.SerialPoolC.PoolP*/PoolP$2$index++;
-      if (/*SerialLoggerC.SerialPoolC.PoolP*/PoolP$2$index == 100) {
-          /*SerialLoggerC.SerialPoolC.PoolP*/PoolP$2$index = 0;
-        }
-      ;
-      return rval;
-    }
-  return (void *)0;
-}
-
-# 97 "/opt/tinyos-main/tos/interfaces/Pool.nc"
-inline static SerialLoggerP$Pool$t * SerialLoggerP$Pool$get(void ){
-#line 97
-  nx_struct message_t *__nesc_result;
-#line 97
-
-#line 97
-  __nesc_result = /*SerialLoggerC.SerialPoolC.PoolP*/PoolP$2$Pool$get();
-#line 97
-
-#line 97
-  return __nesc_result;
-#line 97
-}
-#line 97
-# 97 "/opt/tinyos-main/tos/lib/serial/SerialActiveMessageP.nc"
-static inline void */*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMSend$getPayload(am_id_t id, message_t *m, uint8_t len)
-#line 97
-{
-  return /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Packet$getPayload(m, len);
-}
-
-# 135 "/opt/tinyos-main/tos/interfaces/AMSend.nc"
-inline static void * /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$AMSend$getPayload(am_id_t arg_0x2ab23b206c70, message_t * msg, uint8_t len){
-#line 135
-  void *__nesc_result;
-#line 135
-
-#line 135
-  __nesc_result = /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMSend$getPayload(arg_0x2ab23b206c70, msg, len);
-#line 135
-
-#line 135
-  return __nesc_result;
-#line 135
-}
-#line 135
-# 211 "/opt/tinyos-main/tos/system/AMQueueImplP.nc"
-static inline void */*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$getPayload(uint8_t id, message_t *m, uint8_t len)
-#line 211
-{
-  return /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$AMSend$getPayload(0, m, len);
-}
-
-# 125 "/opt/tinyos-main/tos/interfaces/Send.nc"
-inline static void * /*SerialLoggerC.SerialSenderC.AMQueueEntryP*/AMQueueEntryP$0$Send$getPayload(message_t * msg, uint8_t len){
-#line 125
-  void *__nesc_result;
-#line 125
-
-#line 125
-  __nesc_result = /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$getPayload(0U, msg, len);
-#line 125
-
-#line 125
-  return __nesc_result;
-#line 125
-}
-#line 125
-# 73 "/opt/tinyos-main/tos/system/AMQueueEntryP.nc"
-static inline void */*SerialLoggerC.SerialSenderC.AMQueueEntryP*/AMQueueEntryP$0$AMSend$getPayload(message_t *m, uint8_t len)
-#line 73
-{
-  return /*SerialLoggerC.SerialSenderC.AMQueueEntryP*/AMQueueEntryP$0$Send$getPayload(m, len);
-}
-
-# 135 "/opt/tinyos-main/tos/interfaces/AMSend.nc"
-inline static void * SerialLoggerP$SerialSend$getPayload(message_t * msg, uint8_t len){
-#line 135
-  void *__nesc_result;
-#line 135
-
-#line 135
-  __nesc_result = /*SerialLoggerC.SerialSenderC.AMQueueEntryP*/AMQueueEntryP$0$AMSend$getPayload(msg, len);
-#line 135
-
-#line 135
-  return __nesc_result;
-#line 135
-}
-#line 135
-# 61 "/opt/tinyos-main/tos/system/QueueC.nc"
-static inline uint8_t /*SerialLoggerC.SerialQueueC*/QueueC$1$Queue$maxSize(void )
-#line 61
-{
-  return 100;
-}
-
-#line 57
-static inline uint8_t /*SerialLoggerC.SerialQueueC*/QueueC$1$Queue$size(void )
-#line 57
-{
-  return /*SerialLoggerC.SerialQueueC*/QueueC$1$size;
-}
-
-#line 97
-static inline error_t /*SerialLoggerC.SerialQueueC*/QueueC$1$Queue$enqueue(/*SerialLoggerC.SerialQueueC*/QueueC$1$queue_t newVal)
-#line 97
-{
-  if (/*SerialLoggerC.SerialQueueC*/QueueC$1$Queue$size() < /*SerialLoggerC.SerialQueueC*/QueueC$1$Queue$maxSize()) {
-      ;
-      /*SerialLoggerC.SerialQueueC*/QueueC$1$queue[/*SerialLoggerC.SerialQueueC*/QueueC$1$tail] = newVal;
-      /*SerialLoggerC.SerialQueueC*/QueueC$1$tail++;
-      if (/*SerialLoggerC.SerialQueueC*/QueueC$1$tail == 100) {
-#line 102
-        /*SerialLoggerC.SerialQueueC*/QueueC$1$tail = 0;
-        }
-#line 103
-      /*SerialLoggerC.SerialQueueC*/QueueC$1$size++;
-      /*SerialLoggerC.SerialQueueC*/QueueC$1$printQueue();
-      return SUCCESS;
-    }
-  else {
-      return FAIL;
-    }
-}
-
-# 90 "/opt/tinyos-main/tos/interfaces/Queue.nc"
-inline static error_t SerialLoggerP$Queue$enqueue(SerialLoggerP$Queue$t  newVal){
-#line 90
-  unsigned char __nesc_result;
-#line 90
-
-#line 90
-  __nesc_result = /*SerialLoggerC.SerialQueueC*/QueueC$1$Queue$enqueue(newVal);
-#line 90
-
-#line 90
-  return __nesc_result;
-#line 90
-}
-#line 90
 # 105 "/opt/tinyos-main/tos/lib/rfxlink/layers/MetadataFlagsLayerC.nc"
 static inline uint8_t /*RF212RadioC.MetadataFlagsLayerC*/MetadataFlagsLayerC$0$RadioPacket$maxPayloadLength(void )
 {
@@ -36311,9 +36139,9 @@ static inline void /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/Active
 }
 
 # 59 "/opt/tinyos-main/tos/interfaces/SendNotifier.nc"
-inline static void /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$0$SendNotifier$aboutToSend(am_id_t arg_0x2ab2391eeca8, am_addr_t dest, message_t * msg){
+inline static void /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$0$SendNotifier$aboutToSend(am_id_t arg_0x2b814d9fcca8, am_addr_t dest, message_t * msg){
 #line 59
-    /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$0$SendNotifier$default$aboutToSend(arg_0x2ab2391eeca8, dest, msg);
+    /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$0$SendNotifier$default$aboutToSend(arg_0x2b814d9fcca8, dest, msg);
 #line 59
 }
 #line 59
@@ -36408,9 +36236,9 @@ static inline void /*RF212RadioC.SendResourceC.Arbiter*/SimpleArbiterP$0$Resourc
 }
 
 # 53 "/opt/tinyos-main/tos/interfaces/ResourceRequested.nc"
-inline static void /*RF212RadioC.SendResourceC.Arbiter*/SimpleArbiterP$0$ResourceRequested$requested(uint8_t arg_0x2ab2392cd1a0){
+inline static void /*RF212RadioC.SendResourceC.Arbiter*/SimpleArbiterP$0$ResourceRequested$requested(uint8_t arg_0x2b814dadb1a0){
 #line 53
-    /*RF212RadioC.SendResourceC.Arbiter*/SimpleArbiterP$0$ResourceRequested$default$requested(arg_0x2ab2392cd1a0);
+    /*RF212RadioC.SendResourceC.Arbiter*/SimpleArbiterP$0$ResourceRequested$default$requested(arg_0x2b814dadb1a0);
 #line 53
 }
 #line 53
@@ -36509,9 +36337,9 @@ static inline void /*RF212RadioC.SendResourceC.Arbiter*/SimpleArbiterP$0$Resourc
 }
 
 # 59 "/opt/tinyos-main/tos/interfaces/ResourceConfigure.nc"
-inline static void /*RF212RadioC.SendResourceC.Arbiter*/SimpleArbiterP$0$ResourceConfigure$configure(uint8_t arg_0x2ab2392cc6e0){
+inline static void /*RF212RadioC.SendResourceC.Arbiter*/SimpleArbiterP$0$ResourceConfigure$configure(uint8_t arg_0x2b814dada6e0){
 #line 59
-    /*RF212RadioC.SendResourceC.Arbiter*/SimpleArbiterP$0$ResourceConfigure$default$configure(arg_0x2ab2392cc6e0);
+    /*RF212RadioC.SendResourceC.Arbiter*/SimpleArbiterP$0$ResourceConfigure$default$configure(arg_0x2b814dada6e0);
 #line 59
 }
 #line 59
@@ -36522,9 +36350,9 @@ static inline void /*RF212RadioC.SendResourceC.Arbiter*/SimpleArbiterP$0$Resourc
 }
 
 # 61 "/opt/tinyos-main/tos/interfaces/ResourceRequested.nc"
-inline static void /*RF212RadioC.SendResourceC.Arbiter*/SimpleArbiterP$0$ResourceRequested$immediateRequested(uint8_t arg_0x2ab2392cd1a0){
+inline static void /*RF212RadioC.SendResourceC.Arbiter*/SimpleArbiterP$0$ResourceRequested$immediateRequested(uint8_t arg_0x2b814dadb1a0){
 #line 61
-    /*RF212RadioC.SendResourceC.Arbiter*/SimpleArbiterP$0$ResourceRequested$default$immediateRequested(arg_0x2ab2392cd1a0);
+    /*RF212RadioC.SendResourceC.Arbiter*/SimpleArbiterP$0$ResourceRequested$default$immediateRequested(arg_0x2b814dadb1a0);
 #line 61
 }
 #line 61
@@ -36835,9 +36663,9 @@ static inline void /*RF212RadioC.SendResourceC.Arbiter*/SimpleArbiterP$0$Resourc
 }
 
 # 65 "/opt/tinyos-main/tos/interfaces/ResourceConfigure.nc"
-inline static void /*RF212RadioC.SendResourceC.Arbiter*/SimpleArbiterP$0$ResourceConfigure$unconfigure(uint8_t arg_0x2ab2392cc6e0){
+inline static void /*RF212RadioC.SendResourceC.Arbiter*/SimpleArbiterP$0$ResourceConfigure$unconfigure(uint8_t arg_0x2b814dada6e0){
 #line 65
-    /*RF212RadioC.SendResourceC.Arbiter*/SimpleArbiterP$0$ResourceConfigure$default$unconfigure(arg_0x2ab2392cc6e0);
+    /*RF212RadioC.SendResourceC.Arbiter*/SimpleArbiterP$0$ResourceConfigure$default$unconfigure(arg_0x2b814dada6e0);
 #line 65
 }
 #line 65
@@ -37338,13 +37166,6 @@ inline static bool /*CtpP.Router1*/CtpRoutingEngineP1$0$CtpCongestion$isCongeste
 #line 7
 }
 #line 7
-# 2 "../serial-logger/SerialLogger.nc"
-inline static void /*CtpP.Router1*/CtpRoutingEngineP1$0$SerialLogger$log(uint16_t evt, uint16_t data){
-#line 2
-  SerialLoggerP$SerialLogger$log(evt, data);
-#line 2
-}
-#line 2
 # 392 "../ctp/CtpRoutingEngineP1.nc"
 static inline void /*CtpP.Router1*/CtpRoutingEngineP1$0$sendBeaconTask$runTask(void )
 #line 392
@@ -37358,8 +37179,8 @@ static inline void /*CtpP.Router1*/CtpRoutingEngineP1$0$sendBeaconTask$runTask(v
   if (/*CtpP.Router1*/CtpRoutingEngineP1$0$sending) {
       return;
     }
-  /*CtpP.Router1*/CtpRoutingEngineP1$0$SerialLogger$log(LOG_CURRENT_DAD, /*CtpP.Router1*/CtpRoutingEngineP1$0$routeInfo.parent);
-  /*CtpP.Router1*/CtpRoutingEngineP1$0$SerialLogger$log(LOG_SENT_BEACON, 1);
+
+
 
   __nesc_hton_uint8(/*CtpP.Router1*/CtpRoutingEngineP1$0$beaconMsg->options.nxdata, 0);
 
@@ -37696,9 +37517,9 @@ static inline void /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/Active
 }
 
 # 59 "/opt/tinyos-main/tos/interfaces/SendNotifier.nc"
-inline static void /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$1$SendNotifier$aboutToSend(am_id_t arg_0x2ab2391eeca8, am_addr_t dest, message_t * msg){
+inline static void /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$1$SendNotifier$aboutToSend(am_id_t arg_0x2b814d9fcca8, am_addr_t dest, message_t * msg){
 #line 59
-    /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$1$SendNotifier$default$aboutToSend(arg_0x2ab2391eeca8, dest, msg);
+    /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$1$SendNotifier$default$aboutToSend(arg_0x2b814d9fcca8, dest, msg);
 #line 59
 }
 #line 59
@@ -37793,9 +37614,9 @@ static inline void /*RF231RadioC.SendResourceC.Arbiter*/SimpleArbiterP$1$Resourc
 }
 
 # 53 "/opt/tinyos-main/tos/interfaces/ResourceRequested.nc"
-inline static void /*RF231RadioC.SendResourceC.Arbiter*/SimpleArbiterP$1$ResourceRequested$requested(uint8_t arg_0x2ab2392cd1a0){
+inline static void /*RF231RadioC.SendResourceC.Arbiter*/SimpleArbiterP$1$ResourceRequested$requested(uint8_t arg_0x2b814dadb1a0){
 #line 53
-    /*RF231RadioC.SendResourceC.Arbiter*/SimpleArbiterP$1$ResourceRequested$default$requested(arg_0x2ab2392cd1a0);
+    /*RF231RadioC.SendResourceC.Arbiter*/SimpleArbiterP$1$ResourceRequested$default$requested(arg_0x2b814dadb1a0);
 #line 53
 }
 #line 53
@@ -37894,9 +37715,9 @@ static inline void /*RF231RadioC.SendResourceC.Arbiter*/SimpleArbiterP$1$Resourc
 }
 
 # 59 "/opt/tinyos-main/tos/interfaces/ResourceConfigure.nc"
-inline static void /*RF231RadioC.SendResourceC.Arbiter*/SimpleArbiterP$1$ResourceConfigure$configure(uint8_t arg_0x2ab2392cc6e0){
+inline static void /*RF231RadioC.SendResourceC.Arbiter*/SimpleArbiterP$1$ResourceConfigure$configure(uint8_t arg_0x2b814dada6e0){
 #line 59
-    /*RF231RadioC.SendResourceC.Arbiter*/SimpleArbiterP$1$ResourceConfigure$default$configure(arg_0x2ab2392cc6e0);
+    /*RF231RadioC.SendResourceC.Arbiter*/SimpleArbiterP$1$ResourceConfigure$default$configure(arg_0x2b814dada6e0);
 #line 59
 }
 #line 59
@@ -37907,9 +37728,9 @@ static inline void /*RF231RadioC.SendResourceC.Arbiter*/SimpleArbiterP$1$Resourc
 }
 
 # 61 "/opt/tinyos-main/tos/interfaces/ResourceRequested.nc"
-inline static void /*RF231RadioC.SendResourceC.Arbiter*/SimpleArbiterP$1$ResourceRequested$immediateRequested(uint8_t arg_0x2ab2392cd1a0){
+inline static void /*RF231RadioC.SendResourceC.Arbiter*/SimpleArbiterP$1$ResourceRequested$immediateRequested(uint8_t arg_0x2b814dadb1a0){
 #line 61
-    /*RF231RadioC.SendResourceC.Arbiter*/SimpleArbiterP$1$ResourceRequested$default$immediateRequested(arg_0x2ab2392cd1a0);
+    /*RF231RadioC.SendResourceC.Arbiter*/SimpleArbiterP$1$ResourceRequested$default$immediateRequested(arg_0x2b814dadb1a0);
 #line 61
 }
 #line 61
@@ -38220,15 +38041,15 @@ static inline void /*RF231RadioC.SendResourceC.Arbiter*/SimpleArbiterP$1$Resourc
 }
 
 # 65 "/opt/tinyos-main/tos/interfaces/ResourceConfigure.nc"
-inline static void /*RF231RadioC.SendResourceC.Arbiter*/SimpleArbiterP$1$ResourceConfigure$unconfigure(uint8_t arg_0x2ab2392cc6e0){
+inline static void /*RF231RadioC.SendResourceC.Arbiter*/SimpleArbiterP$1$ResourceConfigure$unconfigure(uint8_t arg_0x2b814dada6e0){
 #line 65
-    /*RF231RadioC.SendResourceC.Arbiter*/SimpleArbiterP$1$ResourceConfigure$default$unconfigure(arg_0x2ab2392cc6e0);
+    /*RF231RadioC.SendResourceC.Arbiter*/SimpleArbiterP$1$ResourceConfigure$default$unconfigure(arg_0x2b814dada6e0);
 #line 65
 }
 #line 65
-# 1326 "../ctp/CtpForwardingEngineP.nc"
+# 1328 "../ctp/CtpForwardingEngineP.nc"
 static inline error_t /*CtpP.Forwarder*/CtpForwardingEngineP$0$CollectionDebug$default$logEvent(uint8_t type)
-#line 1326
+#line 1328
 {
   return SUCCESS;
 }
@@ -38263,23 +38084,23 @@ inline static uint8_t /*CtpP.Forwarder*/CtpForwardingEngineP$0$SubPacket1$maxPay
 #line 106
 }
 #line 106
-# 1223 "../ctp/CtpForwardingEngineP.nc"
+# 1225 "../ctp/CtpForwardingEngineP.nc"
 static inline uint8_t /*CtpP.Forwarder*/CtpForwardingEngineP$0$Packet$maxPayloadLength(void )
-#line 1223
+#line 1225
 {
   return /*CtpP.Forwarder*/CtpForwardingEngineP$0$SubPacket1$maxPayloadLength() - sizeof(ctp_data_header_t );
 }
 
-#line 1219
+#line 1221
 static inline void /*CtpP.Forwarder*/CtpForwardingEngineP$0$Packet$setPayloadLength(message_t *msg, uint8_t len)
-#line 1219
+#line 1221
 {
   /*CtpP.Forwarder*/CtpForwardingEngineP$0$SubPacket1$setPayloadLength(msg, len + sizeof(ctp_data_header_t ));
 }
 
-#line 1290
+#line 1292
 static inline void /*CtpP.Forwarder*/CtpForwardingEngineP$0$setState(uint8_t state)
-#line 1290
+#line 1292
 {
   /*CtpP.Forwarder*/CtpForwardingEngineP$0$forwardingState = /*CtpP.Forwarder*/CtpForwardingEngineP$0$forwardingState | state;
 }
@@ -38299,16 +38120,16 @@ inline static error_t /*CtpP.Forwarder*/CtpForwardingEngineP$0$SubSend2$send(am_
 #line 80
 }
 #line 80
-# 1284 "../ctp/CtpForwardingEngineP.nc"
+# 1286 "../ctp/CtpForwardingEngineP.nc"
 static inline void /*CtpP.Forwarder*/CtpForwardingEngineP$0$clearState(uint8_t state)
-#line 1284
+#line 1286
 {
   /*CtpP.Forwarder*/CtpForwardingEngineP$0$forwardingState = /*CtpP.Forwarder*/CtpForwardingEngineP$0$forwardingState & ~state;
 }
 
-#line 1287
+#line 1289
 static inline bool /*CtpP.Forwarder*/CtpForwardingEngineP$0$hasState(uint8_t state)
-#line 1287
+#line 1289
 {
   return /*CtpP.Forwarder*/CtpForwardingEngineP$0$forwardingState & state;
 }
@@ -38394,31 +38215,31 @@ static inline ctp_data_header_t */*CtpP.Forwarder*/CtpForwardingEngineP$0$getHea
   return (ctp_data_header_t *)/*CtpP.Forwarder*/CtpForwardingEngineP$0$SubPacket1$getPayload(m, sizeof(ctp_data_header_t ));
 }
 
-#line 1255
+#line 1257
 static inline void /*CtpP.Forwarder*/CtpForwardingEngineP$0$CtpPacket$setEtx(message_t *msg, uint16_t e)
-#line 1255
+#line 1257
 {
-#line 1255
+#line 1257
   __nesc_hton_uint16(/*CtpP.Forwarder*/CtpForwardingEngineP$0$getHeader(msg)->etx.nxdata, e);
 }
 
-#line 1306
+#line 1308
 static inline message_t *
 /*CtpP.Forwarder*/CtpForwardingEngineP$0$Receive$default$receive(collection_id_t collectid, message_t *msg, void *payload, 
 uint8_t len)
-#line 1308
+#line 1310
 {
   return msg;
 }
 
 # 78 "/opt/tinyos-main/tos/interfaces/Receive.nc"
-inline static message_t * /*CtpP.Forwarder*/CtpForwardingEngineP$0$Receive$receive(collection_id_t arg_0x2ab23a96c648, message_t * msg, void * payload, uint8_t len){
+inline static message_t * /*CtpP.Forwarder*/CtpForwardingEngineP$0$Receive$receive(collection_id_t arg_0x2b814f176270, message_t * msg, void * payload, uint8_t len){
 #line 78
   nx_struct message_t *__nesc_result;
 #line 78
 
 #line 78
-  switch (arg_0x2ab23a96c648) {
+  switch (arg_0x2b814f176270) {
 #line 78
     case COLLECTION_ID:
 #line 78
@@ -38428,7 +38249,7 @@ inline static message_t * /*CtpP.Forwarder*/CtpForwardingEngineP$0$Receive$recei
 #line 78
     default:
 #line 78
-      __nesc_result = /*CtpP.Forwarder*/CtpForwardingEngineP$0$Receive$default$receive(arg_0x2ab23a96c648, msg, payload, len);
+      __nesc_result = /*CtpP.Forwarder*/CtpForwardingEngineP$0$Receive$default$receive(arg_0x2b814f176270, msg, payload, len);
 #line 78
       break;
 #line 78
@@ -38755,11 +38576,11 @@ inline static bool /*CtpP.Forwarder*/CtpForwardingEngineP$0$UnicastNameFreeRouti
 #line 9
 }
 #line 9
-# 1235 "../ctp/CtpForwardingEngineP.nc"
+# 1237 "../ctp/CtpForwardingEngineP.nc"
 static inline uint8_t /*CtpP.Forwarder*/CtpForwardingEngineP$0$CtpPacket$getRadio(message_t *msg)
-#line 1235
+#line 1237
 {
-#line 1235
+#line 1237
   return __nesc_ntoh_uint8(/*CtpP.Forwarder*/CtpForwardingEngineP$0$getHeader(msg)->radio.nxdata);
 }
 
@@ -38999,9 +38820,9 @@ inline static bool /*CtpP.Forwarder*/CtpForwardingEngineP$0$SendQueue$empty(void
 #line 50
 }
 #line 50
-# 486 "../ctp/CtpForwardingEngineP.nc"
+# 488 "../ctp/CtpForwardingEngineP.nc"
 static inline void /*CtpP.Forwarder*/CtpForwardingEngineP$0$sendTask$runTask(void )
-#line 486
+#line 488
 {
   uint16_t gradient;
   am_addr_t dest;
@@ -39028,7 +38849,7 @@ static inline void /*CtpP.Forwarder*/CtpForwardingEngineP$0$sendTask$runTask(voi
           if (/*CtpP.Forwarder*/CtpForwardingEngineP$0$MessagePool$put(qe->msg) != SUCCESS) {
             /*CtpP.Forwarder*/CtpForwardingEngineP$0$CollectionDebug$logEvent(NET_C_FE_PUT_MSGPOOL_ERR);
             }
-#line 511
+#line 513
           if (/*CtpP.Forwarder*/CtpForwardingEngineP$0$QEntryPool$put(qe) != SUCCESS) {
             /*CtpP.Forwarder*/CtpForwardingEngineP$0$CollectionDebug$logEvent(NET_C_FE_PUT_QEPOOL_ERR);
             }
@@ -39046,7 +38867,7 @@ static inline void /*CtpP.Forwarder*/CtpForwardingEngineP$0$sendTask$runTask(voi
 
 
           if ((
-#line 526
+#line 528
           !/*CtpP.Forwarder*/CtpForwardingEngineP$0$RootControl1$isRoot() && 
           !/*CtpP.Forwarder*/CtpForwardingEngineP$0$UnicastNameFreeRouting1$hasRoute()) || 
           /*CtpP.Forwarder*/CtpForwardingEngineP$0$CtpInfo1$getEtx(&gradient) != SUCCESS) {
@@ -39131,7 +38952,7 @@ static inline void /*CtpP.Forwarder*/CtpForwardingEngineP$0$sendTask$runTask(voi
           ;
 
           if ((
-#line 608
+#line 610
           !/*CtpP.Forwarder*/CtpForwardingEngineP$0$RootControl2$isRoot() && 
           !/*CtpP.Forwarder*/CtpForwardingEngineP$0$UnicastNameFreeRouting2$hasRoute()) || 
           /*CtpP.Forwarder*/CtpForwardingEngineP$0$CtpInfo2$getEtx(&gradient) != SUCCESS) {
@@ -39208,11 +39029,11 @@ static inline void /*CtpP.Forwarder*/CtpForwardingEngineP$0$sendTask$runTask(voi
     }
 }
 
-#line 1248
+#line 1250
 static inline am_addr_t /*CtpP.Forwarder*/CtpForwardingEngineP$0$CtpPacket$getOrigin(message_t *msg)
-#line 1248
+#line 1250
 {
-#line 1248
+#line 1250
   return __nesc_ntoh_uint16(/*CtpP.Forwarder*/CtpForwardingEngineP$0$getHeader(msg)->origin.nxdata);
 }
 
@@ -39327,6 +39148,181 @@ inline static bool TestCtpC$ReceivedCache$lookup(TestCtpC$ReceivedCache$t item){
 #line 59
 }
 #line 59
+# 75 "/opt/tinyos-main/tos/system/PoolP.nc"
+static inline bool /*SerialLoggerC.SerialPoolC.PoolP*/PoolP$2$Pool$empty(void )
+#line 75
+{
+  ;
+  return /*SerialLoggerC.SerialPoolC.PoolP*/PoolP$2$free == 0;
+}
+
+# 61 "/opt/tinyos-main/tos/interfaces/Pool.nc"
+inline static bool SerialLoggerP$Pool$empty(void ){
+#line 61
+  unsigned char __nesc_result;
+#line 61
+
+#line 61
+  __nesc_result = /*SerialLoggerC.SerialPoolC.PoolP*/PoolP$2$Pool$empty();
+#line 61
+
+#line 61
+  return __nesc_result;
+#line 61
+}
+#line 61
+# 88 "/opt/tinyos-main/tos/system/PoolP.nc"
+static inline /*SerialLoggerC.SerialPoolC.PoolP*/PoolP$2$pool_t */*SerialLoggerC.SerialPoolC.PoolP*/PoolP$2$Pool$get(void )
+#line 88
+{
+  if (/*SerialLoggerC.SerialPoolC.PoolP*/PoolP$2$free) {
+      /*SerialLoggerC.SerialPoolC.PoolP*/PoolP$2$pool_t *rval = /*SerialLoggerC.SerialPoolC.PoolP*/PoolP$2$queue[/*SerialLoggerC.SerialPoolC.PoolP*/PoolP$2$index];
+
+#line 91
+      /*SerialLoggerC.SerialPoolC.PoolP*/PoolP$2$queue[/*SerialLoggerC.SerialPoolC.PoolP*/PoolP$2$index] = (void *)0;
+      /*SerialLoggerC.SerialPoolC.PoolP*/PoolP$2$free--;
+      /*SerialLoggerC.SerialPoolC.PoolP*/PoolP$2$index++;
+      if (/*SerialLoggerC.SerialPoolC.PoolP*/PoolP$2$index == 100) {
+          /*SerialLoggerC.SerialPoolC.PoolP*/PoolP$2$index = 0;
+        }
+      ;
+      return rval;
+    }
+  return (void *)0;
+}
+
+# 97 "/opt/tinyos-main/tos/interfaces/Pool.nc"
+inline static SerialLoggerP$Pool$t * SerialLoggerP$Pool$get(void ){
+#line 97
+  nx_struct message_t *__nesc_result;
+#line 97
+
+#line 97
+  __nesc_result = /*SerialLoggerC.SerialPoolC.PoolP*/PoolP$2$Pool$get();
+#line 97
+
+#line 97
+  return __nesc_result;
+#line 97
+}
+#line 97
+# 97 "/opt/tinyos-main/tos/lib/serial/SerialActiveMessageP.nc"
+static inline void */*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMSend$getPayload(am_id_t id, message_t *m, uint8_t len)
+#line 97
+{
+  return /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Packet$getPayload(m, len);
+}
+
+# 135 "/opt/tinyos-main/tos/interfaces/AMSend.nc"
+inline static void * /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$AMSend$getPayload(am_id_t arg_0x2b814fa0dc70, message_t * msg, uint8_t len){
+#line 135
+  void *__nesc_result;
+#line 135
+
+#line 135
+  __nesc_result = /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$AMSend$getPayload(arg_0x2b814fa0dc70, msg, len);
+#line 135
+
+#line 135
+  return __nesc_result;
+#line 135
+}
+#line 135
+# 211 "/opt/tinyos-main/tos/system/AMQueueImplP.nc"
+static inline void */*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$getPayload(uint8_t id, message_t *m, uint8_t len)
+#line 211
+{
+  return /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$AMSend$getPayload(0, m, len);
+}
+
+# 125 "/opt/tinyos-main/tos/interfaces/Send.nc"
+inline static void * /*SerialLoggerC.SerialSenderC.AMQueueEntryP*/AMQueueEntryP$0$Send$getPayload(message_t * msg, uint8_t len){
+#line 125
+  void *__nesc_result;
+#line 125
+
+#line 125
+  __nesc_result = /*SerialAMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$getPayload(0U, msg, len);
+#line 125
+
+#line 125
+  return __nesc_result;
+#line 125
+}
+#line 125
+# 73 "/opt/tinyos-main/tos/system/AMQueueEntryP.nc"
+static inline void */*SerialLoggerC.SerialSenderC.AMQueueEntryP*/AMQueueEntryP$0$AMSend$getPayload(message_t *m, uint8_t len)
+#line 73
+{
+  return /*SerialLoggerC.SerialSenderC.AMQueueEntryP*/AMQueueEntryP$0$Send$getPayload(m, len);
+}
+
+# 135 "/opt/tinyos-main/tos/interfaces/AMSend.nc"
+inline static void * SerialLoggerP$SerialSend$getPayload(message_t * msg, uint8_t len){
+#line 135
+  void *__nesc_result;
+#line 135
+
+#line 135
+  __nesc_result = /*SerialLoggerC.SerialSenderC.AMQueueEntryP*/AMQueueEntryP$0$AMSend$getPayload(msg, len);
+#line 135
+
+#line 135
+  return __nesc_result;
+#line 135
+}
+#line 135
+# 61 "/opt/tinyos-main/tos/system/QueueC.nc"
+static inline uint8_t /*SerialLoggerC.SerialQueueC*/QueueC$1$Queue$maxSize(void )
+#line 61
+{
+  return 100;
+}
+
+#line 57
+static inline uint8_t /*SerialLoggerC.SerialQueueC*/QueueC$1$Queue$size(void )
+#line 57
+{
+  return /*SerialLoggerC.SerialQueueC*/QueueC$1$size;
+}
+
+#line 97
+static inline error_t /*SerialLoggerC.SerialQueueC*/QueueC$1$Queue$enqueue(/*SerialLoggerC.SerialQueueC*/QueueC$1$queue_t newVal)
+#line 97
+{
+  if (/*SerialLoggerC.SerialQueueC*/QueueC$1$Queue$size() < /*SerialLoggerC.SerialQueueC*/QueueC$1$Queue$maxSize()) {
+      ;
+      /*SerialLoggerC.SerialQueueC*/QueueC$1$queue[/*SerialLoggerC.SerialQueueC*/QueueC$1$tail] = newVal;
+      /*SerialLoggerC.SerialQueueC*/QueueC$1$tail++;
+      if (/*SerialLoggerC.SerialQueueC*/QueueC$1$tail == 100) {
+#line 102
+        /*SerialLoggerC.SerialQueueC*/QueueC$1$tail = 0;
+        }
+#line 103
+      /*SerialLoggerC.SerialQueueC*/QueueC$1$size++;
+      /*SerialLoggerC.SerialQueueC*/QueueC$1$printQueue();
+      return SUCCESS;
+    }
+  else {
+      return FAIL;
+    }
+}
+
+# 90 "/opt/tinyos-main/tos/interfaces/Queue.nc"
+inline static error_t SerialLoggerP$Queue$enqueue(SerialLoggerP$Queue$t  newVal){
+#line 90
+  unsigned char __nesc_result;
+#line 90
+
+#line 90
+  __nesc_result = /*SerialLoggerC.SerialQueueC*/QueueC$1$Queue$enqueue(newVal);
+#line 90
+
+#line 90
+  return __nesc_result;
+#line 90
+}
+#line 90
 # 66 "../ctp/CtpPacket.nc"
 inline static uint8_t /*TestCtpAppC.ReceivedCacheP.CacheP*/LruCtpMsgCacheP$1$CtpPacket$getType(message_t *msg){
 #line 66
@@ -39558,25 +39554,25 @@ inline static void /*CtpP.Forwarder*/CtpForwardingEngineP$0$CtpInfo1$recomputeRo
 #line 83
 }
 #line 83
-# 144 "TestCtpC.nc"
+# 143 "TestCtpC.nc"
 static inline void TestCtpC$Send$sendDone(message_t *msg, error_t error)
-#line 144
+#line 143
 {
 }
 
-# 1297 "../ctp/CtpForwardingEngineP.nc"
+# 1299 "../ctp/CtpForwardingEngineP.nc"
 static inline 
-#line 1296
+#line 1298
 void 
 /*CtpP.Forwarder*/CtpForwardingEngineP$0$Send$default$sendDone(uint8_t client, message_t *msg, error_t error)
-#line 1297
+#line 1299
 {
 }
 
 # 100 "/opt/tinyos-main/tos/interfaces/Send.nc"
-inline static void /*CtpP.Forwarder*/CtpForwardingEngineP$0$Send$sendDone(uint8_t arg_0x2ab23a96d3f0, message_t * msg, error_t error){
+inline static void /*CtpP.Forwarder*/CtpForwardingEngineP$0$Send$sendDone(uint8_t arg_0x2b814f178108, message_t * msg, error_t error){
 #line 100
-  switch (arg_0x2ab23a96d3f0) {
+  switch (arg_0x2b814f178108) {
 #line 100
     case 0U:
 #line 100
@@ -39586,7 +39582,7 @@ inline static void /*CtpP.Forwarder*/CtpForwardingEngineP$0$Send$sendDone(uint8_
 #line 100
     default:
 #line 100
-      /*CtpP.Forwarder*/CtpForwardingEngineP$0$Send$default$sendDone(arg_0x2ab23a96d3f0, msg, error);
+      /*CtpP.Forwarder*/CtpForwardingEngineP$0$Send$default$sendDone(arg_0x2b814f178108, msg, error);
 #line 100
       break;
 #line 100
@@ -40218,9 +40214,9 @@ inline static error_t /*RF231RadioC.MessageBufferLayerC.MessageBufferLayerP*/Mes
 #line 44
 }
 #line 44
-# 117 "TestCtpC.nc"
+# 116 "TestCtpC.nc"
 static inline void TestCtpC$RadiosControl$stopDone(error_t err)
-#line 117
+#line 116
 {
 }
 
@@ -40295,9 +40291,9 @@ static inline void /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/Active
 }
 
 # 110 "/opt/tinyos-main/tos/interfaces/AMSend.nc"
-inline static void /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$1$AMSend$sendDone(am_id_t arg_0x2ab2391f03c8, message_t * msg, error_t error){
+inline static void /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$1$AMSend$sendDone(am_id_t arg_0x2b814d9fe3c8, message_t * msg, error_t error){
 #line 110
-  switch (arg_0x2ab2391f03c8) {
+  switch (arg_0x2b814d9fe3c8) {
 #line 110
     case AM_CTP_ROUTING:
 #line 110
@@ -40313,7 +40309,7 @@ inline static void /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/Active
 #line 110
     default:
 #line 110
-      /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$1$AMSend$default$sendDone(arg_0x2ab2391f03c8, msg, error);
+      /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$1$AMSend$default$sendDone(arg_0x2b814d9fe3c8, msg, error);
 #line 110
       break;
 #line 110
@@ -40669,13 +40665,13 @@ static inline message_t */*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/
 }
 
 # 78 "/opt/tinyos-main/tos/interfaces/Receive.nc"
-inline static message_t * /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$1$SnoopDefault$receive(am_id_t arg_0x2ab2391eb488, message_t * msg, void * payload, uint8_t len){
+inline static message_t * /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$1$SnoopDefault$receive(am_id_t arg_0x2b814d9f9488, message_t * msg, void * payload, uint8_t len){
 #line 78
   nx_struct message_t *__nesc_result;
 #line 78
 
 #line 78
-    __nesc_result = /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$1$SnoopDefault$default$receive(arg_0x2ab2391eb488, msg, payload, len);
+    __nesc_result = /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$1$SnoopDefault$default$receive(arg_0x2b814d9f9488, msg, payload, len);
 #line 78
 
 #line 78
@@ -40683,23 +40679,23 @@ inline static message_t * /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*
 #line 78
 }
 #line 78
-# 1312 "../ctp/CtpForwardingEngineP.nc"
+# 1314 "../ctp/CtpForwardingEngineP.nc"
 static inline message_t *
 /*CtpP.Forwarder*/CtpForwardingEngineP$0$Snoop$default$receive(collection_id_t collectid, message_t *msg, void *payload, 
 uint8_t len)
-#line 1314
+#line 1316
 {
   return msg;
 }
 
 # 78 "/opt/tinyos-main/tos/interfaces/Receive.nc"
-inline static message_t * /*CtpP.Forwarder*/CtpForwardingEngineP$0$Snoop$receive(collection_id_t arg_0x2ab23a96a270, message_t * msg, void * payload, uint8_t len){
+inline static message_t * /*CtpP.Forwarder*/CtpForwardingEngineP$0$Snoop$receive(collection_id_t arg_0x2b814f176e08, message_t * msg, void * payload, uint8_t len){
 #line 78
   nx_struct message_t *__nesc_result;
 #line 78
 
 #line 78
-    __nesc_result = /*CtpP.Forwarder*/CtpForwardingEngineP$0$Snoop$default$receive(arg_0x2ab23a96a270, msg, payload, len);
+    __nesc_result = /*CtpP.Forwarder*/CtpForwardingEngineP$0$Snoop$default$receive(arg_0x2b814f176e08, msg, payload, len);
 #line 78
 
 #line 78
@@ -40714,10 +40710,10 @@ inline static void /*CtpP.Forwarder*/CtpForwardingEngineP$0$CtpInfo1$triggerRout
 #line 71
 }
 #line 71
-# 1161 "../ctp/CtpForwardingEngineP.nc"
+# 1163 "../ctp/CtpForwardingEngineP.nc"
 static inline message_t *
 /*CtpP.Forwarder*/CtpForwardingEngineP$0$SubSnoop1$receive(message_t *msg, void *payload, uint8_t len)
-#line 1162
+#line 1164
 {
 
 
@@ -40739,13 +40735,13 @@ static inline message_t */*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/
 }
 
 # 78 "/opt/tinyos-main/tos/interfaces/Receive.nc"
-inline static message_t * /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$1$Snoop$receive(am_id_t arg_0x2ab2391ee1a0, message_t * msg, void * payload, uint8_t len){
+inline static message_t * /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$1$Snoop$receive(am_id_t arg_0x2b814d9fc1a0, message_t * msg, void * payload, uint8_t len){
 #line 78
   nx_struct message_t *__nesc_result;
 #line 78
 
 #line 78
-  switch (arg_0x2ab2391ee1a0) {
+  switch (arg_0x2b814d9fc1a0) {
 #line 78
     case AM_CTP_DATA:
 #line 78
@@ -40755,7 +40751,7 @@ inline static message_t * /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*
 #line 78
     default:
 #line 78
-      __nesc_result = /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$1$Snoop$default$receive(arg_0x2ab2391ee1a0, msg, payload, len);
+      __nesc_result = /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$1$Snoop$default$receive(arg_0x2b814d9fc1a0, msg, payload, len);
 #line 78
       break;
 #line 78
@@ -40774,13 +40770,13 @@ static inline message_t */*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/
 }
 
 # 78 "/opt/tinyos-main/tos/interfaces/Receive.nc"
-inline static message_t * /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$1$ReceiveDefault$receive(am_id_t arg_0x2ab2391ed8b0, message_t * msg, void * payload, uint8_t len){
+inline static message_t * /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$1$ReceiveDefault$receive(am_id_t arg_0x2b814d9fb8b0, message_t * msg, void * payload, uint8_t len){
 #line 78
   nx_struct message_t *__nesc_result;
 #line 78
 
 #line 78
-    __nesc_result = /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$1$ReceiveDefault$default$receive(arg_0x2ab2391ed8b0, msg, payload, len);
+    __nesc_result = /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$1$ReceiveDefault$default$receive(arg_0x2b814d9fb8b0, msg, payload, len);
 #line 78
 
 #line 78
@@ -40867,9 +40863,9 @@ static inline error_t /*CtpP.Router1*/CtpRoutingEngineP1$0$routingTableUpdateEnt
   return SUCCESS;
 }
 
-# 1207 "../ctp/CtpForwardingEngineP.nc"
+# 1209 "../ctp/CtpForwardingEngineP.nc"
 static inline void /*CtpP.Forwarder*/CtpForwardingEngineP$0$LinkEstimator1$evicted(am_addr_t neighbor)
-#line 1207
+#line 1209
 {
 }
 
@@ -41404,9 +41400,9 @@ inline static am_addr_t /*CtpP.Forwarder*/CtpForwardingEngineP$0$AMPacket1$desti
 #line 78
 }
 #line 78
-# 1335 "../ctp/CtpForwardingEngineP.nc"
+# 1337 "../ctp/CtpForwardingEngineP.nc"
 static inline error_t /*CtpP.Forwarder*/CtpForwardingEngineP$0$CollectionDebug$default$logEventMsg(uint8_t type, uint16_t msg, am_addr_t origin, am_addr_t node)
-#line 1335
+#line 1337
 {
   return SUCCESS;
 }
@@ -41530,9 +41526,9 @@ inline static bool /*CtpP.Forwarder*/CtpForwardingEngineP$0$MessagePool$empty(vo
 #line 61
 }
 #line 61
-# 844 "../ctp/CtpForwardingEngineP.nc"
+# 846 "../ctp/CtpForwardingEngineP.nc"
 static inline message_t * /*CtpP.Forwarder*/CtpForwardingEngineP$0$forward1(message_t * m)
-#line 844
+#line 846
 {
   if (/*CtpP.Forwarder*/CtpForwardingEngineP$0$MessagePool$empty()) {
       ;
@@ -41540,7 +41536,7 @@ static inline message_t * /*CtpP.Forwarder*/CtpForwardingEngineP$0$forward1(mess
       /*CtpP.Forwarder*/CtpForwardingEngineP$0$CollectionDebug$logEvent(NET_C_FE_MSG_POOL_EMPTY);
     }
   else {
-#line 850
+#line 852
     if (/*CtpP.Forwarder*/CtpForwardingEngineP$0$QEntryPool$empty()) {
         ;
 
@@ -41602,13 +41598,13 @@ static inline message_t * /*CtpP.Forwarder*/CtpForwardingEngineP$0$forward1(mess
             return newMsg;
           }
         else 
-#line 909
+#line 911
           {
 
             if (/*CtpP.Forwarder*/CtpForwardingEngineP$0$MessagePool$put(newMsg) != SUCCESS) {
               /*CtpP.Forwarder*/CtpForwardingEngineP$0$CollectionDebug$logEvent(NET_C_FE_PUT_MSGPOOL_ERR);
               }
-#line 913
+#line 915
             if (/*CtpP.Forwarder*/CtpForwardingEngineP$0$QEntryPool$put(qe) != SUCCESS) {
               /*CtpP.Forwarder*/CtpForwardingEngineP$0$CollectionDebug$logEvent(NET_C_FE_PUT_QEPOOL_ERR);
               }
@@ -41622,31 +41618,31 @@ static inline message_t * /*CtpP.Forwarder*/CtpForwardingEngineP$0$forward1(mess
   return m;
 }
 
-# 142 "TestCtpC.nc"
+# 141 "TestCtpC.nc"
 static inline bool TestCtpC$Intercept$forward(message_t *msg, void *payload, uint8_t len)
-#line 142
+#line 141
 {
 }
 
-# 1301 "../ctp/CtpForwardingEngineP.nc"
+# 1303 "../ctp/CtpForwardingEngineP.nc"
 static inline 
-#line 1300
+#line 1302
 bool 
 /*CtpP.Forwarder*/CtpForwardingEngineP$0$Intercept$default$forward(collection_id_t collectid, message_t *msg, void *payload, 
 uint8_t len)
-#line 1302
+#line 1304
 {
   return TRUE;
 }
 
 # 31 "/opt/tinyos-main/tos/interfaces/Intercept.nc"
-inline static bool /*CtpP.Forwarder*/CtpForwardingEngineP$0$Intercept$forward(collection_id_t arg_0x2ab23a96ada8, message_t * msg, void * payload, uint8_t len){
+inline static bool /*CtpP.Forwarder*/CtpForwardingEngineP$0$Intercept$forward(collection_id_t arg_0x2b814f1759b0, message_t * msg, void * payload, uint8_t len){
 #line 31
   unsigned char __nesc_result;
 #line 31
 
 #line 31
-  switch (arg_0x2ab23a96ada8) {
+  switch (arg_0x2b814f1759b0) {
 #line 31
     case COLLECTION_ID:
 #line 31
@@ -41656,7 +41652,7 @@ inline static bool /*CtpP.Forwarder*/CtpForwardingEngineP$0$Intercept$forward(co
 #line 31
     default:
 #line 31
-      __nesc_result = /*CtpP.Forwarder*/CtpForwardingEngineP$0$Intercept$default$forward(arg_0x2ab23a96ada8, msg, payload, len);
+      __nesc_result = /*CtpP.Forwarder*/CtpForwardingEngineP$0$Intercept$default$forward(arg_0x2b814f1759b0, msg, payload, len);
 #line 31
       break;
 #line 31
@@ -41733,24 +41729,24 @@ inline static uint8_t /*CtpP.Forwarder*/CtpForwardingEngineP$0$SubSend1$maxPaylo
 #line 123
 }
 #line 123
-# 1252 "../ctp/CtpForwardingEngineP.nc"
+# 1254 "../ctp/CtpForwardingEngineP.nc"
 static inline void /*CtpP.Forwarder*/CtpForwardingEngineP$0$CtpPacket$setThl(message_t *msg, uint8_t thl)
-#line 1252
+#line 1254
 {
-#line 1252
+#line 1254
   __nesc_hton_uint8(/*CtpP.Forwarder*/CtpForwardingEngineP$0$getHeader(msg)->thl.nxdata, thl);
 }
 
-#line 1015
+#line 1017
 static inline message_t *
 /*CtpP.Forwarder*/CtpForwardingEngineP$0$SubReceive1$receive(message_t *msg, void *payload, uint8_t len)
-#line 1016
+#line 1018
 {
   collection_id_t collectid;
   bool duplicate = FALSE;
   fe_queue_entry_t *qe;
   uint8_t i;
-#line 1020
+#line 1022
   uint8_t thl;
 
 
@@ -41814,7 +41810,7 @@ static inline message_t *
         return msg;
         }
       else 
-#line 1081
+#line 1083
         {
 
           ;
@@ -41833,13 +41829,13 @@ static inline message_t */*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/
 }
 
 # 78 "/opt/tinyos-main/tos/interfaces/Receive.nc"
-inline static message_t * /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$1$Receive$receive(am_id_t arg_0x2ab2391ef5f8, message_t * msg, void * payload, uint8_t len){
+inline static message_t * /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$1$Receive$receive(am_id_t arg_0x2b814d9fd5f8, message_t * msg, void * payload, uint8_t len){
 #line 78
   nx_struct message_t *__nesc_result;
 #line 78
 
 #line 78
-  switch (arg_0x2ab2391ef5f8) {
+  switch (arg_0x2b814d9fd5f8) {
 #line 78
     case AM_CTP_ROUTING:
 #line 78
@@ -41855,7 +41851,7 @@ inline static message_t * /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*
 #line 78
     default:
 #line 78
-      __nesc_result = /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$1$Receive$default$receive(arg_0x2ab2391ef5f8, msg, payload, len);
+      __nesc_result = /*RF231RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$1$Receive$default$receive(arg_0x2b814d9fd5f8, msg, payload, len);
 #line 78
       break;
 #line 78
@@ -42171,9 +42167,9 @@ static inline void /*RF231RadioC.SendResourceC.Arbiter*/SimpleArbiterP$1$Resourc
 }
 
 # 102 "/opt/tinyos-main/tos/interfaces/Resource.nc"
-inline static void /*RF231RadioC.SendResourceC.Arbiter*/SimpleArbiterP$1$Resource$granted(uint8_t arg_0x2ab2392ce020){
+inline static void /*RF231RadioC.SendResourceC.Arbiter*/SimpleArbiterP$1$Resource$granted(uint8_t arg_0x2b814dadc020){
 #line 102
-  switch (arg_0x2ab2392ce020) {
+  switch (arg_0x2b814dadc020) {
 #line 102
     case 1U:
 #line 102
@@ -42183,7 +42179,7 @@ inline static void /*RF231RadioC.SendResourceC.Arbiter*/SimpleArbiterP$1$Resourc
 #line 102
     default:
 #line 102
-      /*RF231RadioC.SendResourceC.Arbiter*/SimpleArbiterP$1$Resource$default$granted(arg_0x2ab2392ce020);
+      /*RF231RadioC.SendResourceC.Arbiter*/SimpleArbiterP$1$Resource$default$granted(arg_0x2b814dadc020);
 #line 102
       break;
 #line 102
@@ -42214,9 +42210,9 @@ uint8_t *rx_buf, uint16_t len, error_t error)
 }
 
 # 82 "/opt/tinyos-main/tos/interfaces/SpiPacket.nc"
-inline static void HilSam3SpiP$SpiPacket$sendDone(uint8_t arg_0x2ab23a405200, uint8_t * txBuf, uint8_t * rxBuf, uint16_t len, error_t error){
+inline static void HilSam3SpiP$SpiPacket$sendDone(uint8_t arg_0x2b814ec13200, uint8_t * txBuf, uint8_t * rxBuf, uint16_t len, error_t error){
 #line 82
-    HilSam3SpiP$SpiPacket$default$sendDone(arg_0x2ab23a405200, txBuf, rxBuf, len, error);
+    HilSam3SpiP$SpiPacket$default$sendDone(arg_0x2b814ec13200, txBuf, rxBuf, len, error);
 #line 82
 }
 #line 82
@@ -42380,9 +42376,9 @@ static inline void /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$Resource$default$g
 }
 
 # 102 "/opt/tinyos-main/tos/interfaces/Resource.nc"
-inline static void /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$Resource$granted(uint8_t arg_0x2ab23a3732f0){
+inline static void /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$Resource$granted(uint8_t arg_0x2b814eb812f0){
 #line 102
-  switch (arg_0x2ab23a3732f0) {
+  switch (arg_0x2b814eb812f0) {
 #line 102
     case /*HplRF212C.SpiC*/Sam3Spi1C$0$CLIENT_ID:
 #line 102
@@ -42398,7 +42394,7 @@ inline static void /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$Resource$granted(u
 #line 102
     default:
 #line 102
-      /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$Resource$default$granted(arg_0x2ab23a3732f0);
+      /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$Resource$default$granted(arg_0x2b814eb812f0);
 #line 102
       break;
 #line 102
@@ -42485,9 +42481,9 @@ static inline void /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$
 }
 
 # 59 "/opt/tinyos-main/tos/interfaces/ResourceConfigure.nc"
-inline static void /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$configure(uint8_t arg_0x2ab23a3706e0){
+inline static void /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$configure(uint8_t arg_0x2b814eb7e6e0){
 #line 59
-  switch (arg_0x2ab23a3706e0) {
+  switch (arg_0x2b814eb7e6e0) {
 #line 59
     case /*HplRF212C.SpiC*/Sam3Spi1C$0$CLIENT_ID:
 #line 59
@@ -42503,7 +42499,7 @@ inline static void /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$
 #line 59
     default:
 #line 59
-      /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$default$configure(arg_0x2ab23a3706e0);
+      /*HilSam3SpiC.ArbiterC.Arbiter*/ArbiterP$0$ResourceConfigure$default$configure(arg_0x2b814eb7e6e0);
 #line 59
       break;
 #line 59
@@ -42808,18 +42804,18 @@ static inline void /*CtpP.Router2*/CtpRoutingEngineP2$0$RouteTimer$fired(void )
     }
 }
 
-# 1187 "../ctp/CtpForwardingEngineP.nc"
+# 1189 "../ctp/CtpForwardingEngineP.nc"
 static inline void /*CtpP.Forwarder*/CtpForwardingEngineP$0$RetxmitTimer1$fired(void )
-#line 1187
+#line 1189
 {
   /*CtpP.Forwarder*/CtpForwardingEngineP$0$clearState(/*CtpP.Forwarder*/CtpForwardingEngineP$0$SENDING1);
   ;
   /*CtpP.Forwarder*/CtpForwardingEngineP$0$sendTask$postTask();
 }
 
-#line 1192
+#line 1194
 static inline void /*CtpP.Forwarder*/CtpForwardingEngineP$0$RetxmitTimer2$fired(void )
-#line 1192
+#line 1194
 {
   /*CtpP.Forwarder*/CtpForwardingEngineP$0$clearState(/*CtpP.Forwarder*/CtpForwardingEngineP$0$SENDING2);
   ;
@@ -42934,26 +42930,26 @@ static inline void TestCtpC$initializeNode(void )
       TestCtpC$RootControl1$setRoot();
       TestCtpC$RootControl2$setRoot();
       TestCtpC$SerialLogger$log(LOG_ROOT, TOS_NODE_ID);
-      TestCtpC$FinishTimer$startOneShot(1100000);
+      TestCtpC$FinishTimer$startOneShot(500000);
     }
   else {
       TestCtpC$transmitting = TRUE;
       TestCtpC$SerialLogger$log(LOG_INITIALIZED, TOS_NODE_ID);
       TestCtpC$SendTimer$startPeriodicAt(5000, 2000);
-      TestCtpC$FinishTimer$startOneShot(1100000);
+      TestCtpC$FinishTimer$startOneShot(500000);
     }
 }
 
-#line 121
+#line 120
 static inline void TestCtpC$InitTimer$fired(void )
-#line 121
+#line 120
 {
   TestCtpC$initializeNode();
 }
 
-# 1353 "../ctp/CtpForwardingEngineP.nc"
+# 1355 "../ctp/CtpForwardingEngineP.nc"
 static inline uint16_t /*CtpP.Forwarder*/CtpForwardingEngineP$0$CtpInfoForward$totalMsgs(void )
-#line 1353
+#line 1355
 {
   return /*CtpP.Forwarder*/CtpForwardingEngineP$0$send_total;
 }
@@ -42973,9 +42969,9 @@ inline static uint16_t TestCtpC$CtpInfoForward$totalMsgs(void ){
 #line 8
 }
 #line 8
-# 1346 "../ctp/CtpForwardingEngineP.nc"
+# 1348 "../ctp/CtpForwardingEngineP.nc"
 static inline uint16_t /*CtpP.Forwarder*/CtpForwardingEngineP$0$CtpInfoForward$maxTHL(void )
-#line 1346
+#line 1348
 {
   return /*CtpP.Forwarder*/CtpForwardingEngineP$0$maxTHL;
 }
@@ -42995,9 +42991,9 @@ inline static uint16_t TestCtpC$CtpInfoForward$maxTHL(void ){
 #line 6
 }
 #line 6
-# 1349 "../ctp/CtpForwardingEngineP.nc"
+# 1351 "../ctp/CtpForwardingEngineP.nc"
 static inline uint32_t /*CtpP.Forwarder*/CtpForwardingEngineP$0$CtpInfoForward$averageTHL(void )
-#line 1349
+#line 1351
 {
   return /*CtpP.Forwarder*/CtpForwardingEngineP$0$sumTHL / /*CtpP.Forwarder*/CtpForwardingEngineP$0$countTHL;
 }
@@ -43017,9 +43013,9 @@ inline static uint32_t TestCtpC$CtpInfoForward$averageTHL(void ){
 #line 7
 }
 #line 7
-# 1342 "../ctp/CtpForwardingEngineP.nc"
+# 1344 "../ctp/CtpForwardingEngineP.nc"
 static inline uint16_t /*CtpP.Forwarder*/CtpForwardingEngineP$0$CtpInfoForward$totalDuplicates(void )
-#line 1342
+#line 1344
 {
   return /*CtpP.Forwarder*/CtpForwardingEngineP$0$duplicates;
 }
@@ -43046,21 +43042,21 @@ static inline uint32_t /*CtpP.Router2*/CtpRoutingEngineP2$0$CtpInfo2$totalBeacon
   return /*CtpP.Router2*/CtpRoutingEngineP2$0$beaconCount;
 }
 
-# 100 "../ctp/CtpInfo2.nc"
+# 101 "../ctp/CtpInfo2.nc"
 inline static uint32_t TestCtpC$CtpInfo2$totalBeacons(void ){
-#line 100
+#line 101
   unsigned long __nesc_result;
-#line 100
+#line 101
 
-#line 100
+#line 101
   __nesc_result = /*CtpP.Router2*/CtpRoutingEngineP2$0$CtpInfo2$totalBeacons();
-#line 100
+#line 101
 
-#line 100
+#line 101
   return __nesc_result;
-#line 100
+#line 101
 }
-#line 100
+#line 101
 # 833 "../ctp/CtpRoutingEngineP1.nc"
 static inline uint32_t /*CtpP.Router1*/CtpRoutingEngineP1$0$CtpInfo1$totalBeacons(void )
 #line 833
@@ -43068,21 +43064,21 @@ static inline uint32_t /*CtpP.Router1*/CtpRoutingEngineP1$0$CtpInfo1$totalBeacon
   return /*CtpP.Router1*/CtpRoutingEngineP1$0$beaconCount;
 }
 
-# 100 "../ctp/CtpInfo1.nc"
+# 101 "../ctp/CtpInfo1.nc"
 inline static uint32_t TestCtpC$CtpInfo1$totalBeacons(void ){
-#line 100
+#line 101
   unsigned long __nesc_result;
-#line 100
+#line 101
 
-#line 100
+#line 101
   __nesc_result = /*CtpP.Router1*/CtpRoutingEngineP1$0$CtpInfo1$totalBeacons();
-#line 100
+#line 101
 
-#line 100
+#line 101
   return __nesc_result;
-#line 100
+#line 101
 }
-#line 100
+#line 101
 # 5 "../ctp/RootControl1.nc"
 inline static bool TestCtpC$RootControl1$isRoot(void ){
 #line 5
@@ -43098,6 +43094,50 @@ inline static bool TestCtpC$RootControl1$isRoot(void ){
 #line 5
 }
 #line 5
+# 836 "../ctp/CtpRoutingEngineP2.nc"
+static inline uint16_t /*CtpP.Router2*/CtpRoutingEngineP2$0$CtpInfo2$current_dad(void )
+#line 836
+{
+  return /*CtpP.Router2*/CtpRoutingEngineP2$0$routeInfo.parent;
+}
+
+# 99 "../ctp/CtpInfo2.nc"
+inline static uint16_t TestCtpC$CtpInfo2$current_dad(void ){
+#line 99
+  unsigned short __nesc_result;
+#line 99
+
+#line 99
+  __nesc_result = /*CtpP.Router2*/CtpRoutingEngineP2$0$CtpInfo2$current_dad();
+#line 99
+
+#line 99
+  return __nesc_result;
+#line 99
+}
+#line 99
+# 837 "../ctp/CtpRoutingEngineP1.nc"
+static inline uint16_t /*CtpP.Router1*/CtpRoutingEngineP1$0$CtpInfo1$current_dad(void )
+#line 837
+{
+  return /*CtpP.Router1*/CtpRoutingEngineP1$0$routeInfo.parent;
+}
+
+# 99 "../ctp/CtpInfo1.nc"
+inline static uint16_t TestCtpC$CtpInfo1$current_dad(void ){
+#line 99
+  unsigned short __nesc_result;
+#line 99
+
+#line 99
+  __nesc_result = /*CtpP.Router1*/CtpRoutingEngineP1$0$CtpInfo1$current_dad();
+#line 99
+
+#line 99
+  return __nesc_result;
+#line 99
+}
+#line 99
 # 164 "/opt/tinyos-main/tos/lib/timer/VirtualizeTimerC.nc"
 static inline void /*HilTimerMilliC.VirtTimersMilli32*/VirtualizeTimerC$0$Timer$stop(uint8_t num)
 {
@@ -43111,13 +43151,17 @@ inline static void TestCtpC$SendTimer$stop(void ){
 #line 78
 }
 #line 78
-# 168 "TestCtpC.nc"
+# 167 "TestCtpC.nc"
 static inline void TestCtpC$FinishTimer$fired(void )
-#line 168
+#line 167
 {
 
   TestCtpC$SendTimer$stop();
   TestCtpC$SerialLogger$log(LOG_FINISH, TOS_NODE_ID);
+  TestCtpC$SerialLogger$log(LOG_CURRENT_DAD, TestCtpC$CtpInfo1$current_dad());
+  TestCtpC$SerialLogger$log(LOG_SENT_BEACON, 1);
+  TestCtpC$SerialLogger$log(LOG_CURRENT_DAD, TestCtpC$CtpInfo2$current_dad());
+  TestCtpC$SerialLogger$log(LOG_SENT_BEACON, 2);
   if (TestCtpC$RootControl1$isRoot()) {
       TestCtpC$SerialLogger$log(LOG_ROOT, TOS_NODE_ID);
       TestCtpC$SerialLogger$log(LOG_RECEIVED_COUNT, TestCtpC$receivedCount);
@@ -43147,21 +43191,21 @@ static inline collection_id_t /*TestCtpAppC.CollectionSenderC.CollectionSenderP.
   return 238;
 }
 
-# 1318 "../ctp/CtpForwardingEngineP.nc"
+# 1320 "../ctp/CtpForwardingEngineP.nc"
 static inline collection_id_t /*CtpP.Forwarder*/CtpForwardingEngineP$0$CollectionId$default$fetch(uint8_t client)
-#line 1318
+#line 1320
 {
   return 0;
 }
 
 # 46 "/opt/tinyos-main/tos/lib/net/CollectionId.nc"
-inline static collection_id_t /*CtpP.Forwarder*/CtpForwardingEngineP$0$CollectionId$fetch(uint8_t arg_0x2ab23a9bd020){
+inline static collection_id_t /*CtpP.Forwarder*/CtpForwardingEngineP$0$CollectionId$fetch(uint8_t arg_0x2b814f1c8350){
 #line 46
   unsigned char __nesc_result;
 #line 46
 
 #line 46
-  switch (arg_0x2ab23a9bd020) {
+  switch (arg_0x2b814f1c8350) {
 #line 46
     case 0U:
 #line 46
@@ -43171,7 +43215,7 @@ inline static collection_id_t /*CtpP.Forwarder*/CtpForwardingEngineP$0$Collectio
 #line 46
     default:
 #line 46
-      __nesc_result = /*CtpP.Forwarder*/CtpForwardingEngineP$0$CollectionId$default$fetch(arg_0x2ab23a9bd020);
+      __nesc_result = /*CtpP.Forwarder*/CtpForwardingEngineP$0$CollectionId$default$fetch(arg_0x2b814f1c8350);
 #line 46
       break;
 #line 46
@@ -43183,9 +43227,9 @@ inline static collection_id_t /*CtpP.Forwarder*/CtpForwardingEngineP$0$Collectio
 #line 46
 }
 #line 46
-# 460 "../ctp/CtpForwardingEngineP.nc"
+# 462 "../ctp/CtpForwardingEngineP.nc"
 static inline uint8_t /*CtpP.Forwarder*/CtpForwardingEngineP$0$Send$maxPayloadLength(uint8_t client)
-#line 460
+#line 462
 {
   return /*CtpP.Forwarder*/CtpForwardingEngineP$0$Packet$maxPayloadLength();
 }
@@ -43205,7 +43249,8 @@ static inline error_t /*CtpP.Forwarder*/CtpForwardingEngineP$0$Send$send(uint8_t
           return EOFF;
         }
       if (len > /*CtpP.Forwarder*/CtpForwardingEngineP$0$Send$maxPayloadLength(client)) {
-          /*CtpP.Forwarder*/CtpForwardingEngineP$0$SerialLogger$log(LOG_PACKET_TOO_BIG, 1);
+          /*CtpP.Forwarder*/CtpForwardingEngineP$0$SerialLogger$log(LOG_PACKET_TOO_BIG, /*CtpP.Forwarder*/CtpForwardingEngineP$0$Send$maxPayloadLength(client));
+          /*CtpP.Forwarder*/CtpForwardingEngineP$0$SerialLogger$log(LOG_PACKET_TOO_BIG, len);
           return ESIZE;
         }
       /*CtpP.Forwarder*/CtpForwardingEngineP$0$radio = 2;
@@ -43257,7 +43302,8 @@ static inline error_t /*CtpP.Forwarder*/CtpForwardingEngineP$0$Send$send(uint8_t
         }
 
       if (len > /*CtpP.Forwarder*/CtpForwardingEngineP$0$Send$maxPayloadLength(client)) {
-          /*CtpP.Forwarder*/CtpForwardingEngineP$0$SerialLogger$log(LOG_PACKET_TOO_BIG, 2);
+          /*CtpP.Forwarder*/CtpForwardingEngineP$0$SerialLogger$log(LOG_PACKET_TOO_BIG, /*CtpP.Forwarder*/CtpForwardingEngineP$0$Send$maxPayloadLength(client));
+          /*CtpP.Forwarder*/CtpForwardingEngineP$0$SerialLogger$log(LOG_PACKET_TOO_BIG, len);
           return ESIZE;
         }
       /*CtpP.Forwarder*/CtpForwardingEngineP$0$radio = 1;
@@ -43320,9 +43366,9 @@ inline static error_t TestCtpC$Send$send(message_t * msg, uint8_t len){
 #line 75
 }
 #line 75
-# 464 "../ctp/CtpForwardingEngineP.nc"
+# 466 "../ctp/CtpForwardingEngineP.nc"
 static inline void */*CtpP.Forwarder*/CtpForwardingEngineP$0$Send$getPayload(uint8_t client, message_t *msg, uint8_t len)
-#line 464
+#line 466
 {
   return /*CtpP.Forwarder*/CtpForwardingEngineP$0$Packet$getPayload(msg, len);
 }
@@ -43352,40 +43398,38 @@ static inline void TestCtpC$SendMessage(void )
   uint8_t i;
 
 #line 73
-  if (250 > 0 && TestCtpC$sendCount >= 250) {
+  if (2000 > 0 && TestCtpC$sendCount >= 2000) {
       return;
     }
   msg = &TestCtpC$msgBuffer;
   payload = (DataMsg *)TestCtpC$Send$getPayload(msg, sizeof(DataMsg ));
 
-  __nesc_hton_uint16(payload->seqno.nxdata, TestCtpC$sendCount);
-  for (i = 0; i < 5; i++) {
+  for (i = 0; i < 19; i++) {
       __nesc_hton_uint8(payload->data[i].nxdata, i);
     }
   result = TestCtpC$Send$send(msg, sizeof(DataMsg ));
   if (result == SUCCESS) {
       TestCtpC$sendCount++;
-      TestCtpC$SerialLogger$log(LOG_SENDING, TestCtpC$sendCount);
     }
-  else {
-      TestCtpC$SerialLogger$log(LOG_SEND_FAILED, result);
+  else 
+    {
     }
 }
 
-#line 125
+#line 124
 static inline void TestCtpC$SendTimer$fired(void )
-#line 125
+#line 124
 {
   if (TOS_NODE_ID % 2 == 1) {
       if (TestCtpC$transmitting) {
 
           TestCtpC$SendMessage();
-          if (TestCtpC$sendCount >= 250) {
+          if (TestCtpC$sendCount >= 2000) {
               TestCtpC$transmitting = FALSE;
             }
         }
       else 
-#line 133
+#line 132
         {
           TestCtpC$SendTimer$stop();
         }
@@ -43401,9 +43445,9 @@ static inline void /*HilTimerMilliC.VirtTimersMilli32*/VirtualizeTimerC$0$Timer$
 }
 
 # 83 "/opt/tinyos-main/tos/lib/timer/Timer.nc"
-inline static void /*HilTimerMilliC.VirtTimersMilli32*/VirtualizeTimerC$0$Timer$fired(uint8_t arg_0x2ab239625448){
+inline static void /*HilTimerMilliC.VirtTimersMilli32*/VirtualizeTimerC$0$Timer$fired(uint8_t arg_0x2b814de33448){
 #line 83
-  switch (arg_0x2ab239625448) {
+  switch (arg_0x2b814de33448) {
 #line 83
     case 0U:
 #line 83
@@ -43461,7 +43505,7 @@ inline static void /*HilTimerMilliC.VirtTimersMilli32*/VirtualizeTimerC$0$Timer$
 #line 83
     default:
 #line 83
-      /*HilTimerMilliC.VirtTimersMilli32*/VirtualizeTimerC$0$Timer$default$fired(arg_0x2ab239625448);
+      /*HilTimerMilliC.VirtTimersMilli32*/VirtualizeTimerC$0$Timer$default$fired(arg_0x2b814de33448);
 #line 83
       break;
 #line 83
@@ -43802,9 +43846,9 @@ static inline void /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/Active
 }
 
 # 110 "/opt/tinyos-main/tos/interfaces/AMSend.nc"
-inline static void /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$0$AMSend$sendDone(am_id_t arg_0x2ab2391f03c8, message_t * msg, error_t error){
+inline static void /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$0$AMSend$sendDone(am_id_t arg_0x2b814d9fe3c8, message_t * msg, error_t error){
 #line 110
-  switch (arg_0x2ab2391f03c8) {
+  switch (arg_0x2b814d9fe3c8) {
 #line 110
     case AM_CTP_ROUTING:
 #line 110
@@ -43820,7 +43864,7 @@ inline static void /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/Active
 #line 110
     default:
 #line 110
-      /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$0$AMSend$default$sendDone(arg_0x2ab2391f03c8, msg, error);
+      /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$0$AMSend$default$sendDone(arg_0x2b814d9fe3c8, msg, error);
 #line 110
       break;
 #line 110
@@ -44254,13 +44298,13 @@ static inline message_t */*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/
 }
 
 # 78 "/opt/tinyos-main/tos/interfaces/Receive.nc"
-inline static message_t * /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$0$SnoopDefault$receive(am_id_t arg_0x2ab2391eb488, message_t * msg, void * payload, uint8_t len){
+inline static message_t * /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$0$SnoopDefault$receive(am_id_t arg_0x2b814d9f9488, message_t * msg, void * payload, uint8_t len){
 #line 78
   nx_struct message_t *__nesc_result;
 #line 78
 
 #line 78
-    __nesc_result = /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$0$SnoopDefault$default$receive(arg_0x2ab2391eb488, msg, payload, len);
+    __nesc_result = /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$0$SnoopDefault$default$receive(arg_0x2b814d9f9488, msg, payload, len);
 #line 78
 
 #line 78
@@ -44268,10 +44312,10 @@ inline static message_t * /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*
 #line 78
 }
 #line 78
-# 1174 "../ctp/CtpForwardingEngineP.nc"
+# 1176 "../ctp/CtpForwardingEngineP.nc"
 static inline message_t *
 /*CtpP.Forwarder*/CtpForwardingEngineP$0$SubSnoop2$receive(message_t *msg, void *payload, uint8_t len)
-#line 1175
+#line 1177
 {
 
 
@@ -44293,13 +44337,13 @@ static inline message_t */*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/
 }
 
 # 78 "/opt/tinyos-main/tos/interfaces/Receive.nc"
-inline static message_t * /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$0$Snoop$receive(am_id_t arg_0x2ab2391ee1a0, message_t * msg, void * payload, uint8_t len){
+inline static message_t * /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$0$Snoop$receive(am_id_t arg_0x2b814d9fc1a0, message_t * msg, void * payload, uint8_t len){
 #line 78
   nx_struct message_t *__nesc_result;
 #line 78
 
 #line 78
-  switch (arg_0x2ab2391ee1a0) {
+  switch (arg_0x2b814d9fc1a0) {
 #line 78
     case AM_CTP_DATA:
 #line 78
@@ -44309,7 +44353,7 @@ inline static message_t * /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*
 #line 78
     default:
 #line 78
-      __nesc_result = /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$0$Snoop$default$receive(arg_0x2ab2391ee1a0, msg, payload, len);
+      __nesc_result = /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$0$Snoop$default$receive(arg_0x2b814d9fc1a0, msg, payload, len);
 #line 78
       break;
 #line 78
@@ -44328,13 +44372,13 @@ static inline message_t */*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/
 }
 
 # 78 "/opt/tinyos-main/tos/interfaces/Receive.nc"
-inline static message_t * /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$0$ReceiveDefault$receive(am_id_t arg_0x2ab2391ed8b0, message_t * msg, void * payload, uint8_t len){
+inline static message_t * /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$0$ReceiveDefault$receive(am_id_t arg_0x2b814d9fb8b0, message_t * msg, void * payload, uint8_t len){
 #line 78
   nx_struct message_t *__nesc_result;
 #line 78
 
 #line 78
-    __nesc_result = /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$0$ReceiveDefault$default$receive(arg_0x2ab2391ed8b0, msg, payload, len);
+    __nesc_result = /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$0$ReceiveDefault$default$receive(arg_0x2b814d9fb8b0, msg, payload, len);
 #line 78
 
 #line 78
@@ -44421,9 +44465,9 @@ static inline error_t /*CtpP.Router2*/CtpRoutingEngineP2$0$routingTableUpdateEnt
   return SUCCESS;
 }
 
-# 1208 "../ctp/CtpForwardingEngineP.nc"
+# 1210 "../ctp/CtpForwardingEngineP.nc"
 static inline void /*CtpP.Forwarder*/CtpForwardingEngineP$0$LinkEstimator2$evicted(am_addr_t neighbor)
-#line 1208
+#line 1210
 {
 }
 
@@ -44888,9 +44932,9 @@ inline static bool /*CtpP.Forwarder*/CtpForwardingEngineP$0$RetxmitTimer2$isRunn
 #line 92
 }
 #line 92
-# 926 "../ctp/CtpForwardingEngineP.nc"
+# 928 "../ctp/CtpForwardingEngineP.nc"
 static inline message_t * /*CtpP.Forwarder*/CtpForwardingEngineP$0$forward2(message_t * m)
-#line 926
+#line 928
 {
   if (/*CtpP.Forwarder*/CtpForwardingEngineP$0$MessagePool$empty()) {
       ;
@@ -44898,7 +44942,7 @@ static inline message_t * /*CtpP.Forwarder*/CtpForwardingEngineP$0$forward2(mess
       /*CtpP.Forwarder*/CtpForwardingEngineP$0$CollectionDebug$logEvent(NET_C_FE_MSG_POOL_EMPTY);
     }
   else {
-#line 932
+#line 934
     if (/*CtpP.Forwarder*/CtpForwardingEngineP$0$QEntryPool$empty()) {
         ;
 
@@ -44960,13 +45004,13 @@ static inline message_t * /*CtpP.Forwarder*/CtpForwardingEngineP$0$forward2(mess
             return newMsg;
           }
         else 
-#line 991
+#line 993
           {
 
             if (/*CtpP.Forwarder*/CtpForwardingEngineP$0$MessagePool$put(newMsg) != SUCCESS) {
               /*CtpP.Forwarder*/CtpForwardingEngineP$0$CollectionDebug$logEvent(NET_C_FE_PUT_MSGPOOL_ERR);
               }
-#line 995
+#line 997
             if (/*CtpP.Forwarder*/CtpForwardingEngineP$0$QEntryPool$put(qe) != SUCCESS) {
               /*CtpP.Forwarder*/CtpForwardingEngineP$0$CollectionDebug$logEvent(NET_C_FE_PUT_QEPOOL_ERR);
               }
@@ -45001,16 +45045,16 @@ inline static uint8_t /*CtpP.Forwarder*/CtpForwardingEngineP$0$SubSend2$maxPaylo
 #line 123
 }
 #line 123
-# 1088 "../ctp/CtpForwardingEngineP.nc"
+# 1090 "../ctp/CtpForwardingEngineP.nc"
 static inline message_t *
 /*CtpP.Forwarder*/CtpForwardingEngineP$0$SubReceive2$receive(message_t *msg, void *payload, uint8_t len)
-#line 1089
+#line 1091
 {
   collection_id_t collectid;
   bool duplicate = FALSE;
   fe_queue_entry_t *qe;
   uint8_t i;
-#line 1093
+#line 1095
   uint8_t thl;
 
 
@@ -45074,7 +45118,7 @@ static inline message_t *
         return msg;
         }
       else 
-#line 1154
+#line 1156
         {
 
           ;
@@ -45093,13 +45137,13 @@ static inline message_t */*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/
 }
 
 # 78 "/opt/tinyos-main/tos/interfaces/Receive.nc"
-inline static message_t * /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$0$Receive$receive(am_id_t arg_0x2ab2391ef5f8, message_t * msg, void * payload, uint8_t len){
+inline static message_t * /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$0$Receive$receive(am_id_t arg_0x2b814d9fd5f8, message_t * msg, void * payload, uint8_t len){
 #line 78
   nx_struct message_t *__nesc_result;
 #line 78
 
 #line 78
-  switch (arg_0x2ab2391ef5f8) {
+  switch (arg_0x2b814d9fd5f8) {
 #line 78
     case AM_CTP_ROUTING:
 #line 78
@@ -45115,7 +45159,7 @@ inline static message_t * /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*
 #line 78
     default:
 #line 78
-      __nesc_result = /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$0$Receive$default$receive(arg_0x2ab2391ef5f8, msg, payload, len);
+      __nesc_result = /*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$0$Receive$default$receive(arg_0x2b814d9fd5f8, msg, payload, len);
 #line 78
       break;
 #line 78
@@ -45457,9 +45501,9 @@ static inline void /*RF212RadioC.SendResourceC.Arbiter*/SimpleArbiterP$0$Resourc
 }
 
 # 102 "/opt/tinyos-main/tos/interfaces/Resource.nc"
-inline static void /*RF212RadioC.SendResourceC.Arbiter*/SimpleArbiterP$0$Resource$granted(uint8_t arg_0x2ab2392ce020){
+inline static void /*RF212RadioC.SendResourceC.Arbiter*/SimpleArbiterP$0$Resource$granted(uint8_t arg_0x2b814dadc020){
 #line 102
-  switch (arg_0x2ab2392ce020) {
+  switch (arg_0x2b814dadc020) {
 #line 102
     case 0U:
 #line 102
@@ -45469,7 +45513,7 @@ inline static void /*RF212RadioC.SendResourceC.Arbiter*/SimpleArbiterP$0$Resourc
 #line 102
     default:
 #line 102
-      /*RF212RadioC.SendResourceC.Arbiter*/SimpleArbiterP$0$Resource$default$granted(arg_0x2ab2392ce020);
+      /*RF212RadioC.SendResourceC.Arbiter*/SimpleArbiterP$0$Resource$default$granted(arg_0x2b814dadc020);
 #line 102
       break;
 #line 102
@@ -46344,9 +46388,9 @@ inline static error_t HalSam3RttP$HplSam3Rtt$setPrescaler(uint16_t prescaler){
 #line 47
 }
 #line 47
-# 94 "TestCtpC.nc"
+# 93 "TestCtpC.nc"
 static inline void TestCtpC$Boot$booted(void )
-#line 94
+#line 93
 {
   TestCtpC$SerialControl$start();
 }
@@ -49120,9 +49164,9 @@ static void SchedulerBasicP$TaskBasic$default$runTask(uint8_t id)
 }
 
 # 75 "/opt/tinyos-main/tos/interfaces/TaskBasic.nc"
-static void SchedulerBasicP$TaskBasic$runTask(uint8_t arg_0x2ab2388110c8){
+static void SchedulerBasicP$TaskBasic$runTask(uint8_t arg_0x2b814d01f0c8){
 #line 75
-  switch (arg_0x2ab2388110c8) {
+  switch (arg_0x2b814d01f0c8) {
 #line 75
     case /*RF212RadioC.SendResourceC.Arbiter*/SimpleArbiterP$0$grantedTask:
 #line 75
@@ -49318,7 +49362,7 @@ static void SchedulerBasicP$TaskBasic$runTask(uint8_t arg_0x2ab2388110c8){
 #line 75
     default:
 #line 75
-      SchedulerBasicP$TaskBasic$default$runTask(arg_0x2ab2388110c8);
+      SchedulerBasicP$TaskBasic$default$runTask(arg_0x2b814d01f0c8);
 #line 75
       break;
 #line 75
@@ -49778,49 +49822,6 @@ static /*HilAlarmMilliC.VirtAlarmsTMilli*/VirtualizeAlarmC$0$size_type /*HilAlar
   return /*HilAlarmMilliC.VirtAlarmsTMilli*/VirtualizeAlarmC$0$AlarmFrom$getNow();
 }
 
-# 57 "../serial-logger/SerialLoggerP.nc"
-static void SerialLoggerP$SerialLogger$log(uint16_t evt, uint16_t data)
-#line 57
-{
-  if (SerialLoggerP$Pool$empty()) {
-      return;
-    }
-  else 
-#line 60
-    {
-      message_t *msg = SerialLoggerP$Pool$get();
-      serial_log_message_t *smsg = (serial_log_message_t *)
-      SerialLoggerP$SerialSend$getPayload(msg, sizeof(serial_log_message_t ));
-
-#line 64
-      if (smsg == (void *)0) {
-          return;
-        }
-      __nesc_hton_uint16(smsg->evt.nxdata, evt);
-      __nesc_hton_uint16(smsg->data.nxdata, data);
-      if (SerialLoggerP$Queue$enqueue(msg) == SUCCESS) {
-          SerialLoggerP$sendTask$postTask();
-        }
-      else 
-#line 71
-        {
-          SerialLoggerP$Pool$put(msg);
-        }
-    }
-}
-
-# 135 "/opt/tinyos-main/tos/lib/serial/SerialActiveMessageP.nc"
-static void */*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Packet$getPayload(message_t *msg, uint8_t len)
-#line 135
-{
-  if (len > /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Packet$maxPayloadLength()) {
-      return (void *)0;
-    }
-  else {
-      return (void * )msg->data;
-    }
-}
-
 # 277 "/opt/tinyos-main/tos/lib/rfxlink/layers/ActiveMessageLayerP.nc"
 static void */*RF212RadioC.ActiveMessageLayerC.ActiveMessageLayerP*/ActiveMessageLayerP$0$Packet$getPayload(message_t *msg, uint8_t len)
 {
@@ -50203,27 +50204,27 @@ static uint8_t /*CtpP.SentCacheP.CacheP*/LruCtpMsgCacheP$0$lookup(message_t *m)
   return i;
 }
 
-# 1250 "../ctp/CtpForwardingEngineP.nc"
+# 1252 "../ctp/CtpForwardingEngineP.nc"
 static uint8_t /*CtpP.Forwarder*/CtpForwardingEngineP$0$CtpPacket$getSequenceNumber(message_t *msg)
-#line 1250
+#line 1252
 {
-#line 1250
+#line 1252
   return __nesc_ntoh_uint8(/*CtpP.Forwarder*/CtpForwardingEngineP$0$getHeader(msg)->originSeqNo.nxdata);
 }
 
-#line 1251
+#line 1253
 static uint8_t /*CtpP.Forwarder*/CtpForwardingEngineP$0$CtpPacket$getThl(message_t *msg)
-#line 1251
+#line 1253
 {
-#line 1251
+#line 1253
   return __nesc_ntoh_uint8(/*CtpP.Forwarder*/CtpForwardingEngineP$0$getHeader(msg)->thl.nxdata);
 }
 
-#line 1247
+#line 1249
 static uint8_t /*CtpP.Forwarder*/CtpForwardingEngineP$0$CtpPacket$getType(message_t *msg)
-#line 1247
+#line 1249
 {
-#line 1247
+#line 1249
   return __nesc_ntoh_uint8(/*CtpP.Forwarder*/CtpForwardingEngineP$0$getHeader(msg)->type.nxdata);
 }
 
@@ -50313,29 +50314,29 @@ static error_t /*CtpP.Router1*/CtpRoutingEngineP1$0$CtpInfo1$getEtx(uint16_t *et
   return SUCCESS;
 }
 
-# 1227 "../ctp/CtpForwardingEngineP.nc"
+# 1229 "../ctp/CtpForwardingEngineP.nc"
 static void */*CtpP.Forwarder*/CtpForwardingEngineP$0$Packet$getPayload(message_t *msg, uint8_t len)
-#line 1227
+#line 1229
 {
   uint8_t *payload = /*CtpP.Forwarder*/CtpForwardingEngineP$0$SubPacket1$getPayload(msg, len + sizeof(ctp_data_header_t ));
 
-#line 1229
+#line 1231
   if (payload != (void *)0) {
       payload += sizeof(ctp_data_header_t );
     }
   return payload;
 }
 
-#line 1215
+#line 1217
 static uint8_t /*CtpP.Forwarder*/CtpForwardingEngineP$0$Packet$payloadLength(message_t *msg)
-#line 1215
+#line 1217
 {
   return /*CtpP.Forwarder*/CtpForwardingEngineP$0$SubPacket1$payloadLength(msg) - sizeof(ctp_data_header_t );
 }
 
-# 146 "TestCtpC.nc"
+# 145 "TestCtpC.nc"
 static message_t *TestCtpC$Receive$receive(message_t *msg, void *payload, uint8_t len)
-#line 146
+#line 145
 {
 
   if (TestCtpC$startTime == 0) {
@@ -50350,9 +50351,9 @@ static message_t *TestCtpC$Receive$receive(message_t *msg, void *payload, uint8_
   else {
       TestCtpC$ReceivedCache$insert(msg);
       TestCtpC$receivedCount++;
-      TestCtpC$SerialLogger$log(LOG_RECEIVED_PACKET, TestCtpC$endTime);
-      TestCtpC$SerialLogger$log(LOG_RECEIVED_COUNT, TestCtpC$receivedCount);
     }
+
+
   return msg;
 }
 
@@ -50395,13 +50396,56 @@ static am_addr_t /*TestCtpAppC.ReceivedCacheP.CacheP*/LruCtpMsgCacheP$1$CtpPacke
 #line 60
 }
 #line 60
-# 739 "../ctp/CtpForwardingEngineP.nc"
+# 57 "../serial-logger/SerialLoggerP.nc"
+static void SerialLoggerP$SerialLogger$log(uint16_t evt, uint16_t data)
+#line 57
+{
+  if (SerialLoggerP$Pool$empty()) {
+      return;
+    }
+  else 
+#line 60
+    {
+      message_t *msg = SerialLoggerP$Pool$get();
+      serial_log_message_t *smsg = (serial_log_message_t *)
+      SerialLoggerP$SerialSend$getPayload(msg, sizeof(serial_log_message_t ));
+
+#line 64
+      if (smsg == (void *)0) {
+          return;
+        }
+      __nesc_hton_uint16(smsg->evt.nxdata, evt);
+      __nesc_hton_uint16(smsg->data.nxdata, data);
+      if (SerialLoggerP$Queue$enqueue(msg) == SUCCESS) {
+          SerialLoggerP$sendTask$postTask();
+        }
+      else 
+#line 71
+        {
+          SerialLoggerP$Pool$put(msg);
+        }
+    }
+}
+
+# 135 "/opt/tinyos-main/tos/lib/serial/SerialActiveMessageP.nc"
+static void */*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Packet$getPayload(message_t *msg, uint8_t len)
+#line 135
+{
+  if (len > /*SerialActiveMessageC.AM*/SerialActiveMessageP$0$Packet$maxPayloadLength()) {
+      return (void *)0;
+    }
+  else {
+      return (void * )msg->data;
+    }
+}
+
+# 741 "../ctp/CtpForwardingEngineP.nc"
 static void /*CtpP.Forwarder*/CtpForwardingEngineP$0$SubSend1$sendDone(message_t *msg, error_t error)
-#line 739
+#line 741
 {
   fe_queue_entry_t *qe = /*CtpP.Forwarder*/CtpForwardingEngineP$0$SendQueue$head();
 
-#line 741
+#line 743
   ;
 
   if (error != SUCCESS) {
@@ -50451,19 +50495,19 @@ static void /*CtpP.Forwarder*/CtpForwardingEngineP$0$SubSend1$sendDone(message_t
     }
 }
 
-#line 1241
+#line 1243
 static uint8_t /*CtpP.Forwarder*/CtpForwardingEngineP$0$CollectionPacket$getSequenceNumber(message_t *msg)
-#line 1241
+#line 1243
 {
-#line 1241
+#line 1243
   return __nesc_ntoh_uint8(/*CtpP.Forwarder*/CtpForwardingEngineP$0$getHeader(msg)->originSeqNo.nxdata);
 }
 
-#line 1239
+#line 1241
 static am_addr_t /*CtpP.Forwarder*/CtpForwardingEngineP$0$CollectionPacket$getOrigin(message_t *msg)
-#line 1239
+#line 1241
 {
-#line 1239
+#line 1241
   return __nesc_ntoh_uint16(/*CtpP.Forwarder*/CtpForwardingEngineP$0$getHeader(msg)->origin.nxdata);
 }
 
@@ -50509,9 +50553,9 @@ static void /*CtpP.Estimator1*/LinkEstimatorP$0$updateETX(neighbor_table_entry_t
   ne->etx = (/*CtpP.Estimator1*/LinkEstimatorP$0$ALPHA * ne->etx + (10 - /*CtpP.Estimator1*/LinkEstimatorP$0$ALPHA) * newEst) / 10;
 }
 
-# 695 "../ctp/CtpForwardingEngineP.nc"
+# 697 "../ctp/CtpForwardingEngineP.nc"
 static void /*CtpP.Forwarder*/CtpForwardingEngineP$0$packetComplete(fe_queue_entry_t *qe, message_t *msg, bool success)
-#line 695
+#line 697
 {
 
 
@@ -50527,7 +50571,7 @@ static void /*CtpP.Forwarder*/CtpForwardingEngineP$0$packetComplete(fe_queue_ent
           /*CtpP.Forwarder*/CtpForwardingEngineP$0$AMPacket1$destination(msg));
         }
       else 
-#line 708
+#line 710
         {
           ;
           /*CtpP.Forwarder*/CtpForwardingEngineP$0$CollectionDebug$logEventMsg(NET_C_FE_SENDDONE_FAIL_ACK_SEND, 
@@ -50555,7 +50599,7 @@ static void /*CtpP.Forwarder*/CtpForwardingEngineP$0$packetComplete(fe_queue_ent
       if (/*CtpP.Forwarder*/CtpForwardingEngineP$0$MessagePool$put(qe->msg) != SUCCESS) {
         /*CtpP.Forwarder*/CtpForwardingEngineP$0$CollectionDebug$logEvent(NET_C_FE_PUT_MSGPOOL_ERR);
         }
-#line 734
+#line 736
       if (/*CtpP.Forwarder*/CtpForwardingEngineP$0$QEntryPool$put(qe) != SUCCESS) {
         /*CtpP.Forwarder*/CtpForwardingEngineP$0$CollectionDebug$logEvent(NET_C_FE_PUT_QEPOOL_ERR);
         }
@@ -50586,23 +50630,23 @@ static void /*CtpP.SentCacheP.CacheP*/LruCtpMsgCacheP$0$Cache$insert(message_t *
   /*CtpP.SentCacheP.CacheP*/LruCtpMsgCacheP$0$count++;
 }
 
-# 1263 "../ctp/CtpForwardingEngineP.nc"
+# 1265 "../ctp/CtpForwardingEngineP.nc"
 static void /*CtpP.Forwarder*/CtpForwardingEngineP$0$CtpPacket$clearOption(message_t *msg, ctp_options_t opt)
-#line 1263
+#line 1265
 {
   unsigned char *__nesc_temp51;
 
-#line 1264
+#line 1266
   (__nesc_temp51 = /*CtpP.Forwarder*/CtpForwardingEngineP$0$getHeader(msg)->options.nxdata, __nesc_hton_uint8(__nesc_temp51, __nesc_ntoh_uint8(__nesc_temp51) & ~opt));
 }
 
-#line 1260
+#line 1262
 static void /*CtpP.Forwarder*/CtpForwardingEngineP$0$CtpPacket$setOption(message_t *msg, ctp_options_t opt)
-#line 1260
+#line 1262
 {
   unsigned char *__nesc_temp50;
 
-#line 1261
+#line 1263
   (__nesc_temp50 = /*CtpP.Forwarder*/CtpForwardingEngineP$0$getHeader(msg)->options.nxdata, __nesc_hton_uint8(__nesc_temp50, __nesc_ntoh_uint8(__nesc_temp50) | opt));
 }
 
@@ -50613,13 +50657,13 @@ static void /*CtpP.Forwarder*/CtpForwardingEngineP$0$SubPacket1$setPayloadLength
 #line 94
 }
 #line 94
-# 789 "../ctp/CtpForwardingEngineP.nc"
+# 791 "../ctp/CtpForwardingEngineP.nc"
 static void /*CtpP.Forwarder*/CtpForwardingEngineP$0$SubSend2$sendDone(message_t *msg, error_t error)
-#line 789
+#line 791
 {
   fe_queue_entry_t *qe = /*CtpP.Forwarder*/CtpForwardingEngineP$0$SendQueue$head();
 
-#line 791
+#line 793
   ;
 
   if (error != SUCCESS) {
@@ -50742,15 +50786,15 @@ static void /*CtpP.Forwarder*/CtpForwardingEngineP$0$RadiosControl$startDone(err
     }
 }
 
-# 108 "TestCtpC.nc"
+# 107 "TestCtpC.nc"
 static void TestCtpC$RadiosControl$startDone(error_t error)
-#line 108
+#line 107
 {
   if (error != SUCCESS) {
       TestCtpC$RadiosControl$start();
     }
   else 
-#line 111
+#line 110
     {
       TestCtpC$CtpRouteControl$start();
       TestCtpC$InitTimer$startOneShot(500);
@@ -50817,9 +50861,9 @@ static /*CtpP.SendQueueP*/QueueC$0$queue_t /*CtpP.SendQueueP*/QueueC$0$Queue$ele
   return /*CtpP.SendQueueP*/QueueC$0$queue[idx];
 }
 
-# 1270 "../ctp/CtpForwardingEngineP.nc"
+# 1272 "../ctp/CtpForwardingEngineP.nc"
 static bool /*CtpP.Forwarder*/CtpForwardingEngineP$0$CtpPacket$matchInstance(message_t *m1, message_t *m2)
-#line 1270
+#line 1272
 {
   return /*CtpP.Forwarder*/CtpForwardingEngineP$0$CtpPacket$getOrigin(m1) == /*CtpP.Forwarder*/CtpForwardingEngineP$0$CtpPacket$getOrigin(m2) && 
   /*CtpP.Forwarder*/CtpForwardingEngineP$0$CtpPacket$getSequenceNumber(m1) == /*CtpP.Forwarder*/CtpForwardingEngineP$0$CtpPacket$getSequenceNumber(m2) && 
@@ -50889,11 +50933,11 @@ static error_t /*CtpP.SendQueueP*/QueueC$0$Queue$enqueue(/*CtpP.SendQueueP*/Queu
     }
 }
 
-# 1249 "../ctp/CtpForwardingEngineP.nc"
+# 1251 "../ctp/CtpForwardingEngineP.nc"
 static uint16_t /*CtpP.Forwarder*/CtpForwardingEngineP$0$CtpPacket$getEtx(message_t *msg)
-#line 1249
+#line 1251
 {
-#line 1249
+#line 1251
   return __nesc_ntoh_uint16(/*CtpP.Forwarder*/CtpForwardingEngineP$0$getHeader(msg)->etx.nxdata);
 }
 
@@ -51086,9 +51130,9 @@ static bool /*CtpP.Router1*/CtpRoutingEngineP1$0$CtpRoutingPacket$getOption(mess
   return (__nesc_ntoh_uint8(/*CtpP.Router1*/CtpRoutingEngineP1$0$getHeader(msg)->options.nxdata) & opt) == opt ? TRUE : FALSE;
 }
 
-# 1257 "../ctp/CtpForwardingEngineP.nc"
+# 1259 "../ctp/CtpForwardingEngineP.nc"
 static bool /*CtpP.Forwarder*/CtpForwardingEngineP$0$CtpPacket$option(message_t *msg, ctp_options_t opt)
-#line 1257
+#line 1259
 {
   return (__nesc_ntoh_uint8(/*CtpP.Forwarder*/CtpForwardingEngineP$0$getHeader(msg)->options.nxdata) & opt) == opt ? TRUE : FALSE;
 }

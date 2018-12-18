@@ -96,6 +96,7 @@ interface CtpInfo2 {
   command uint16_t getNeighborLinkQuality(uint8_t n);
   command uint16_t getNeighborRouteQuality(uint8_t n);
   command am_addr_t getNeighborAddr(uint8_t n);
+  command uint16_t current_dad();
 
   command uint32_t totalBeacons();
 }

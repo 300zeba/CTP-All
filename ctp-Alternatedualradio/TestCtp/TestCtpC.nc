@@ -1,8 +1,8 @@
 #define INIT_TIME 500
-#define FINISH_TIME 1100000
+#define FINISH_TIME 500000
 
-#define NUM_MSGS 250
-#define SEND_PERIOD 2000
+#define NUM_MSGS 2000
+#define SEND_PERIOD 200
 #define SEND_DELAY 5000
 
 module TestCtpC {
@@ -74,7 +74,6 @@ implementation {
     msg = &msgBuffer;
     payload = (DataMsg*) call Send.getPayload(msg, sizeof(DataMsg));
 
-    payload->seqno = sendCount;
     for (i = 0; i < MSG_SIZE; i++) {
       payload->data[i] = i;
     }
@@ -156,8 +155,8 @@ implementation {
     else{
       call ReceivedCache.insert(msg);
       receivedCount++;
-      call SerialLogger.log(LOG_RECEIVED_PACKET,endTime);
-      call SerialLogger.log(LOG_RECEIVED_COUNT,receivedCount);
+     // call SerialLogger.log(LOG_RECEIVED_PACKET,endTime);
+      //call SerialLogger.log(LOG_RECEIVED_COUNT,receivedCount);
     }
     return msg;
   }
@@ -166,6 +165,8 @@ implementation {
   event void FinishTimer.fired(){
     call SendTimer.stop();
 		call SerialLogger.log(LOG_FINISH,TOS_NODE_ID);
+    call SerialLogger.log(LOG_CURRENT_DAD,call CtpInfo.current_dad());
+    call SerialLogger.log(LOG_SENT_BEACON,call CtpInfo.current_radio());
     if(call RootControl.isRoot()){
       call SerialLogger.log(LOG_ROOT,TOS_NODE_ID);
       call SerialLogger.log(LOG_RECEIVED_COUNT,receivedCount);

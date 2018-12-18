@@ -2,7 +2,7 @@
 #define TESTCTP_H
 
 
-#define MSG_SIZE 5
+#define MSG_SIZE 20
 
 enum{
   LOG_INITIALIZED,
@@ -56,7 +56,6 @@ enum{
 };
 
 typedef nx_struct DataMsg{
-	nx_uint16_t seqno;
 	nx_uint8_t data[MSG_SIZE];
 }DataMsg;
 

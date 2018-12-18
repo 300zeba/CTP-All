@@ -348,7 +348,8 @@ implementation {
         return EOFF;
       }
       if (len > call Send.maxPayloadLength[client]()) {
-        call SerialLogger.log(LOG_PACKET_TOO_BIG,1);
+        call SerialLogger.log(LOG_PACKET_TOO_BIG,call Send.maxPayloadLength[client]());
+        call SerialLogger.log(LOG_PACKET_TOO_BIG,len);
         return ESIZE;
       }
       radio = 2;
@@ -400,7 +401,8 @@ implementation {
       }
       
       if (len > call Send.maxPayloadLength[client]()) {
-        call SerialLogger.log(LOG_PACKET_TOO_BIG,2);
+        call SerialLogger.log(LOG_PACKET_TOO_BIG,call Send.maxPayloadLength[client]());
+        call SerialLogger.log(LOG_PACKET_TOO_BIG,len);
         return ESIZE;
       }
       radio = 1;

@@ -1,8 +1,8 @@
 #define INIT_TIME 500
-#define FINISH_TIME 1100000
+#define FINISH_TIME 500000
 
-#define NUM_MSGS 250
-#define SEND_PERIOD 2000
+#define NUM_MSGS 2000
+#define SEND_PERIOD 200
 #define SEND_DELAY 5000
 
 module TestCtpC {
@@ -44,6 +44,7 @@ implementation {
   uint32_t startTime = 0;
   uint32_t endTime = 0;
   uint16_t duplicate = 0;
+  
 
 
   void initializeNode() {
@@ -72,8 +73,6 @@ implementation {
     }
     msg = &msgBuffer;
     payload = (DataMsg*) call Send.getPayload(msg, sizeof(DataMsg));
-
-    payload->seqno = sendCount;
     for (i = 0; i < MSG_SIZE; i++) {
       payload->data[i] = i;
     }
@@ -153,8 +152,8 @@ implementation {
     else{
       call ReceivedCache.insert(msg);
       receivedCount++;
-      call SerialLogger.log(LOG_RECEIVED_PACKET,endTime);
-      call SerialLogger.log(LOG_RECEIVED_COUNT,receivedCount);
+      //call SerialLogger.log(LOG_RECEIVED_PACKET,endTime);
+      //call SerialLogger.log(LOG_RECEIVED_COUNT,receivedCount);
     }
     return msg;
   }
