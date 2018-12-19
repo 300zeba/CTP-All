@@ -2,7 +2,7 @@
 #define TESTCTP_H
 
 
-#define MSG_SIZE 16
+#define MSG_SIZE 20
 
 enum{
   LOG_INITIALIZED,

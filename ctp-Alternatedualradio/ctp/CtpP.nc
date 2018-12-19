@@ -155,7 +155,7 @@ implementation {
   components RF231ActiveMessageC;
   components RF212ActiveMessageC;
 
-  components new CtpRoutingEngineP(TREE_ROUTING_TABLE_SIZE, 64, 512000) as Router;
+  components new CtpRoutingEngineP(TREE_ROUTING_TABLE_SIZE, 32, 512000) as Router;
 
   StdControl = Router;
   StdControl = Estimator1;
@@ -230,6 +230,10 @@ implementation {
   //components new AMReceiverC(AM_CTP_ROUTING) as ReceiveControl;
 
  // LinkEstimator = Estimator1;
+  /*components new AMSenderC1(AM_CTP_ROUTING) as SendControl1;
+  components new AMReceiverC1(AM_CTP_ROUTING) as ReceiveControl1;
+  components new AMSenderC2(AM_CTP_ROUTING) as SendControl2;
+  components new AMReceiverC2(AM_CTP_ROUTING) as ReceiveControl2;*/
   
   Estimator1.Random -> RandomC;
   Estimator2.Random -> RandomC;
@@ -242,6 +246,16 @@ implementation {
   Estimator2.SubPacket -> RF212ActiveMessageC;
   Estimator1.SubAMPacket -> RF231ActiveMessageC;
   Estimator2.SubAMPacket -> RF212ActiveMessageC;
+/*
+  Estimator1.AMSend -> SendControl1;
+  Estimator2.AMSend -> SendControl2;
+  Estimator1.SubReceive -> ReceiveControl1;
+  Estimator2.SubReceive -> ReceiveControl2;
+  Estimator1.SubPacket -> SendControl1;
+  Estimator2.SubPacket -> SendControl2;
+  Estimator1.SubAMPacket -> SendControl1;
+  Estimator2.SubAMPacket -> SendControl2;
+  */
 
 #if defined(CC2420X)
   components CC2420XActiveMessageC as PlatformActiveMessageC;

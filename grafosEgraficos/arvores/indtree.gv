@@ -1,0 +1,11 @@
+graph indtree{
+rankdir=BT;
+1 -- 2 [color=black];
+1 -- 3 [color=black];
+3 -- 4 [color=black];
+3 -- 5 [color=black];
+1 -- 4 [color=gray37];
+1 -- 3 [color=gray37];
+1 -- 5 [color=gray37];
+5 -- 2 [color=gray37];
+}

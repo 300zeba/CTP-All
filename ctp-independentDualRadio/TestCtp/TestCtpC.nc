@@ -1,8 +1,8 @@
 #define INIT_TIME 500
 #define FINISH_TIME 500000
 
-#define NUM_MSGS 2000
-#define SEND_PERIOD 2000
+#define NUM_MSGS 3000
+#define SEND_PERIOD 1500
 #define SEND_DELAY 5000
 
 module TestCtpC {
@@ -46,6 +46,7 @@ implementation {
   uint32_t startTime = 0;
   uint32_t endTime = 0;
   uint16_t duplicate = 0;
+  uint16_t cycles = 0;
 
 
   void initializeNode() {
@@ -143,12 +144,11 @@ implementation {
 	event void Send.sendDone(message_t *msg, error_t error) {}
 
 	event message_t * Receive.receive(message_t *msg, void *payload, uint8_t len) {
-
     if (startTime == 0) {
       startTime = call FinishTimer.getNow();
     }
     endTime = call FinishTimer.getNow();
-
+   
     if(call ReceivedCache.lookup(msg)){
       call SerialLogger.log(LOG_DUPLICATE_AT_ROOT,1);
       duplicate ++;
@@ -175,6 +175,9 @@ implementation {
     if(call RootControl1.isRoot()){
       call SerialLogger.log(LOG_ROOT,TOS_NODE_ID);
       call SerialLogger.log(LOG_RECEIVED_COUNT,receivedCount);
+      call SerialLogger.log(LOG_THROUGHPUT_TIME,endTime - startTime);
+      cycles = (endTime - startTime)>>16;
+      call SerialLogger.log(LOG_OVERFLOW_COUNTER,cycles);
     }
     else{
       call SerialLogger.log(LOG_NOT_ROOT,TOS_NODE_ID);
