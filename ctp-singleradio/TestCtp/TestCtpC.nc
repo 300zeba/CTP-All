@@ -1,8 +1,8 @@
 #define INIT_TIME 500
-#define FINISH_TIME 500000
+#define FINISH_TIME 250000
 
-#define NUM_MSGS 3000
-#define SEND_PERIOD 2
+#define NUM_MSGS 10
+#define SEND_PERIOD 10000
 #define SEND_DELAY 5000
 
 module TestCtpC {
@@ -39,7 +39,7 @@ implementation {
 	bool is_root;
   bool transmitting = FALSE;
   uint16_t sendCount = 0;
-  uint16_t receivedCount = 0;
+  uint32_t receivedCount = 0;
   message_t msgBuffer;
   uint32_t startTime = 0;
   uint32_t endTime = 0;
@@ -49,7 +49,7 @@ implementation {
 
   void initializeNode() {
 
-    if (TOS_NODE_ID == 36 )  {
+    if (TOS_NODE_ID == 50 )  {
       call RootControl.setRoot();
       call SerialLogger.log(LOG_ROOT, TOS_NODE_ID);
       call FinishTimer.startOneShot(FINISH_TIME);

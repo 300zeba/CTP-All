@@ -279,8 +279,8 @@ implementation {
   components DummyActiveMessageP as PlatformActiveMessageC;
 #endif
 
-  Estimator1.LinkPacketMetadata -> PlatformActiveMessageC;
-  Estimator2.LinkPacketMetadata -> PlatformActiveMessageC;
+  Estimator1.LinkPacketMetadata -> RF231ActiveMessageC;
+  Estimator2.LinkPacketMetadata -> RF212ActiveMessageC;
 
   // eventually
   //  Estimator.LinkPacketMetadata -> ActiveMessageC;
