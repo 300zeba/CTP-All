@@ -1,6 +1,8 @@
 import os
 import sys
 from selenium import webdriver
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.keys import Keys
 
 
 submission_dir = 'images'
@@ -14,6 +16,10 @@ for directory in dir_list:
         for i in range(len(file_list)):
             file_tup.append([directory,file_list[i]])
 
+file_tup.sort()
+
+for index in range(len(file_tup)):
+    print(file_tup[index][1])
 
 #Web
 
@@ -26,7 +32,7 @@ id_box = driver.find_element_by_name('username')
 pass_box = driver.find_element_by_name('password')
 login_button = driver.find_element_by_class_name('button')
 
-id_box.send_keys('user')
+id_box.send_keys('login')
 pass_box.send_keys('password')
 login_button.click()
 
@@ -52,7 +58,7 @@ for index in range(len(file_tup)):
     name = file_tup[index][1].split(".")
     image_name = name[0]
     number = sys.argv[1]
-    
+
     print(number)
     num_nodes = int(float(number))
 
@@ -118,8 +124,12 @@ for index in range(len(file_tup)):
     task_box = driver.find_element_by_id('task_name')
     task_box.send_keys(image_name)
 
+
     time_slot = driver.find_element_by_css_selector('li.ui-widget-content.ui-selectee')
-    time_slot.click()
+
+    ActionChains(driver).drag_and_drop_by_offset(time_slot,0,24*(int(sys.argv[2])-1)).perform()
+
 
     submit_button = driver.find_element_by_xpath("//form[@id='mainform']/table[1]//tr[3]/td[3]/input[1]")
     submit_button.click()
+

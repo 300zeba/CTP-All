@@ -1,9 +1,17 @@
 graph indtree{
 rankdir=BT;
-1 -- 2 [color=black];
-1 -- 3 [color=black];
-3 -- 4 [color=black];
-3 -- 5 [color=black];
+1 [ xlabel="ETX = 0"];
+2 [ xlabel="ETX = 5"];
+3 [ xlabel="ETX = 3"];
+4 [ xlabel="ETX = 6"];
+5 [ xlabel="ETX = 5"];
+
+
+1 -- 2 [color=black, label=" 5"];
+1 -- 3 [color=black, label=" 3"];
+2 -- 4 [color=black, label=" 1"];
+3 -- 5 [color=black, label=" 2"];
+
 1 -- 4 [color=gray37];
 1 -- 3 [color=gray37];
 1 -- 5 [color=gray37];

@@ -2,7 +2,7 @@
 #define FINISH_TIME 500000
 
 #define NUM_MSGS 3000
-#define SEND_PERIOD 1500
+#define SEND_PERIOD 2
 #define SEND_DELAY 5000
 
 module TestCtpC {
@@ -175,6 +175,7 @@ implementation {
     if(call RootControl1.isRoot()){
       call SerialLogger.log(LOG_ROOT,TOS_NODE_ID);
       call SerialLogger.log(LOG_RECEIVED_COUNT,receivedCount);
+      call SerialLogger.log(LOG_OVERFLOW_COUNTER,receivedCount>>16);
       call SerialLogger.log(LOG_THROUGHPUT_TIME,endTime - startTime);
       cycles = (endTime - startTime)>>16;
       call SerialLogger.log(LOG_OVERFLOW_COUNTER,cycles);
@@ -184,6 +185,7 @@ implementation {
       call SerialLogger.log(LOG_SENT_COUNT,sendCount);
     }
     call SerialLogger.log(LOG_TOTAL_BEACONS, call CtpInfo1.totalBeacons() + call CtpInfo2.totalBeacons());
+    call SerialLogger.log(LOG_OVERFLOW_COUNTER,(call CtpInfo1.totalBeacons() + call CtpInfo2.totalBeacons())>>16);
     call SerialLogger.log(LOG_DUPLICATES,call CtpInfoForward.totalDuplicates() + duplicate);
     call SerialLogger.log(LOG_AVERAGE_THL,call CtpInfoForward.averageTHL());
     call SerialLogger.log(LOG_MAX_THL,call CtpInfoForward.maxTHL());
