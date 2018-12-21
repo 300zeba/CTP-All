@@ -1,8 +1,8 @@
 #define INIT_TIME 500
 #define FINISH_TIME 250000
 
-#define NUM_MSGS 10
-#define SEND_PERIOD 10000
+#define NUM_MSGS 2000
+#define SEND_PERIOD 1
 #define SEND_DELAY 5000
 
 
@@ -51,7 +51,7 @@ implementation {
 
   void initializeNode() {
 
-    if (TOS_NODE_ID == 50) {
+    if (TOS_NODE_ID == 40) {
       call RootControl.setRoot();
       call SerialLogger.log(LOG_ROOT, TOS_NODE_ID);
       call FinishTimer.startOneShot(FINISH_TIME);

@@ -32,8 +32,8 @@ id_box = driver.find_element_by_name('username')
 pass_box = driver.find_element_by_name('password')
 login_button = driver.find_element_by_class_name('button')
 
-id_box.send_keys('login')
-pass_box.send_keys('password')
+id_box.send_keys('nildo')
+pass_box.send_keys('meneze')
 login_button.click()
 
 #Grande Loop de envio
@@ -129,7 +129,23 @@ for index in range(len(file_tup)):
 
     ActionChains(driver).drag_and_drop_by_offset(time_slot,0,24*(int(sys.argv[2])-1)).perform()
 
-
+    #Send Task again
     submit_button = driver.find_element_by_xpath("//form[@id='mainform']/table[1]//tr[3]/td[3]/input[1]")
     submit_button.click()
 
+    driver.get('http://twonet.cs.uh.edu/webentry/task_page.php')
+
+    task_button = driver.find_element_by_name('new_task')
+    task_button.click()
+
+    task_box = driver.find_element_by_id('task_name')
+    task_box.send_keys(image_name)
+
+
+    time_slot = driver.find_element_by_css_selector('li.ui-widget-content.ui-selectee')
+
+    ActionChains(driver).drag_and_drop_by_offset(time_slot,0,24*(int(sys.argv[2])-1)).perform()
+
+
+    submit_button = driver.find_element_by_xpath("//form[@id='mainform']/table[1]//tr[3]/td[3]/input[1]")
+    submit_button.click()
