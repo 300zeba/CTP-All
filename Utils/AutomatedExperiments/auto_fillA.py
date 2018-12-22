@@ -32,8 +32,8 @@ id_box = driver.find_element_by_name('username')
 pass_box = driver.find_element_by_name('password')
 login_button = driver.find_element_by_class_name('button')
 
-id_box.send_keys('nildo')
-pass_box.send_keys('meneze')
+id_box.send_keys('user')
+pass_box.send_keys('pasword')
 login_button.click()
 
 #Grande Loop de envio
