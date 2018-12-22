@@ -1,0 +1,692 @@
+4543: ALT 1000
+Vazao = 0.001262
+TaxaDeEntrega = 0.050945
+TotalEnvios = 11954
+TotalBeacons = 25766
+TotalMensagens = 50717
+Duplicadas = 640
+4544:
+Vazao = 0.021851
+TaxaDeEntrega = 0.897298
+TotalEnvios = 12103
+TotalBeacons = 2669
+TotalMensagens = 28633
+Duplicadas = 103
+4545:
+Vazao = 0.023952
+TaxaDeEntrega = 0.992040
+TotalEnvios = 12061
+TotalBeacons = 16538
+TotalMensagens = 38903
+Duplicadas = 64
+4546:
+Vazao = 0.024025
+TaxaDeEntrega = 0.983719
+TotalEnvios = 12100
+TotalBeacons = 11056
+TotalMensagens = 25619
+Duplicadas = 67
+4547:
+Vazao = 0.008507
+TaxaDeEntrega = 0.265630
+TotalEnvios = 15947
+TotalBeacons = 33090
+TotalMensagens = 79711
+Duplicadas = 1678
+4548:
+Vazao = 0.004152
+TaxaDeEntrega = 0.127101
+TotalEnvios = 16121
+TotalBeacons = 2645
+TotalMensagens = 52431
+Duplicadas = 208
+4549:
+Vazao = 0.030740
+TaxaDeEntrega = 0.994943
+TotalEnvios = 15425
+TotalBeacons = 188134
+TotalMensagens = 42518
+Duplicadas = 251
+4550:
+Vazao = 0.026278
+TaxaDeEntrega = 0.816837
+TotalEnvios = 16024
+TotalBeacons = 12606
+TotalMensagens = 37534
+Duplicadas = 84
+4551:
+Vazao = 0.034097
+TaxaDeEntrega = 0.707996
+TotalEnvios = 23986
+TotalBeacons = 24834
+TotalMensagens = 67279
+Duplicadas = 884
+4552:
+Vazao = 0.014017
+TaxaDeEntrega = 0.571015
+TotalEnvios = 12103
+TotalBeacons = 2629
+TotalMensagens = 30850
+Duplicadas = 84
+4553:
+Vazao = 0.045738
+TaxaDeEntrega = 0.987062
+TotalEnvios = 23111
+TotalBeacons = 9103
+TotalMensagens = 72933
+Duplicadas = 314
+4554:
+Vazao = 0.037975
+TaxaDeEntrega = 0.777460
+TotalEnvios = 24162
+TotalBeacons = 20982
+TotalMensagens = 49326
+Duplicadas = 193
+4555:
+Vazao = 0.039358
+TaxaDeEntrega = 0.412100
+TotalEnvios = 47486
+TotalBeacons = 33821
+TotalMensagens = 101571
+Duplicadas = 1489
+4556:
+Vazao = 0.071872
+TaxaDeEntrega = 0.752019
+TotalEnvios = 47415
+TotalBeacons = 2663
+TotalMensagens = 104772
+Duplicadas = 1512
+4557:
+Vazao = 0.095744
+TaxaDeEntrega = 0.990366
+TotalEnvios = 48265
+TotalBeacons = 8759
+TotalMensagens = 131169
+Duplicadas = 1013
+4558:
+Vazao = 0.078717
+TaxaDeEntrega = 0.822417
+TotalEnvios = 47696
+TotalBeacons = 16567
+TotalMensagens = 110159
+Duplicadas = 1092
+4559:
+Vazao = 0.035818
+TaxaDeEntrega = 0.201484
+TotalEnvios = 87739
+TotalBeacons = 28005
+TotalMensagens = 186645
+Duplicadas = 2648
+4560:
+Vazao = 0.051924
+TaxaDeEntrega = 0.310754
+TotalEnvios = 83098
+TotalBeacons = 4345
+TotalMensagens = 214742
+Duplicadas = 3310
+4561:
+Vazao = 0.046938
+TaxaDeEntrega = 0.267352
+TotalEnvios = 87600
+TotalBeacons = 16268
+TotalMensagens = 201717
+Duplicadas = 2948
+4562:
+Vazao = 0.116026
+TaxaDeEntrega = 0.619530
+TotalEnvios = 92780
+TotalBeacons = 28816
+TotalMensagens = 210327
+Duplicadas = 3429
+4563:
+Vazao = 0.095202
+TaxaDeEntrega = 0.257271
+TotalEnvios = 133058
+TotalBeacons = 14899
+TotalMensagens = 228678
+Duplicadas = 4864
+4564:
+Vazao = 0.051422
+TaxaDeEntrega = 0.248105
+TotalEnvios = 103279
+TotalBeacons = 6104
+TotalMensagens = 310056
+Duplicadas = 7425
+4566:
+Vazao = 0.093496
+TaxaDeEntrega = 0.318235
+TotalEnvios = 122617
+TotalBeacons = 7183
+TotalMensagens = 230285
+Duplicadas = 4871
+4567:
+Vazao = 0.100367
+TaxaDeEntrega = 0.372991
+TotalEnvios = 133258
+TotalBeacons = 18786
+TotalMensagens = 258386
+Duplicadas = 4075
+4568:
+Vazao = 0.084643
+TaxaDeEntrega = 0.246201
+TotalEnvios = 117713
+TotalBeacons = 12366
+TotalMensagens = 222530
+Duplicadas = 4469
+4569:
+Vazao = 0.054572
+TaxaDeEntrega = 0.214221
+TotalEnvios = 126332
+TotalBeacons = 6849
+TotalMensagens = 341667
+Duplicadas = 5704
+4570:
+Vazao = 0.132385
+TaxaDeEntrega = 0.291462
+TotalEnvios = 115274
+TotalBeacons = 9843
+TotalMensagens = 198655
+Duplicadas = 3638
+4571:
+Vazao = 0.135027
+TaxaDeEntrega = 0.346816
+TotalEnvios = 133627
+TotalBeacons = 14288
+TotalMensagens = 291663
+Duplicadas = 3937
+4572:
+Vazao = 0.012401
+TaxaDeEntrega = 0.514548
+TotalEnvios = 11995
+TotalBeacons = 27734
+TotalMensagens = 72701
+Duplicadas = 1390
+4573:
+Vazao = 0.019033
+TaxaDeEntrega = 0.781872
+TotalEnvios = 12103
+TotalBeacons = 2513
+TotalMensagens = 26040
+Duplicadas = 48
+4574:
+Vazao = 0.024097
+TaxaDeEntrega = 0.994294
+TotalEnvios = 12093
+TotalBeacons = 5945
+TotalMensagens = 32225
+Duplicadas = 56
+4575:
+Vazao = 0.021117
+TaxaDeEntrega = 0.860932
+TotalEnvios = 12102
+TotalBeacons = 12127
+TotalMensagens = 23121
+Duplicadas = 23
+4576:
+Vazao = 0.026316
+TaxaDeEntrega = 0.808759
+TotalEnvios = 16121
+TotalBeacons = 25729
+TotalMensagens = 43439
+Duplicadas = 628
+4577:
+Vazao = 0.023757
+TaxaDeEntrega = 0.730414
+TotalEnvios = 16121
+TotalBeacons = 2418
+TotalMensagens = 35549
+Duplicadas = 53
+4578:
+Vazao = 0.030860
+TaxaDeEntrega = 0.997218
+TotalEnvios = 15459
+TotalBeacons = 474604
+TotalMensagens = 46384
+Duplicadas = 489
+4579:
+Vazao = 0.028631
+TaxaDeEntrega = 0.880174
+TotalEnvios = 16115
+TotalBeacons = 16191
+TotalMensagens = 32840
+Duplicadas = 85
+4580:
+Vazao = 0.001000
+TaxaDeEntrega = 0.020462
+TotalEnvios = 24045
+TotalBeacons = 30338
+TotalMensagens = 80573
+Duplicadas = 1168
+4581:
+Vazao = 0.015006
+TaxaDeEntrega = 0.306081
+TotalEnvios = 24206
+TotalBeacons = 2402
+TotalMensagens = 62606
+Duplicadas = 342
+4582:
+Vazao = 0.047468
+TaxaDeEntrega = 0.994046
+TotalEnvios = 23848
+TotalBeacons = 158419
+TotalMensagens = 60698
+Duplicadas = 660
+4583:
+Vazao = 0.042641
+TaxaDeEntrega = 0.873435
+TotalEnvios = 24201
+TotalBeacons = 14370
+TotalMensagens = 58051
+Duplicadas = 294
+4584:
+Vazao = 0.030708
+TaxaDeEntrega = 0.318991
+TotalEnvios = 47901
+TotalBeacons = 41940
+TotalMensagens = 133074
+Duplicadas = 1629
+4585:
+Vazao = 0.059961
+TaxaDeEntrega = 0.639814
+TotalEnvios = 46587
+TotalBeacons = 2339
+TotalMensagens = 102196
+Duplicadas = 1055
+4586:
+Vazao = 0.944814
+TaxaDeEntrega = 0.753185
+TotalEnvios = 46780
+TotalBeacons = 5166
+TotalMensagens = 119750
+Duplicadas = 981
+4587:
+Vazao = 0.081349
+TaxaDeEntrega = 0.836878
+TotalEnvios = 48387
+TotalBeacons = 17150
+TotalMensagens = 105013
+Duplicadas = 1204
+4588:
+Vazao = 0.032517
+TaxaDeEntrega = 0.183183
+TotalEnvios = 88278
+TotalBeacons = 27292
+TotalMensagens = 182086
+Duplicadas = 2727
+4589:
+Vazao = 0.052313
+TaxaDeEntrega = 0.348424
+TotalEnvios = 74415
+TotalBeacons = 3505
+TotalMensagens = 215684
+Duplicadas = 4590
+4590:
+Vazao = 0.092798
+TaxaDeEntrega = 0.523955
+TotalEnvios = 88498
+TotalBeacons = 11787
+TotalMensagens = 169521
+Duplicadas = 3347
+4591:
+Vazao = 0.017404
+TaxaDeEntrega = 0.091697
+TotalEnvios = 94540
+TotalBeacons = 27817
+TotalMensagens = 223904
+Duplicadas = 5294
+4592:
+Vazao = 0.065503
+TaxaDeEntrega = 0.270296
+TotalEnvios = 120579
+TotalBeacons = 18256
+TotalMensagens = 230200
+Duplicadas = 3973
+4593:
+Vazao = 0.060975
+TaxaDeEntrega = 0.260335
+TotalEnvios = 116784
+TotalBeacons = 4872
+TotalMensagens = 309153
+Duplicadas = 6597
+4594:
+Vazao = 0.031613
+TaxaDeEntrega = 0.122516
+TotalEnvios = 128906
+TotalBeacons = 11018
+TotalMensagens = 219862
+Duplicadas = 2658
+4595:
+Vazao = 0.098346
+TaxaDeEntrega = 0.370734
+TotalEnvios = 132011
+TotalBeacons = 31992
+TotalMensagens = 299511
+Duplicadas = 5103
+4596:
+Vazao = 0.089023
+TaxaDeEntrega = 0.203876
+TotalEnvios = 123325
+TotalBeacons = 10302
+TotalMensagens = 223173
+Duplicadas = 3871
+4597:
+Vazao = 0.048417
+TaxaDeEntrega = 0.229863
+TotalEnvios = 104336
+TotalBeacons = 4862
+TotalMensagens = 263075
+Duplicadas = 3201
+4598:
+Vazao = 0.139015
+TaxaDeEntrega = 0.265648
+TotalEnvios = 115299
+TotalBeacons = 6733
+TotalMensagens = 204151
+Duplicadas = 4367
+4599:
+Vazao = 0.114572
+TaxaDeEntrega = 0.321063
+TotalEnvios = 126785
+TotalBeacons = 13540
+TotalMensagens = 260045
+Duplicadas = 3957
+4600:
+Vazao = 0.149671
+TaxaDeEntrega = 0.242971
+TotalEnvios = 111993
+TotalBeacons = 9638
+TotalMensagens = 187238
+Duplicadas = 1444
+4601:
+Vazao = 0.030310
+TaxaDeEntrega = 0.120107
+TotalEnvios = 122549
+TotalBeacons = 10169
+TotalMensagens = 340562
+Duplicadas = 4623
+4602:
+Vazao = 0.233262
+TaxaDeEntrega = 0.309433
+TotalEnvios = 121713
+TotalBeacons = 26846
+TotalMensagens = 197575
+Duplicadas = 1532
+4603:
+Vazao = 0.107509
+TaxaDeEntrega = 0.194968
+TotalEnvios = 129693
+TotalBeacons = 17795
+TotalMensagens = 308075
+Duplicadas = 5935
+4604:
+Vazao = 0.097779
+TaxaDeEntrega = 0.127369
+TotalEnvios = 109940
+TotalBeacons = 9004
+TotalMensagens = 187651
+Duplicadas = 1381
+4605:
+Vazao = 0.038919
+TaxaDeEntrega = 0.135171
+TotalEnvios = 113582
+TotalBeacons = 10734
+TotalMensagens = 338065
+Duplicadas = 6106
+4606:
+Vazao = 0.224900
+TaxaDeEntrega = 0.285524
+TotalEnvios = 116603
+TotalBeacons = 11472
+TotalMensagens = 190262
+Duplicadas = 1331
+4607:
+Vazao = 0.162683
+TaxaDeEntrega = 0.249075
+TotalEnvios = 122405
+TotalBeacons = 12432
+TotalMensagens = 250568
+Duplicadas = 3004
+4608:
+Vazao = 0.101102
+TaxaDeEntrega = 0.136200
+TotalEnvios = 116571
+TotalBeacons = 10449
+TotalMensagens = 204372
+Duplicadas = 2624
+4644:
+Vazao = 0.002469
+TaxaDeEntrega = 0.271605
+TotalEnvios = 4455
+TotalBeacons = 15582
+TotalMensagens = 14796
+Duplicadas = 183
+4645:
+Vazao = 0.018472
+TaxaDeEntrega = 0.848361
+TotalEnvios = 5368
+TotalBeacons = 24057
+TotalMensagens = 18956
+Duplicadas = 222
+4646:
+Vazao = 0.004850
+TaxaDeEntrega = 0.224851
+TotalEnvios = 5368
+TotalBeacons = 16125
+TotalMensagens = 21396
+Duplicadas = 352
+4647:
+Vazao = 0.013378
+TaxaDeEntrega = 0.613778
+TotalEnvios = 5124
+TotalBeacons = 13926
+TotalMensagens = 17007
+Duplicadas = 152
+4648:
+Vazao = 0.173444
+TaxaDeEntrega = 0.378977
+TotalEnvios = 82261
+TotalBeacons = 8679
+TotalMensagens = 160768
+Duplicadas = 2544
+
+4650:
+Vazao = 0.007791
+TaxaDeEntrega = 0.359724
+TotalEnvios = 5368
+TotalBeacons = 20886
+TotalMensagens = 20177
+Duplicadas = 351
+4651:
+Vazao = 0.093303
+TaxaDeEntrega = 0.177899
+TotalEnvios = 71743
+TotalBeacons = 7446
+TotalMensagens = 136553
+Duplicadas = 1919
+4652:
+Vazao = 0.105596
+TaxaDeEntrega = 0.190579
+TotalEnvios = 90330
+TotalBeacons = 10968
+TotalMensagens = 171949
+Duplicadas = 2423
+4653:
+Vazao = 0.002631
+TaxaDeEntrega = 0.585227
+TotalEnvios = 1056
+TotalBeacons = 6694
+TotalMensagens = 3586
+Duplicadas = 42
+4654:
+Vazao = 0.030558
+TaxaDeEntrega = 0.089628
+TotalEnvios = 84159
+TotalBeacons = 11778
+TotalMensagens = 155288
+Duplicadas = 1821
+4655:
+Vazao = 0.007170
+TaxaDeEntrega = 0.667175
+TotalEnvios = 2623
+TotalBeacons = 11838
+TotalMensagens = 13347
+Duplicadas = 211
+4656:
+Vazao = 0.013226
+TaxaDeEntrega = 0.178166
+TotalEnvios = 18219
+TotalBeacons = 16339
+TotalMensagens = 57181
+Duplicadas = 1003
+4659:
+Vazao = 0.011682
+TaxaDeEntrega = 0.050029
+TotalEnvios = 57127
+TotalBeacons = 39550
+TotalMensagens = 176630
+Duplicadas = 4170
+4660:
+Vazao = 0.098287
+TaxaDeEntrega = 0.275088
+TotalEnvios = 87023
+TotalBeacons = 13935
+TotalMensagens = 174637
+Duplicadas = 3645
+4661:
+Vazao = 0.078566
+TaxaDeEntrega = 0.233338
+TotalEnvios = 81834
+TotalBeacons = 12323
+TotalMensagens = 143512
+Duplicadas = 2693
+4662:
+Vazao = 0.005620
+TaxaDeEntrega = 0.644712
+TotalEnvios = 2156
+TotalBeacons = 19005
+TotalMensagens = 20030
+Duplicadas = 505
+4663:
+Vazao = 0.003550
+TaxaDeEntrega = 0.408627
+TotalEnvios = 2156
+TotalBeacons = 23505
+TotalMensagens = 26346
+Duplicadas = 714
+4664:
+Vazao = 0.021146
+TaxaDeEntrega = 0.974665
+TotalEnvios = 5368
+TotalBeacons = 12408
+TotalMensagens = 18992
+Duplicadas = 215
+4665:
+Vazao = 0.017801
+TaxaDeEntrega = 1.007058
+TotalEnvios = 4392
+TotalBeacons = 9865
+TotalMensagens = 17430
+Duplicadas = 170
+4666:
+Vazao = 0.020232
+TaxaDeEntrega = 0.930142
+TotalEnvios = 5368
+TotalBeacons = 8090
+TotalMensagens = 14999
+Duplicadas = 84
+4667:
+Vazao = 0.018304
+TaxaDeEntrega = 0.847057
+TotalEnvios = 5368
+TotalBeacons = 11291
+TotalMensagens = 14529
+Duplicadas = 114
+4668:
+Vazao = 0.037694
+TaxaDeEntrega = 0.861057
+TotalEnvios = 10767
+TotalBeacons = 7958
+TotalMensagens = 24186
+Duplicadas = 78
+4669:
+Vazao = 0.108777
+TaxaDeEntrega = 0.305700
+TotalEnvios = 87200
+TotalBeacons = 8307
+TotalMensagens = 169700
+Duplicadas = 2098
+4670:
+Vazao = 0.008758
+TaxaDeEntrega = 0.994538
+TotalEnvios = 2197
+TotalBeacons = 5149
+TotalMensagens = 6413
+Duplicadas = 16
+4671:
+Vazao = 0.005131
+TaxaDeEntrega = 0.569161
+TotalEnvios = 2205
+TotalBeacons = 7340
+TotalMensagens = 6833
+Duplicadas = 13
+4672:
+Vazao = 0.006142
+TaxaDeEntrega = 0.696660
+TotalEnvios = 2156
+TotalBeacons = 5627
+TotalMensagens = 4862
+Duplicadas = 15
+4673:
+4674:
+Vazao = 0.004655
+TaxaDeEntrega = 0.523191
+TotalEnvios = 2156
+TotalBeacons = 6973
+TotalMensagens = 6785
+Duplicadas = 34
+4675:
+Vazao = 0.005967
+TaxaDeEntrega = 0.673469
+TotalEnvios = 2156
+TotalBeacons = 5350
+TotalMensagens = 4689
+Duplicadas = 9
+4676:
+4676:
+4677:
+4680:
+4681:
+Vazao = 0.007450
+TaxaDeEntrega = 0.852968
+TotalEnvios = 2156
+TotalBeacons = 5861
+TotalMensagens = 4948
+Duplicadas = 11
+4682:
+Vazao = 0.002996
+TaxaDeEntrega = 0.549543
+TotalEnvios = 1312
+TotalBeacons = 2639
+TotalMensagens = 3974
+Duplicadas = 4
+4683:
+Vazao = 0.008400
+TaxaDeEntrega = 0.973966
+TotalEnvios = 2151
+TotalBeacons = 87627
+TotalMensagens = 8132
+Duplicadas = 22
+4684:
+Vazao = 0.006357
+TaxaDeEntrega = 0.696599
+TotalEnvios = 2205
+TotalBeacons = 7876
+TotalMensagens = 6259
+Duplicadas = 16
+4685:
+Vazao = 0.007794
+TaxaDeEntrega = 0.874830
+TotalEnvios = 2205
+TotalBeacons = 4966
+TotalMensagens = 6657
+Duplicadas = 7

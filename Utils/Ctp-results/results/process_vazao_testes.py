@@ -45,13 +45,13 @@ for line in file:
                 time += (int(linha[2]))<<16
                 overflow_id = 3
 
-        if linha[0] == '57' and linha[1] == 'MAX_THL':
+        if linha[0] == '40' and linha[1] == 'MAX_THL':
             max_thl = int(linha[2])
-        elif linha[0] == '57' and linha[1] == 'AVERAGE_THL':
+        elif linha[0] == '40' and linha[1] == 'AVERAGE_THL':
             average_thl = int(linha[2])
 
 
-throughput = received_count/float(time)
+throughput = (received_count/float(time))*(1024/1000)*29
 
 delivery_rate = received_count/float(sent_count)
 
