@@ -1,669 +1,669 @@
-4768: ALT 10000
+4768:
 Vazao = 0.119201
 TaxaDeEntrega = 0.981195
 TotalEnvios = 904
 TotalBeacons = 13108
 TotalMensagens = 2929
 Duplicadas = 2
-4769: ALT 10000
+4769:
 Vazao = 0.119000
 TaxaDeEntrega = 0.998918
 TotalEnvios = 924
 TotalBeacons = 15031
 TotalMensagens = 2397
 Duplicadas = 2
-4770: COMP 10000
+4770:
 Vazao = 0.094494
 TaxaDeEntrega = 0.678571
 TotalEnvios = 924
 TotalBeacons = 5998
 TotalMensagens = 2768
 Duplicadas = 8
-4771: COMP 10000
+4771:
 Vazao = 0.084580
 TaxaDeEntrega = 0.666667
 TotalEnvios = 945
 TotalBeacons = 4512
 TotalMensagens = 2413
 Duplicadas = 4
-4772: IND 10000
+4772:
 Vazao = 0.109005
 TaxaDeEntrega = 0.879870
 TotalEnvios = 924
 TotalBeacons = 4082
 TotalMensagens = 2400
 Duplicadas = 4
-4773: IND 10000
+4773:
 Vazao = 0.106989
 TaxaDeEntrega = 0.864719
 TotalEnvios = 924
 TotalBeacons = 5338
 TotalMensagens = 2576
 Duplicadas = 3
-4774: SING 10000
+4774:
 Vazao = 0.045837
 TaxaDeEntrega = 0.482143
 TotalEnvios = 672
 TotalBeacons = 1634
 TotalMensagens = 1785
 Duplicadas = 0
-4775: SING 10000
+4775:
 Vazao = 0.062156
 TaxaDeEntrega = 0.634921
 TotalEnvios = 693
 TotalBeacons = 1648
 TotalMensagens = 1554
 Duplicadas = 0
-4776: ALT 8000
+4776:
 Vazao = 0.130440
 TaxaDeEntrega = 0.996387
 TotalEnvios = 1107
 TotalBeacons = 57907
 TotalMensagens = 3142
 Duplicadas = 10
-4777: ALT 8000
+4777:
 Vazao = 0.149652
 TaxaDeEntrega = 0.995532
 TotalEnvios = 1119
 TotalBeacons = 104610
 TotalMensagens = 2934
 Duplicadas = 8
-4778: COMP 8000
+4778:
 Vazao = 0.127523
 TaxaDeEntrega = 0.788462
 TotalEnvios = 1144
 TotalBeacons = 2514
 TotalMensagens = 2517
 Duplicadas = 3
-4779: COMP 8000
+4779:
 Vazao = 0.108084
 TaxaDeEntrega = 0.654701
 TotalEnvios = 1170
 TotalBeacons = 3251
 TotalMensagens = 2346
 Duplicadas = 4
-4780: IND 8000
+4780:
 Vazao = 0.144610
 TaxaDeEntrega = 0.929196
 TotalEnvios = 1144
 TotalBeacons = 5508
 TotalMensagens = 3325
 Duplicadas = 12
-4781: IND 8000
+4781:
 Vazao = 0.151745
 TaxaDeEntrega = 0.941434
 TotalEnvios = 1144
 TotalBeacons = 4380
 TotalMensagens = 3088
 Duplicadas = 4
-4782: SING 8000
+4782:
 Vazao = 0.058551
 TaxaDeEntrega = 0.484848
 TotalEnvios = 858
 TotalBeacons = 1671
 TotalMensagens = 1940
 Duplicadas = 3
-4783: SING 8000
+4783:
 Vazao = 0.117099
 TaxaDeEntrega = 0.966200
 TotalEnvios = 858
 TotalBeacons = 1635
 TotalMensagens = 2155
 Duplicadas = 3
-4784: ALT 2000
+4784:
 Vazao = 0.598517
 TaxaDeEntrega = 0.979407
 TotalEnvios = 4516
 TotalBeacons = 68775
 TotalMensagens = 12887
 Duplicadas = 19
-4785: ALT 2000
+4785:
 Vazao = 0.456258
 TaxaDeEntrega = 0.874440
 TotalEnvios = 4468
 TotalBeacons = 54503
 TotalMensagens = 14039
 Duplicadas = 58
-4786: COMP 2000
+4786:
 Vazao = 0.448262
 TaxaDeEntrega = 0.706494
 TotalEnvios = 4620
 TotalBeacons = 7974
 TotalMensagens = 13748
 Duplicadas = 43
-4787: COMP 2000
+4787:
 Vazao = 0.432913
 TaxaDeEntrega = 0.692857
 TotalEnvios = 4620
 TotalBeacons = 4692
 TotalMensagens = 10785
 Duplicadas = 7
-4788: IND 2000
+4788:
 Vazao = 0.427303
 TaxaDeEntrega = 0.698782
 TotalEnvios = 4515
 TotalBeacons = 8334
 TotalMensagens = 10731
 Duplicadas = 43
-4789: IND 2000
+4789:
 Vazao = 0.584703
 TaxaDeEntrega = 0.970321
 TotalEnvios = 4515
 TotalBeacons = 4796
 TotalMensagens = 11258
 Duplicadas = 18
-4790: SING 2000
+4790:
 Vazao = 0.377576
 TaxaDeEntrega = 0.775630
 TotalEnvios = 3570
 TotalBeacons = 1795
 TotalMensagens = 7971
 Duplicadas = 12
-4791: SING 2000
+4791:
 Vazao = 0.067762
 TaxaDeEntrega = 0.146726
 TotalEnvios = 3360
 TotalBeacons = 1736
 TotalMensagens = 8950
 Duplicadas = 25
-4792: ALT 4000
+4792:
 Vazao = 0.222322
 TaxaDeEntrega = 0.839714
 TotalEnvios = 1959
 TotalBeacons = 119278
 TotalMensagens = 9076
 Duplicadas = 110
-4793: ALT 4000
+4793:
 Vazao = 0.307016
 TaxaDeEntrega = 0.996941
 TotalEnvios = 2288
 TotalBeacons = 10191
 TotalMensagens = 6842
 Duplicadas = 5
-4794: COMP 4000
+4794:
 Vazao = 0.233328
 TaxaDeEntrega = 0.749563
 TotalEnvios = 2288
 TotalBeacons = 3927
 TotalMensagens = 4806
 Duplicadas = 6
-4795: COMP 4000
+4795:
 Vazao = 0.194502
 TaxaDeEntrega = 0.625874
 TotalEnvios = 2288
 TotalBeacons = 4520
 TotalMensagens = 4921
 Duplicadas = 7
-4796: IND 4000
+4796:
 Vazao = 0.238572
 TaxaDeEntrega = 0.750855
 TotalEnvios = 2340
 TotalBeacons = 7085
 TotalMensagens = 5595
 Duplicadas = 5
-4797: IND 4000
+4797:
 Vazao = 0.220216
 TaxaDeEntrega = 0.697990
 TotalEnvios = 2288
 TotalBeacons = 6672
 TotalMensagens = 5724
 Duplicadas = 3
-4798: SING 4000
+4798:
 Vazao = 0.076571
 TaxaDeEntrega = 0.319347
 TotalEnvios = 1716
 TotalBeacons = 1953
 TotalMensagens = 4521
 Duplicadas = 6
-4799: SING 4000
+4799:
 Vazao = 0.166302
 TaxaDeEntrega = 0.716947
 TotalEnvios = 1664
 TotalBeacons = 1661
 TotalMensagens = 3612
 Duplicadas = 3
-4800: ALT 6000
+4800:
 Vazao = 0.203531
 TaxaDeEntrega = 0.994156
 TotalEnvios = 1540
 TotalBeacons = 4826
 TotalMensagens = 3843
 Duplicadas = 1
-4801: ALT 6000
+4801:
 Vazao = 0.192330
 TaxaDeEntrega = 0.996753
 TotalEnvios = 1540
 TotalBeacons = 108876
 TotalMensagens = 4107
 Duplicadas = 14
-4802: COMP 6000
+4802:
 Vazao = 0.151016
 TaxaDeEntrega = 0.709740
 TotalEnvios = 1540
 TotalBeacons = 9193
 TotalMensagens = 3572
 Duplicadas = 21
-4803: COMP 6000
+4803:
 Vazao = 0.183866
 TaxaDeEntrega = 0.864935
 TotalEnvios = 1540
 TotalBeacons = 5396
 TotalMensagens = 3493
 Duplicadas = 5
-4804: IND 6000
+4804:
 Vazao = 0.162377
 TaxaDeEntrega = 0.781169
 TotalEnvios = 1540
 TotalBeacons = 5977
 TotalMensagens = 3619
 Duplicadas = 10
-4805: IND 6000
+4805:
 Vazao = 0.179333
 TaxaDeEntrega = 0.842857
 TotalEnvios = 1540
 TotalBeacons = 4836
 TotalMensagens = 3465
 Duplicadas = 6
-4806: SING 6000
+4806:
 Vazao = 0.121424
 TaxaDeEntrega = 0.733613
 TotalEnvios = 1190
 TotalBeacons = 1697
 TotalMensagens = 2476
 Duplicadas = 0
-4807: SING 6000
+4807:
 Vazao = 0.111769
 TaxaDeEntrega = 0.716071
 TotalEnvios = 1120
 TotalBeacons = 1560
 TotalMensagens = 2405
 Duplicadas = 1
-4808: ALT 1000
+4808:
 Vazao = 1.064151
 TaxaDeEntrega = 0.850557
 TotalEnvios = 9241
 TotalBeacons = 8100
 TotalMensagens = 26486
 Duplicadas = 137
-4809: ALT 1000
+4809:
 Vazao = 1.041754
 TaxaDeEntrega = 0.987285
 TotalEnvios = 8966
 TotalBeacons = 71659
 TotalMensagens = 30456
 Duplicadas = 319
-4810: COMP 1000
+4810:
 Vazao = 0.623011
 TaxaDeEntrega = 0.502522
 TotalEnvios = 9120
 TotalBeacons = 8435
 TotalMensagens = 16929
 Duplicadas = 55
-4811: COMP 1000
+4811:
 Vazao = 0.914507
 TaxaDeEntrega = 0.730411
 TotalEnvios = 9240
 TotalBeacons = 4828
 TotalMensagens = 17537
 Duplicadas = 55
-4812: IND 1000
+4812:
 Vazao = 0.888313
 TaxaDeEntrega = 0.825087
 TotalEnvios = 9176
 TotalBeacons = 8303
 TotalMensagens = 22542
 Duplicadas = 59
-4813: IND 1000
+4813:
 Vazao = 1.095347
 TaxaDeEntrega = 0.877165
 TotalEnvios = 9240
 TotalBeacons = 7204
 TotalMensagens = 20079
 Duplicadas = 63
-4814: SING 1000
+4814:
 Vazao = 0.635307
 TaxaDeEntrega = 0.662605
 TotalEnvios = 7140
 TotalBeacons = 1785
 TotalMensagens = 15704
 Duplicadas = 48
-4815: SING 1000
+4815:
 Vazao = 0.840176
 TaxaDeEntrega = 0.904473
 TotalEnvios = 6930
 TotalBeacons = 1640
 TotalMensagens = 15585
 Duplicadas = 116
-4816: ALT 100
+4816:
 Vazao = 3.665542
 TaxaDeEntrega = 0.389165
 TotalEnvios = 78933
 TotalBeacons = 3636
 TotalMensagens = 134701
 Duplicadas = 2375
-4817: ALT 100
+4817:
 Vazao = 3.446852
 TaxaDeEntrega = 0.383654
 TotalEnvios = 77179
 TotalBeacons = 8478
 TotalMensagens = 147129
 Duplicadas = 2821
-4818: COMP 100
+4818:
 Vazao = 2.885213
 TaxaDeEntrega = 0.311177
 TotalEnvios = 79196
 TotalBeacons = 6836
 TotalMensagens = 150392
 Duplicadas = 2404
-4819: COMP 100
+4819:
 Vazao = 2.600590
 TaxaDeEntrega = 0.262862
 TotalEnvios = 84124
 TotalBeacons = 10817
 TotalMensagens = 168567
 Duplicadas = 2889
-4820: IND 100
+4820:
 Vazao = 2.990995
 TaxaDeEntrega = 0.326854
 TotalEnvios = 78561
 TotalBeacons = 19599
 TotalMensagens = 183657
 Duplicadas = 3626
-4821: IND 100
+4821:
 Vazao = 2.914316
 TaxaDeEntrega = 0.326808
 TotalEnvios = 76366
 TotalBeacons = 15721
 TotalMensagens = 162985
 Duplicadas = 2573
-4822: SING 100
+4822:
 Vazao = 1.441252
 TaxaDeEntrega = 0.195339
 TotalEnvios = 63469
 TotalBeacons = 6052
 TotalMensagens = 225340
 Duplicadas = 6213
-4823: SING 100
+4823:
 Vazao = 1.944434
 TaxaDeEntrega = 0.238220
 TotalEnvios = 69461
 TotalBeacons = 5094
 TotalMensagens = 217770
 Duplicadas = 5982
-4824: ALT 250
+4824:
 Vazao = 3.046620
 TaxaDeEntrega = 0.757882
 TotalEnvios = 34384
 TotalBeacons = 8764
 TotalMensagens = 88095
 Duplicadas = 2630
-4825: ALT 250
+4825:
 Vazao = 2.260733
 TaxaDeEntrega = 0.535575
 TotalEnvios = 33366
 TotalBeacons = 8145
 TotalMensagens = 79513
 Duplicadas = 1567
-4826: COMP 250
+4826:
 Vazao = 1.410449
 TaxaDeEntrega = 0.351942
 TotalEnvios = 34142
 TotalBeacons = 6995
 TotalMensagens = 86892
 Duplicadas = 598
-4827: COMP 250
+4827:
 Vazao = 2.940509
 TaxaDeEntrega = 0.602341
 TotalEnvios = 36828
 TotalBeacons = 6293
 TotalMensagens = 67074
 Duplicadas = 752
-4828: IND 250
+4828:
 Vazao = 1.967646
 TaxaDeEntrega = 0.434263
 TotalEnvios = 34562
 TotalBeacons = 10031
 TotalMensagens = 69167
 Duplicadas = 543
-4829: IND 250
+4829:
 Vazao = 3.168379
 TaxaDeEntrega = 0.760612
 TotalEnvios = 35691
 TotalBeacons = 9266
 TotalMensagens = 88149
 Duplicadas = 1653
-4830: SING 250
+4830:
 Vazao = 2.190768
 TaxaDeEntrega = 0.518072
 TotalEnvios = 35829
 TotalBeacons = 2926
 TotalMensagens = 99235
 Duplicadas = 2184
-4831: SING 250
+4831:
 Vazao = 1.913305
 TaxaDeEntrega = 0.452030
 TotalEnvios = 35814
 TotalBeacons = 2652
 TotalMensagens = 88671
 Duplicadas = 1486
-4832: ALT 500
+4832:
 Vazao = 2.509673
 TaxaDeEntrega = 0.982381
 TotalEnvios = 21908
 TotalBeacons = 7496
 TotalMensagens = 54254
 Duplicadas = 682
-4833: ALT 500
+4833:
 Vazao = 2.441491
 TaxaDeEntrega = 0.988966
 TotalEnvios = 21025
 TotalBeacons = 64618
 TotalMensagens = 55262
 Duplicadas = 1255
-4834: COMP 500
+4834:
 Vazao = 1.631095
 TaxaDeEntrega = 0.628018
 TotalEnvios = 21993
 TotalBeacons = 9763
 TotalMensagens = 46432
 Duplicadas = 204
-4835: COMP 500
+4835:
 Vazao = 1.678590
 TaxaDeEntrega = 0.670135
 TotalEnvios = 21239
 TotalBeacons = 7333
 TotalMensagens = 44772
 Duplicadas = 206
-4836: IND 500
+4836:
 Vazao = 2.033465
 TaxaDeEntrega = 0.828850
 TotalEnvios = 21040
 TotalBeacons = 11722
 TotalMensagens = 49328
 Duplicadas = 368
-4837: IND 500
+4837:
 Vazao = 2.165603
 TaxaDeEntrega = 0.883674
 TotalEnvios = 20967
 TotalBeacons = 9611
 TotalMensagens = 45735
 Duplicadas = 440
-4838: SING 500
+4838:
 Vazao = 2.148377
 TaxaDeEntrega = 0.838277
 TotalEnvios = 22013
 TotalBeacons = 2268
 TotalMensagens = 54290
 Duplicadas = 922
-4839: SING 500
+4839:
 Vazao = 2.076400
 TaxaDeEntrega = 0.793050
 TotalEnvios = 22044
 TotalBeacons = 2390
 TotalMensagens = 52849
 Duplicadas = 910
-4840: ALT 100
+4840:
 Vazao = 4.613660
 TaxaDeEntrega = 0.493764
 TotalEnvios = 80257
 TotalBeacons = 5262
 TotalMensagens = 145686
 Duplicadas = 3459
-4841: ALT 100
+4841:
 Vazao = 4.315037
 TaxaDeEntrega = 0.480654
 TotalEnvios = 76839
 TotalBeacons = 75238
 TotalMensagens = 134304
 Duplicadas = 3838
-4842: COMP 100
+4842:
 Vazao = 3.027348
 TaxaDeEntrega = 0.310974
 TotalEnvios = 82843
 TotalBeacons = 10280
 TotalMensagens = 144791
 Duplicadas = 2242
-4843: COMP 100
+4843:
 Vazao = 3.512381
 TaxaDeEntrega = 0.359006
 TotalEnvios = 82617
 TotalBeacons = 8491
 TotalMensagens = 159537
 Duplicadas = 2854
-4844: IND 100
+4844:
 Vazao = 3.568022
 TaxaDeEntrega = 0.421908
 TotalEnvios = 72338
 TotalBeacons = 15217
 TotalMensagens = 163681
 Duplicadas = 2990
-4845: IND 100
+4845:
 Vazao = 4.546736
 TaxaDeEntrega = 0.516568
 TotalEnvios = 74511
 TotalBeacons = 14724
 TotalMensagens = 174821
 Duplicadas = 4305
-4846: SING 100
+4846:
 Vazao = 1.624352
 TaxaDeEntrega = 0.200924
 TotalEnvios = 69469
 TotalBeacons = 5030
 TotalMensagens = 216781
 Duplicadas = 5844
-4847: SING 100
+4847:
 Vazao = 1.825554
 TaxaDeEntrega = 0.215884
 TotalEnvios = 72511
 TotalBeacons = 4628
 TotalMensagens = 210290
 Duplicadas = 5800
-4850: ALT 25
+4850:
 Vazao = 3.511506
 TaxaDeEntrega = 0.325169
 TotalEnvios = 78630
 TotalBeacons = 3437
 TotalMensagens = 143400
 Duplicadas = 1376
-4851: ALT 25
+4851:
 Vazao = 5.198819
 TaxaDeEntrega = 0.487522
 TotalEnvios = 80261
 TotalBeacons = 12294
 TotalMensagens = 137018
 Duplicadas = 518
-4852: COMP 25
+4852:
 Vazao = 2.972524
 TaxaDeEntrega = 0.285605
 TotalEnvios = 78241
 TotalBeacons = 6353
 TotalMensagens = 154839
 Duplicadas = 889
-4853: COMP 25
+4853:
 Vazao = 3.518658
 TaxaDeEntrega = 0.379519
 TotalEnvios = 78913
 TotalBeacons = 7946
 TotalMensagens = 178313
 Duplicadas = 1353
-4854: IND 25
+4854:
 Vazao = 2.960285
 TaxaDeEntrega = 0.293709
 TotalEnvios = 78646
 TotalBeacons = 9981
 TotalMensagens = 186344
 Duplicadas = 3877
-4855: IND 25
+4855:
 Vazao = 3.787110
 TaxaDeEntrega = 0.326042
 TotalEnvios = 79999
 TotalBeacons = 12816
 TotalMensagens = 188416
 Duplicadas = 3554
-4856: SING 25
+4856:
 Vazao = 1.298680
 TaxaDeEntrega = 0.133020
 TotalEnvios = 83536
 TotalBeacons = 8874
 TotalMensagens = 252036
 Duplicadas = 4012
-4857: SING 25
+4857:
 Vazao = 1.422395
 TaxaDeEntrega = 0.144672
 TotalEnvios = 83520
 TotalBeacons = 7568
 TotalMensagens = 240524
 Duplicadas = 3412
-4858: ALT 50
+4858:
 Vazao = 5.464131
 TaxaDeEntrega = 0.375275
 TotalEnvios = 124999
 TotalBeacons = 11166
 TotalMensagens = 243147
 Duplicadas = 5850
-4859: ALT 50
+4859:
 Vazao = 5.927477
 TaxaDeEntrega = 0.413992
 TotalEnvios = 122471
 TotalBeacons = 8323
 TotalMensagens = 237740
 Duplicadas = 5341
-4860: COMP 50
+4860:
 Vazao = 4.964419
 TaxaDeEntrega = 0.325444
 TotalEnvios = 130256
 TotalBeacons = 6550
 TotalMensagens = 247868
 Duplicadas = 4789
-4861: COMP 50
+4861:
 Vazao = 2.599911
 TaxaDeEntrega = 0.170129
 TotalEnvios = 130113
 TotalBeacons = 2969
 TotalMensagens = 237588
 Duplicadas = 3415
-4862: IND 50
+4862:
 Vazao = 4.733330
 TaxaDeEntrega = 0.338804
 TotalEnvios = 119609
 TotalBeacons = 11498
 TotalMensagens = 245893
 Duplicadas = 3188
-4863: IND 50
+4863:
 Vazao = 5.002667
 TaxaDeEntrega = 0.376156
 TotalEnvios = 114014
 TotalBeacons = 16086
 TotalMensagens = 259419
 Duplicadas = 4652
-4864: SING 50
+4864:
 Vazao = 1.717135
 TaxaDeEntrega = 0.157912
 TotalEnvios = 92539
 TotalBeacons = 6358
 TotalMensagens = 281317
 Duplicadas = 4976
-4865: SING 50
+4865:
 Vazao = 1.982434
 TaxaDeEntrega = 0.175582
 TotalEnvios = 95904
