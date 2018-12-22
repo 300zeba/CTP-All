@@ -2,7 +2,7 @@
 #define TESTCTP_H
 
 
-#define MSG_SIZE 5
+#define MSG_SIZE 19
 
 enum{
   LOG_INITIALIZED,
@@ -52,11 +52,11 @@ enum{
   LOG_MAX_THL,
   LOG_DUPLICATE_AT_ROOT,
   LOG_TOTAL_MESSAGES,
+  LOG_OVERFLOW_COUNTER,
   COLLECTION_ID = 0xee,
 };
 
 typedef nx_struct DataMsg{
-	nx_uint16_t seqno;
 	nx_uint8_t data[MSG_SIZE];
 }DataMsg;
 

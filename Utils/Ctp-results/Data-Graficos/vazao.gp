@@ -1,19 +1,19 @@
 reset
 n=10 #number of intervals
-max=5000. #max value
-min=0. #min value
+max=1000. #max value
+min=000. #min value
 width=1
 
 set term png #output terminal and file
-set output "GraficoVazao5min.png"
+set output "GraficoVazaoDown.png"
 set xrange [max:min]
-set yrange [0:60]
+set yrange [0:6]
 
 set xlabel "Período de geração de pacotes"
 set ylabel "Vazão (KBytes/s)"
-set key right bottom
+set key left top
 
-plot "SINGVazao.data" using 1:2 smooth unique title "CTP" with lines lt 1, \
- "ALTVazao.data" using 1:2 smooth unique title "PAC-A" with lines lt 2, \
- "COMPVazao.data" using 1:2  smooth unique title "CTP-Multi" with lines lt 3, \
- "INDVazao.data" using 1:2 smooth unique title "PAC-I" with lines lt 4 ;
+plot "ALTVazao.data" using 1:2 title "PAC-A" with linespoints lw 2 ps 2 lc rgb "#0", \
+ "INDVazao.data" using 1:2 title "PAC-I" with linespoints lw 2 ps 2 lc rgb "#778899", \
+ "COMPVazao.data" using 1:2  title "CTP-Multi" with linespoints lw 2 ps 2 lc rgb "#696969", \
+ "SINGVazao.data" using 1:2 title "CTP" with linespoints lw 2 ps 2 lc rgb "#a9a9a9" ;
