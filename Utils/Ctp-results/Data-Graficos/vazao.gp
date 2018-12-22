@@ -9,7 +9,7 @@ set output "GraficoVazao5min.png"
 set xrange [max:min]
 set yrange [0:60]
 
-set xlabel "Período de criação de pacotes"
+set xlabel "Período de geração de pacotes"
 set ylabel "Vazão (KBytes/s)"
 set key right bottom
 
